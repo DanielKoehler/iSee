@@ -19,6 +19,8 @@
 		4CF04C6C18940CFC00E2AF40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF04C5418940CFC00E2AF40 /* UIKit.framework */; };
 		4CF04C7418940CFC00E2AF40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CF04C7218940CFC00E2AF40 /* InfoPlist.strings */; };
 		4CF04C7618940CFC00E2AF40 /* iSeeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF04C7518940CFC00E2AF40 /* iSeeTests.m */; };
+		4CF04C8118940D2300E2AF40 /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF04C8018940D2300E2AF40 /* LandingViewController.m */; };
+		4CF04C8318940D4200E2AF40 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF04C8218940D4200E2AF40 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		4CF04C7118940CFC00E2AF40 /* iSeeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iSeeTests-Info.plist"; sourceTree = "<group>"; };
 		4CF04C7318940CFC00E2AF40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CF04C7518940CFC00E2AF40 /* iSeeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iSeeTests.m; sourceTree = "<group>"; };
+		4CF04C7F18940D2300E2AF40 /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingViewController.h; sourceTree = "<group>"; };
+		4CF04C8018940D2300E2AF40 /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingViewController.m; sourceTree = "<group>"; };
+		4CF04C8218940D4200E2AF40 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +112,11 @@
 		4CF04C5618940CFC00E2AF40 /* iSee */ = {
 			isa = PBXGroup;
 			children = (
+				4CF04C8218940D4200E2AF40 /* Storyboard.storyboard */,
 				4CF04C5F18940CFC00E2AF40 /* AppDelegate.h */,
 				4CF04C6018940CFC00E2AF40 /* AppDelegate.m */,
+				4CF04C7F18940D2300E2AF40 /* LandingViewController.h */,
+				4CF04C8018940D2300E2AF40 /* LandingViewController.m */,
 				4CF04C6218940CFC00E2AF40 /* Images.xcassets */,
 				4CF04C5718940CFC00E2AF40 /* Supporting Files */,
 			);
@@ -221,6 +229,7 @@
 			files = (
 				4CF04C5B18940CFC00E2AF40 /* InfoPlist.strings in Resources */,
 				4CF04C6318940CFC00E2AF40 /* Images.xcassets in Resources */,
+				4CF04C8318940D4200E2AF40 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CF04C6118940CFC00E2AF40 /* AppDelegate.m in Sources */,
+				4CF04C8118940D2300E2AF40 /* LandingViewController.m in Sources */,
 				4CF04C5D18940CFC00E2AF40 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
