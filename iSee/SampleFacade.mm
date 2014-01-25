@@ -99,7 +99,7 @@
     return m_largeIcon;
 }
 
-- (bool) processFrame:(const cv::Mat&) inputFrame into:(cv::Mat&) outputFrame
+- (bool) processFrame:(cv::Mat&) inputFrame into:(cv::Mat&) outputFrame
 {
     return _sample->processFrame(inputFrame, outputFrame);
 }

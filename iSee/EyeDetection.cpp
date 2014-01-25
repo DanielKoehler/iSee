@@ -7,7 +7,7 @@
 //
 
 #include <iostream>
-#include "EyeDetection.h"
+
 #include "opencv2/imgproc/imgproc.hpp"
 #include <opencv2/objdetect/objdetect.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -20,8 +20,9 @@
 #include "findEyeCenter.h"
 #include "findEyeCorner.h"
 #include "constants.h"
-EyeDetection::EyeDetection()
-: useNeonOptimized(false)
+
+#include "EyeDetection.hpp"
+EyeDetectionSample::EyeDetectionSample()
 {
     flipped = false;
     cv::String face_cascade_name = "haarcascade_frontalface_alt.xml";
@@ -31,25 +32,25 @@ EyeDetection::EyeDetection()
     cv::Mat skinCrCbHist = cv::Mat::zeros(cv::Size(256, 256), CV_8UC1);
 }
 
-std::string EyeDetection::getName() const
+std::string EyeDetectionSample::getName() const
 {
   return "Eye Detection";
 }
 
-std::string EyeDetection::getUserFriendlyName() const
+std::string EyeDetectionSample::getUserFriendlyName() const
 {
   return getName() + " - " + m_currentEffect + " effect";
 }
 
 //! Returns a detailed sample description
-std::string EyeDetection::getDescription() const
+std::string EyeDetectionSample::getDescription() const
 {
   return "Demonstrate various image filtering techniques";
 }
 
 //! Processes a frame and returns output image 
-bool EyeDetection::processFrame(cv::Mat& inputFrame, cv::Mat& outputFrame)
-{  
+bool EyeDetectionSample::processFrame(cv::Mat& inputFrame, cv::Mat& outputFrame)
+{
     if (flipped){
         cv::flip(inputFrame, inputFrame, 1);
     }
@@ -59,7 +60,7 @@ bool EyeDetection::processFrame(cv::Mat& inputFrame, cv::Mat& outputFrame)
     return true;
 }
 
-void EyeDetection::detectAndDisplay(cv::Mat& inputFrame ) {
+void EyeDetectionSample::detectAndDisplay(cv::Mat& inputFrame ) {
     std::vector<cv::Rect> faces;
     //cv::Mat frame_gray;
     
@@ -84,7 +85,7 @@ void EyeDetection::detectAndDisplay(cv::Mat& inputFrame ) {
     }
 }
 
-void EyeDetection::findEyes(const cv::Mat frame_gray, cv::Rect face) {
+void EyeDetectionSample::findEyes(const cv::Mat frame_gray, cv::Rect face) {
     cv::Mat faceROI = frame_gray(face);
     cv::Mat debugFace = faceROI;
     

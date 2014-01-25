@@ -11,10 +11,10 @@
 
 #include "SampleBase.h"
 
-class EyeDetection : public SampleBase
+class EyeDetectionSample : public SampleBase
 {
 public:
-  EyeDetection();
+  EyeDetectionSample();
   
   //! Gets a sample name
   virtual std::string getName() const;
@@ -32,8 +32,6 @@ private:
   
   void findEyes(const cv::Mat frame_gray, cv::Rect face);
 
-  
-private:
   std::string m_currentEffect;
 
   
@@ -42,10 +40,7 @@ private:
     cv::RNG rng;
     cv::Mat debugImage;
     cv::Mat skinCrCbHist;
-  cv::Mat_<float> m_contrastKernel;
-  cv::Mat_<float> m_contrastKernelT;
-  
-  bool useNeonOptimized;
+
 };
 
 #endif

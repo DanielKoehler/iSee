@@ -37,7 +37,7 @@ public:
     virtual void resetReferenceFrame() const;
     
     //! Processes a frame and returns output image 
-    virtual bool processFrame(const cv::Mat& inputFrame, cv::Mat& outputFrame) = 0;
+    virtual bool processFrame(cv::Mat& inputFrame, cv::Mat& outputFrame) = 0;
     
     bool hasIcon() const;
     

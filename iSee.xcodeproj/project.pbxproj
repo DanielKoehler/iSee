@@ -65,7 +65,7 @@
 /* Begin PBXFileReference section */
 		3CB2B8B51894703E00423F9B /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		3CB2B8B61894703E00423F9B /* EyeDetection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EyeDetection.cpp; sourceTree = "<group>"; };
-		3CB2B8B71894703E00423F9B /* EyeDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EyeDetection.h; sourceTree = "<group>"; };
+		3CB2B8B71894703E00423F9B /* EyeDetection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EyeDetection.hpp; sourceTree = "<group>"; };
 		3CB2B8B81894703E00423F9B /* findEyeCenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = findEyeCenter.cpp; sourceTree = "<group>"; };
 		3CB2B8B91894703E00423F9B /* findEyeCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = findEyeCenter.h; sourceTree = "<group>"; };
 		3CB2B8BA1894703E00423F9B /* findEyeCorner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = findEyeCorner.cpp; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 			children = (
 				3CB2B8B51894703E00423F9B /* constants.h */,
 				3CB2B8B61894703E00423F9B /* EyeDetection.cpp */,
-				3CB2B8B71894703E00423F9B /* EyeDetection.h */,
+				3CB2B8B71894703E00423F9B /* EyeDetection.hpp */,
 				3CB2B8B81894703E00423F9B /* findEyeCenter.cpp */,
 				3CB2B8B91894703E00423F9B /* findEyeCenter.h */,
 				3CB2B8BA1894703E00423F9B /* findEyeCorner.cpp */,
