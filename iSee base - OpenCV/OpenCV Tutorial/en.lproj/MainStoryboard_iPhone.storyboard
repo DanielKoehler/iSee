@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3017" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="11">
+            <objects>
+                <navigationController id="3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="12" kind="relationship" relationship="rootViewController" id="19"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-277" y="-188"/>
+        </scene>
+        <!--Master View Controller - Samples-->
+        <scene sceneID="18">
+            <objects>
+                <tableViewController title="Samples" id="12" customClass="MasterViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" style="IBUITableViewCellStyleDefault" id="lJ0-d7-vTF">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lJ0-d7-vTF" id="F68-k6-IE1">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="21" kind="push" identifier="showDetail" id="jZb-fq-zAk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="12" id="16"/>
+                            <outlet property="delegate" destination="12" id="15"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="OpenCV Samples" id="36">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="m1u-EC-Yzi"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="183" y="-188"/>
+        </scene>
+        <!--Detail View Controller - Detail-->
+        <scene sceneID="24">
+            <objects>
+                <viewController title="Detail" id="21" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="22">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="d71-R8-SeW">
+                                <rect key="frame" x="20" y="128" width="280" height="332"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="57o-4l-EB2">
+                                <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zNO-71-ALR">
+                                <rect key="frame" x="149" y="20" width="151" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Run on image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="22w-9U-Oct" kind="push" identifier="processImage" id="Ni8-n1-Itx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="STE-bC-t3a">
+                                <rect key="frame" x="149" y="65" width="151" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Run on video">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Wac-Dj-mok" kind="push" identifier="processVideo" id="rQG-3k-mPe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="26"/>
+                    <connections>
+                        <outlet property="runOnVideoButton" destination="STE-bC-t3a" id="wMy-RE-IGg"/>
+                        <outlet property="sampleDescriptionTextView" destination="d71-R8-SeW" id="Uul-a2-YyV"/>
+                        <outlet property="sampleIconView" destination="57o-4l-EB2" id="TGT-x2-iuh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="644" y="-182"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="b2s-8I-Qbe">
+            <objects>
+                <viewController id="Wac-Dj-mok" customClass="VideoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fyS-Oc-Y7R">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="xqr-A0-xhC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="mev-vc-lCS">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="switchCamera.png" style="plain" id="0cH-Fc-y0H" userLabel="switchCameraButton">
+                                        <connections>
+                                            <action selector="toggleCameraPressed:" destination="Wac-Dj-mok" id="JH2-Eb-Xzq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ons-ZI-Sxi"/>
+                                    <barButtonItem image="photos_polaroid.png" style="plain" id="cES-kV-lCw" userLabel="CaptureReferenceFrameButton">
+                                        <connections>
+                                            <action selector="captureReferenceFrame:" destination="Wac-Dj-mok" id="cFv-RZ-McA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ZuT-Br-fqp"/>
+                                    <barButtonItem image="cog_01.png" style="plain" id="I1T-i5-mh3" userLabel="showOptionsButton">
+                                        <connections>
+                                            <action selector="showOptions:" destination="Wac-Dj-mok" id="fbp-Bn-Jb3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="bZe-Td-agE"/>
+                                    <barButtonItem image="refresh_straight_arrows.png" style="plain" id="BX1-5o-4NW" userLabel="ClearReferenceFrameButton">
+                                        <connections>
+                                            <action selector="clearReferenceFrame:" destination="Wac-Dj-mok" id="WFO-yf-zsS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Hen-Cv-Aze"/>
+                                    <barButtonItem style="plain" systemItem="action" id="Gsh-6h-STO" userLabel="navigationActionSheetButton">
+                                        <connections>
+                                            <action selector="showActionSheet:" destination="Wac-Dj-mok" id="siA-JN-1lb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jkl-70-nt7"/>
+                    <connections>
+                        <outlet property="actionSheetButton" destination="Gsh-6h-STO" id="8h5-m8-d60"/>
+                        <outlet property="captureReferenceFrameButton" destination="cES-kV-lCw" id="DwK-sh-bBn"/>
+                        <outlet property="clearReferenceFrameButton" destination="BX1-5o-4NW" id="Lfw-KU-JzG"/>
+                        <outlet property="containerView" destination="xqr-A0-xhC" id="LRi-lx-hs1"/>
+                        <outlet property="options" destination="I1T-i5-mh3" id="4dp-c7-27H"/>
+                        <outlet property="toggleCameraButton" destination="0cH-Fc-y0H" id="os1-i3-lp3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RhH-cl-n91" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249" y="-482"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="kug-rQ-vLf">
+            <objects>
+                <viewController id="22w-9U-Oct" customClass="ImageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T0z-Tc-TaG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="ShL-ye-fdZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="g27-f9-DXb">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="photos_polaroid.png" style="plain" id="pLF-ra-4dQ" userLabel="selectImageButton">
+                                        <connections>
+                                            <action selector="selectPictureForProcessing:" destination="22w-9U-Oct" id="Ul3-XK-RJL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Iel-EN-xG4"/>
+                                    <barButtonItem image="cog_01.png" style="plain" id="GoY-2m-aIN" userLabel="showOptionsButton">
+                                        <connections>
+                                            <action selector="presentOptionsView:" destination="22w-9U-Oct" id="iS2-Ui-aSM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="omW-vm-KSN"/>
+                                    <barButtonItem style="plain" systemItem="action" id="iAJ-T9-8Bg" userLabel="navigationActionSheetButton">
+                                        <connections>
+                                            <action selector="selectAction:" destination="22w-9U-Oct" id="B1A-0Q-ISB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ijU-yh-CES">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="gIM-NE-YES"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="actionButton" destination="iAJ-T9-8Bg" id="GPY-W2-hve"/>
+                        <outlet property="containerView" destination="ShL-ye-fdZ" id="sJQ-BF-Y0A"/>
+                        <outlet property="optionsBarButton" destination="GoY-2m-aIN" id="Qd9-Pc-ovA"/>
+                        <outlet property="takePhotoButton" destination="pLF-ra-4dQ" id="Cka-m4-SXO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THp-Oo-sRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249" y="118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cog_01.png" width="26" height="26"/>
+        <image name="photos_polaroid.png" width="26" height="26"/>
+        <image name="refresh_straight_arrows.png" width="26" height="26"/>
+        <image name="switchCamera.png" width="43" height="26"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,23 @@
+//
+// Prefix header for all source files of the 'OpenCV Tutorial' target in the 'OpenCV Tutorial' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __cplusplus
+#include <opencv2/opencv.hpp>
+#include <opencv2/nonfree/nonfree.hpp>
+#endif
+
+#ifdef __OBJC__
+  #import <UIKit/UIKit.h>
+  #import <Foundation/Foundation.h>
+  #import <QuartzCore/QuartzCore.h>
+#endif
+
+#include "TargetConditionals.h"
+
