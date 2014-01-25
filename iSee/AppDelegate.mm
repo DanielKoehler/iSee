@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "VideoTracking.hpp"
+#import "EyeDetection.h"
 
 
 @implementation AppDelegate
@@ -17,7 +17,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
-    allSamples.push_back([[SampleFacade alloc] initWithSample:  new VideoTrackingSample()]);
+    allSamples.push_back([[SampleFacade alloc] initWithSample:  new EyeDetection()]);
 
     // Override point for customization after application launch.
 //    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
