@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CB2B8C01894703E00423F9B /* EyeDetection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2B8B61894703E00423F9B /* EyeDetection.cpp */; };
+		3CB2B8C11894703E00423F9B /* findEyeCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2B8B81894703E00423F9B /* findEyeCenter.cpp */; };
+		3CB2B8C21894703E00423F9B /* findEyeCorner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2B8BA1894703E00423F9B /* findEyeCorner.cpp */; };
+		3CB2B8C31894703E00423F9B /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3CB2B8BC1894703E00423F9B /* haarcascade_frontalface_alt.xml */; };
+		3CB2B8C41894703E00423F9B /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2B8BD1894703E00423F9B /* helpers.cpp */; };
+		3CB2B8C51894703E00423F9B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2B8BF1894703E00423F9B /* main.cpp */; };
 		4C67A84318943B30006DBCA7 /* DefaultSampleIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C67A83918943B30006DBCA7 /* DefaultSampleIcon.png */; };
 		4C67A84418943B30006DBCA7 /* DefaultSampleIcon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C67A83A18943B30006DBCA7 /* DefaultSampleIcon~ipad.png */; };
 		4C67A84518943B30006DBCA7 /* Globals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C67A83B18943B30006DBCA7 /* Globals.cpp */; };
@@ -20,7 +26,6 @@
 		8A43889C1595DE5800027D3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A43886C1595BC4F00027D3C /* CoreGraphics.framework */; };
 		8A4388A81595DE5800027D3C /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4388A71595DE5800027D3C /* AppDelegate.mm */; };
 		8A4388AE1595DE5800027D3C /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A4388AC1595DE5800027D3C /* MainStoryboard_iPad.storyboard */; };
-		8A4388B11595DE5800027D3C /* MasterViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4388B01595DE5800027D3C /* MasterViewController.mm */; };
 		8A4388B41595DE5800027D3C /* DetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4388B31595DE5800027D3C /* DetailViewController.mm */; };
 		8A4388DC1597189A00027D3C /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4388741595BC4F00027D3C /* main.mm */; };
 		8A4388E81597B7BB00027D3C /* UIImage2OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4388E71597B7BB00027D3C /* UIImage2OpenCV.mm */; };
@@ -58,6 +63,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CB2B8B51894703E00423F9B /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		3CB2B8B61894703E00423F9B /* EyeDetection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EyeDetection.cpp; sourceTree = "<group>"; };
+		3CB2B8B71894703E00423F9B /* EyeDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EyeDetection.h; sourceTree = "<group>"; };
+		3CB2B8B81894703E00423F9B /* findEyeCenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = findEyeCenter.cpp; sourceTree = "<group>"; };
+		3CB2B8B91894703E00423F9B /* findEyeCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = findEyeCenter.h; sourceTree = "<group>"; };
+		3CB2B8BA1894703E00423F9B /* findEyeCorner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = findEyeCorner.cpp; sourceTree = "<group>"; };
+		3CB2B8BB1894703E00423F9B /* findEyeCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = findEyeCorner.h; sourceTree = "<group>"; };
+		3CB2B8BC1894703E00423F9B /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
+		3CB2B8BD1894703E00423F9B /* helpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = helpers.cpp; sourceTree = "<group>"; };
+		3CB2B8BE1894703E00423F9B /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
+		3CB2B8BF1894703E00423F9B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4C67A83918943B30006DBCA7 /* DefaultSampleIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultSampleIcon.png; sourceTree = "<group>"; };
 		4C67A83A18943B30006DBCA7 /* DefaultSampleIcon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DefaultSampleIcon~ipad.png"; sourceTree = "<group>"; };
 		4C67A83B18943B30006DBCA7 /* Globals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Globals.cpp; sourceTree = "<group>"; };
@@ -83,8 +99,6 @@
 		8A4388A61595DE5800027D3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A4388A71595DE5800027D3C /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		8A4388AD1595DE5800027D3C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		8A4388AF1595DE5800027D3C /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		8A4388B01595DE5800027D3C /* MasterViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MasterViewController.mm; sourceTree = "<group>"; };
 		8A4388B21595DE5800027D3C /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		8A4388B31595DE5800027D3C /* DetailViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DetailViewController.mm; sourceTree = "<group>"; };
 		8A4388E61597B75400027D3C /* UIImage2OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImage2OpenCV.h; sourceTree = "<group>"; };
@@ -161,6 +175,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CB2B8B41894702800423F9B /* Eye Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				3CB2B8B51894703E00423F9B /* constants.h */,
+				3CB2B8B61894703E00423F9B /* EyeDetection.cpp */,
+				3CB2B8B71894703E00423F9B /* EyeDetection.h */,
+				3CB2B8B81894703E00423F9B /* findEyeCenter.cpp */,
+				3CB2B8B91894703E00423F9B /* findEyeCenter.h */,
+				3CB2B8BA1894703E00423F9B /* findEyeCorner.cpp */,
+				3CB2B8BB1894703E00423F9B /* findEyeCorner.h */,
+				3CB2B8BC1894703E00423F9B /* haarcascade_frontalface_alt.xml */,
+				3CB2B8BD1894703E00423F9B /* helpers.cpp */,
+				3CB2B8BE1894703E00423F9B /* helpers.h */,
+				3CB2B8BF1894703E00423F9B /* main.cpp */,
+			);
+			name = "Eye Tracking";
+			sourceTree = "<group>";
+		};
 		4C67A84918943B3F006DBCA7 /* Base Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +270,7 @@
 		8A43886E1595BC4F00027D3C /* iSee */ = {
 			isa = PBXGroup;
 			children = (
+				3CB2B8B41894702800423F9B /* Eye Tracking */,
 				8AA7F84E15A462250052C95A /* View Controllers */,
 				8AB6D05115BDEB320029641C /* Video Tracking */,
 				8A43886F1595BC4F00027D3C /* Supporting Files */,
@@ -310,8 +343,6 @@
 			isa = PBXGroup;
 			children = (
 				8A7934C415AB5DB30043BE99 /* Options */,
-				8A4388AF1595DE5800027D3C /* MasterViewController.h */,
-				8A4388B01595DE5800027D3C /* MasterViewController.mm */,
 				8A4388B21595DE5800027D3C /* DetailViewController.h */,
 				8A4388B31595DE5800027D3C /* DetailViewController.mm */,
 				8A723FD91599BB74008C72DB /* VideoViewController.h */,
@@ -395,6 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB2B8C31894703E00423F9B /* haarcascade_frontalface_alt.xml in Resources */,
 				8A4388AE1595DE5800027D3C /* MainStoryboard_iPad.storyboard in Resources */,
 				8A7934BD15AB5C5A0043BE99 /* BooleanTableViewCell.xib in Resources */,
 				8A7934BF15AB5CB20043BE99 /* FloatTableViewCell.xib in Resources */,
@@ -416,7 +448,6 @@
 			files = (
 				4C67A84518943B30006DBCA7 /* Globals.cpp in Sources */,
 				8A4388A81595DE5800027D3C /* AppDelegate.mm in Sources */,
-				8A4388B11595DE5800027D3C /* MasterViewController.mm in Sources */,
 				8A4388B41595DE5800027D3C /* DetailViewController.mm in Sources */,
 				8A4388DC1597189A00027D3C /* main.mm in Sources */,
 				8A4388E81597B7BB00027D3C /* UIImage2OpenCV.mm in Sources */,
@@ -424,11 +455,15 @@
 				8A723FDB1599BB74008C72DB /* VideoViewController.mm in Sources */,
 				8A723FDE1599BB95008C72DB /* GLESImageView.mm in Sources */,
 				4C67A84718943B30006DBCA7 /* SampleFacade.mm in Sources */,
+				3CB2B8C51894703E00423F9B /* main.cpp in Sources */,
 				8AA7F85115A462400052C95A /* FPSCalculator.mm in Sources */,
 				8A79349F15A9ADA20043BE99 /* BooleanTableViewCell.mm in Sources */,
 				8A7934A815AB47070043BE99 /* SampleOptionsTableViewDelegate.mm in Sources */,
+				3CB2B8C41894703E00423F9B /* helpers.cpp in Sources */,
 				8A7934AB15AB48C80043BE99 /* NSString+StdString.mm in Sources */,
+				3CB2B8C21894703E00423F9B /* findEyeCorner.cpp in Sources */,
 				4C67A84818943B30006DBCA7 /* SampleOptions.cpp in Sources */,
+				3CB2B8C11894703E00423F9B /* findEyeCenter.cpp in Sources */,
 				8A7934C715AB5E2F0043BE99 /* Int32TableViewCell.mm in Sources */,
 				8A7934CA15AB5E3A0043BE99 /* FloatTableViewCell.mm in Sources */,
 				8A7934CD15AB5E440043BE99 /* EnumTableViewCell.mm in Sources */,
@@ -439,6 +474,7 @@
 				4C67A84618943B30006DBCA7 /* SampleBase.cpp in Sources */,
 				8AB6D05015BDEB2F0029641C /* VideoTracking.cpp in Sources */,
 				8AFE53CA15D7E3B200E7ADEB /* DoubleTableViewCell.mm in Sources */,
+				3CB2B8C01894703E00423F9B /* EyeDetection.cpp in Sources */,
 				8AFE53CF15D7F18E00E7ADEB /* cvneon.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
