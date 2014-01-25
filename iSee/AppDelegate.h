@@ -1,15 +1,20 @@
 //
 //  AppDelegate.h
-//  iSee
+//  OpenCV Tutorial
 //
-//  Created by Daniel Koehler on 25/01/2014.
-//  Copyright (c) 2014 Daniel Koehler. All rights reserved.
+//  Created by BloodAxe on 6/23/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "SampleBase.h"
+#import "SampleFacade.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+{
+@public
+  std::vector<SampleFacade*> allSamples;
+}
 @property (strong, nonatomic) UIWindow *window;
 
 @end

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3017" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="42">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller - Detail-->
+        <scene sceneID="16">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15" sceneMemberID="firstResponder"/>
+                <viewController title="Detail" id="4" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="26">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GCK-ti-51M">
+                                <rect key="frame" x="283" y="493" width="202" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Debug Analysis">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="K8a-OQ-WeD" kind="push" identifier="processVideo" id="Ud3-re-obG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="53"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1254" y="-1818"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="U9Y-ka-Ay8">
+            <objects>
+                <viewController id="K8a-OQ-WeD" customClass="VideoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SiE-H0-eIK">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="abh-x4-lYu">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="980"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="81Y-4N-cYD">
+                                <rect key="frame" x="1" y="979" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="switchCamera.png" style="plain" id="n3D-dJ-ydc" userLabel="switchCameraButton">
+                                        <connections>
+                                            <action selector="toggleCameraPressed:" destination="K8a-OQ-WeD" id="ggC-hE-2aK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9xd-hx-Ajn"/>
+                                    <barButtonItem image="photos_polaroid.png" style="plain" id="23d-4k-fUX" userLabel="CaptureReferenceFrameButton">
+                                        <connections>
+                                            <action selector="captureReferenceFrame:" destination="K8a-OQ-WeD" id="bY0-H1-LKr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5z9-2U-tKS"/>
+                                    <barButtonItem image="refresh_straight_arrows.png" style="plain" id="BxJ-sk-12z" userLabel="ClearReferenceFrameButton">
+                                        <connections>
+                                            <action selector="clearReferenceFrame:" destination="K8a-OQ-WeD" id="E5Q-Mo-AeM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Yh1-vR-nOF"/>
+                                    <barButtonItem image="cog_01.png" style="plain" id="ZgH-2B-QIm" userLabel="showOptionsButton">
+                                        <connections>
+                                            <action selector="showOptions:" destination="K8a-OQ-WeD" id="Rxc-VP-j1K"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="6P7-oN-iGf">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="455-K3-mhP"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="p92-gf-OY7" userLabel="navigationActionSheetButton">
+                            <connections>
+                                <action selector="showActionSheet:" destination="K8a-OQ-WeD" id="aAb-Im-wc9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="actionSheetButton" destination="p92-gf-OY7" id="LCM-0O-r2h"/>
+                        <outlet property="containerView" destination="abh-x4-lYu" id="Qt5-DY-d5V"/>
+                        <outlet property="options" destination="ZgH-2B-QIm" id="cn3-HU-r2P"/>
+                        <outlet property="toggleCameraButton" destination="n3D-dJ-ydc" id="cui-FS-res"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="peJ-8j-LDI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2462" y="-1818"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="50">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="49" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="42" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="43">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4" kind="relationship" relationship="rootViewController" id="52"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-12" y="-1818"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cog_01.png" width="26" height="26"/>
+        <image name="photos_polaroid.png" width="26" height="26"/>
+        <image name="refresh_straight_arrows.png" width="26" height="26"/>
+        <image name="switchCamera.png" width="43" height="26"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

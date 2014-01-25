@@ -1,18 +1,18 @@
 //
 //  main.m
-//  iSee
+//  OpenCV Tutorial
 //
-//  Created by Daniel Koehler on 25/01/2014.
-//  Copyright (c) 2014 Daniel Koehler. All rights reserved.
+//  Created by BloodAxe on 6/23/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 #import "AppDelegate.h"
 
-int main(int argc, char * argv[])
+int main(int argc, char *argv[])
 {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
+  @autoreleasepool {
+      return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+  }
 }
