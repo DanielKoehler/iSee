@@ -110,6 +110,7 @@
     cv::Mat outputImage;
     
     _sample->processFrame(inputImage, outputImage);
+    
     UIImage * result = [UIImage imageWithMat:outputImage andImageOrientation:[source imageOrientation]];
     return result;
 }

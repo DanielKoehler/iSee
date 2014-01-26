@@ -11,7 +11,7 @@
 		4C67A84618943B30006DBCA7 /* SampleBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C67A83D18943B30006DBCA7 /* SampleBase.cpp */; };
 		4C67A84718943B30006DBCA7 /* SampleFacade.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C67A84018943B30006DBCA7 /* SampleFacade.mm */; };
 		4C67A84818943B30006DBCA7 /* SampleOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C67A84118943B30006DBCA7 /* SampleOptions.cpp */; };
-		4CDA3F5818947EB000CE0D70 /* EyeDetection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA3F4F18947EB000CE0D70 /* EyeDetection.cpp */; };
+		4CDA3F5818947EB000CE0D70 /* EyeDetection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA3F4F18947EB000CE0D70 /* EyeDetection.mm */; };
 		4CDA3F5918947EB000CE0D70 /* findEyeCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA3F5118947EB000CE0D70 /* findEyeCenter.cpp */; };
 		4CDA3F5A18947EB000CE0D70 /* findEyeCorner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA3F5318947EB000CE0D70 /* findEyeCorner.cpp */; };
 		4CDA3F5B18947EB000CE0D70 /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4CDA3F5518947EB000CE0D70 /* haarcascade_frontalface_alt.xml */; };
@@ -59,8 +59,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C67A83918943B30006DBCA7 /* DefaultSampleIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultSampleIcon.png; sourceTree = "<group>"; };
-		4C67A83A18943B30006DBCA7 /* DefaultSampleIcon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DefaultSampleIcon~ipad.png"; sourceTree = "<group>"; };
 		4C67A83B18943B30006DBCA7 /* Globals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Globals.cpp; sourceTree = "<group>"; };
 		4C67A83C18943B30006DBCA7 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		4C67A83D18943B30006DBCA7 /* SampleBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SampleBase.cpp; sourceTree = "<group>"; };
@@ -70,7 +68,7 @@
 		4C67A84118943B30006DBCA7 /* SampleOptions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SampleOptions.cpp; sourceTree = "<group>"; };
 		4C67A84218943B30006DBCA7 /* SampleOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleOptions.h; sourceTree = "<group>"; };
 		4CDA3F4E18947EB000CE0D70 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = constants.h; path = iSee/constants.h; sourceTree = "<group>"; };
-		4CDA3F4F18947EB000CE0D70 /* EyeDetection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EyeDetection.cpp; path = iSee/EyeDetection.cpp; sourceTree = "<group>"; };
+		4CDA3F4F18947EB000CE0D70 /* EyeDetection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EyeDetection.mm; path = iSee/EyeDetection.mm; sourceTree = "<group>"; };
 		4CDA3F5018947EB000CE0D70 /* EyeDetection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = EyeDetection.hpp; path = iSee/EyeDetection.hpp; sourceTree = "<group>"; };
 		4CDA3F5118947EB000CE0D70 /* findEyeCenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = findEyeCenter.cpp; path = iSee/findEyeCenter.cpp; sourceTree = "<group>"; };
 		4CDA3F5218947EB000CE0D70 /* findEyeCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = findEyeCenter.h; path = iSee/findEyeCenter.h; sourceTree = "<group>"; };
@@ -182,8 +180,6 @@
 				8A723FDD1599BB95008C72DB /* GLESImageView.mm */,
 				8AB6D04615B99B590029641C /* BaseSampleViewController.h */,
 				8AB6D04715B99B5A0029641C /* BaseSampleViewController.mm */,
-				4C67A83918943B30006DBCA7 /* DefaultSampleIcon.png */,
-				4C67A83A18943B30006DBCA7 /* DefaultSampleIcon~ipad.png */,
 				4C67A83B18943B30006DBCA7 /* Globals.cpp */,
 				4C67A83C18943B30006DBCA7 /* Globals.h */,
 				4C67A83D18943B30006DBCA7 /* SampleBase.cpp */,
@@ -211,7 +207,7 @@
 				4CDA3F5618947EB000CE0D70 /* helpers.cpp */,
 				4CDA3F5718947EB000CE0D70 /* helpers.h */,
 				4CDA3F4E18947EB000CE0D70 /* constants.h */,
-				4CDA3F4F18947EB000CE0D70 /* EyeDetection.cpp */,
+				4CDA3F4F18947EB000CE0D70 /* EyeDetection.mm */,
 				4CDA3F5018947EB000CE0D70 /* EyeDetection.hpp */,
 				4CDA3F5118947EB000CE0D70 /* findEyeCenter.cpp */,
 				4CDA3F5218947EB000CE0D70 /* findEyeCenter.h */,
@@ -437,7 +433,7 @@
 				4CDA3F5C18947EB000CE0D70 /* helpers.cpp in Sources */,
 				8A4388DC1597189A00027D3C /* main.mm in Sources */,
 				8A4388E81597B7BB00027D3C /* UIImage2OpenCV.mm in Sources */,
-				4CDA3F5818947EB000CE0D70 /* EyeDetection.cpp in Sources */,
+				4CDA3F5818947EB000CE0D70 /* EyeDetection.mm in Sources */,
 				8A723FC11599AC42008C72DB /* VideoSource.mm in Sources */,
 				8A723FDB1599BB74008C72DB /* VideoViewController.mm in Sources */,
 				8A723FDE1599BB95008C72DB /* GLESImageView.mm in Sources */,

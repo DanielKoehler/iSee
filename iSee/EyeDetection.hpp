@@ -28,7 +28,7 @@ public:
   virtual bool processFrame(cv::Mat& inputFrame, cv::Mat& outputFrame);
 
 private:
-  void detectAndDisplay(cv::Mat inputFrame, cv::Mat& outputFrame);
+  void detectAndDisplay(cv::Mat& inputFrame, cv::Mat& outputFrame);
   
   void findEyes(cv::Mat frame_gray, cv::Rect face, cv::Mat& outputFrame);
 

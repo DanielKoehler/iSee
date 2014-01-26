@@ -8,7 +8,6 @@
         <!--Detail View Controller - Detail-->
         <scene sceneID="16">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="15" sceneMemberID="firstResponder"/>
                 <viewController title="Detail" id="4" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="26">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
@@ -32,6 +31,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1254" y="-1818"/>
         </scene>
@@ -48,35 +48,6 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="81Y-4N-cYD">
-                                <rect key="frame" x="1" y="979" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem image="switchCamera.png" style="plain" id="n3D-dJ-ydc" userLabel="switchCameraButton">
-                                        <connections>
-                                            <action selector="toggleCameraPressed:" destination="K8a-OQ-WeD" id="ggC-hE-2aK"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9xd-hx-Ajn"/>
-                                    <barButtonItem image="photos_polaroid.png" style="plain" id="23d-4k-fUX" userLabel="CaptureReferenceFrameButton">
-                                        <connections>
-                                            <action selector="captureReferenceFrame:" destination="K8a-OQ-WeD" id="bY0-H1-LKr"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5z9-2U-tKS"/>
-                                    <barButtonItem image="refresh_straight_arrows.png" style="plain" id="BxJ-sk-12z" userLabel="ClearReferenceFrameButton">
-                                        <connections>
-                                            <action selector="clearReferenceFrame:" destination="K8a-OQ-WeD" id="E5Q-Mo-AeM"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Yh1-vR-nOF"/>
-                                    <barButtonItem image="cog_01.png" style="plain" id="ZgH-2B-QIm" userLabel="showOptionsButton">
-                                        <connections>
-                                            <action selector="showOptions:" destination="K8a-OQ-WeD" id="Rxc-VP-j1K"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -94,8 +65,6 @@
                     <connections>
                         <outlet property="actionSheetButton" destination="p92-gf-OY7" id="LCM-0O-r2h"/>
                         <outlet property="containerView" destination="abh-x4-lYu" id="Qt5-DY-d5V"/>
-                        <outlet property="options" destination="ZgH-2B-QIm" id="cn3-HU-r2P"/>
-                        <outlet property="toggleCameraButton" destination="n3D-dJ-ydc" id="cui-FS-res"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="peJ-8j-LDI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -105,7 +74,6 @@
         <!--Navigation Controller-->
         <scene sceneID="50">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="49" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="42" sceneMemberID="viewController">
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -116,16 +84,11 @@
                         <segue destination="4" kind="relationship" relationship="rootViewController" id="52"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="49" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-12" y="-1818"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="cog_01.png" width="26" height="26"/>
-        <image name="photos_polaroid.png" width="26" height="26"/>
-        <image name="refresh_straight_arrows.png" width="26" height="26"/>
-        <image name="switchCamera.png" width="43" height="26"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

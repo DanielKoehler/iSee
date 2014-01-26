@@ -1,106 +1,80 @@
 //
-//  EyeDetection.cpp
-//  OpenCV Tutorial
+//  ViewController.m
+//  openCViOSFaceTrackingTutorial
 //
-//  Created by BloodAxe on 7/8/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Evangelos Georgiou on 16/03/2013.
+//  Copyright (c) 2013 Evangelos Georgiou. All rights reserved.
 //
 
-#include <iostream>
-
-#include "opencv2/imgproc/imgproc.hpp"
-#include <opencv2/objdetect/objdetect.hpp>
-#include <opencv2/highgui/highgui.hpp>
-
-#include <iostream>
-#include <queue>
-#include <stdio.h>
-#include <math.h>
-
+#import "ViewController.h"
 #include "findEyeCenter.h"
 #include "findEyeCorner.h"
 #include "constants.h"
 
-#include "EyeDetection.hpp"
+//#include "EyeDetection.hpp"
 
-EyeDetectionSample::EyeDetectionSample()
+NSString* const faceCascadeFilename = @"haarcascade_frontalface_alt2";
+const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
+
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+
+@synthesize videoCamera;
+
+- (void)viewDidLoad
 {
-    flipped = true;
-    cv::String face_cascade_name = "/var/mobile/Applications/DCDB4A2F-A7E4-4F30-B743-5B6BC73A0B87/iSee.app/haarcascade_frontalface_alt.xml";
-    cv::CascadeClassifier face_cascade;
-    cv::RNG rng(12345);
-    cv::Mat debugImage;
-    cv::Mat skinCrCbHist = cv::Mat::zeros(cv::Size(256, 256), CV_8UC1);
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
     
-    createCornerKernels();
-    ellipse(skinCrCbHist, cv::Point(113, 155.6), cv::Size(23.4, 15.2),
-            43.0, 0.0, 360.0, cv::Scalar(255, 255, 255), -1);
-
-    if(!face_cascade.load(face_cascade_name)){ printf("--(!)Error loading face cascade, please change face_cascade_name in source code.\n");};
+    self.videoCamera = [[CvVideoCamera alloc] initWithParentView:imageView];
+    self.videoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
+    self.videoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
+    self.videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
+    self.videoCamera.defaultFPS = 30;
+    self.videoCamera.grayscaleMode = NO;
+    self.videoCamera.delegate = self;
+    
+    NSString* faceCascadePath = [[NSBundle mainBundle] pathForResource:faceCascadeFilename ofType:@"xml"];
+    faceCascade.load([faceCascadePath UTF8String]);
 }
 
-std::string EyeDetectionSample::getName() const
+- (void)didReceiveMemoryWarning
 {
-  return "Eye Detection";
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
-std::string EyeDetectionSample::getUserFriendlyName() const
+#pragma mark - Protocol CvVideoCameraDelegate
+
+#ifdef __cplusplus
+- (void)processImage:(Mat&)image;
 {
-  return getName() + " - " + m_currentEffect + " effect";
-}
-
-//! Returns a detailed sample description
-std::string EyeDetectionSample::getDescription() const
-{
-  return "Demonstrate various image filtering techniques";
-}
-
-//! Processes a frame and returns output image 
-bool EyeDetectionSample::processFrame(cv::Mat& inputFrame, cv::Mat& outputFrame)
-{
-//    inputFrame.copyTo(outputFrame);
+    Mat grayscaleFrame;
+    cvtColor(image, grayscaleFrame, CV_BGR2GRAY);
+    equalizeHist(grayscaleFrame, grayscaleFrame);
     
-//    cv::flip(inputFrame, inputFrame, 1);
-    
-    inputFrame.copyTo(debugImage);
-
-    if( !inputFrame.empty() ) {
-        detectAndDisplay( inputFrame, outputFrame );
-        debugImage.copyTo(outputFrame);
-    }
-    
-    
-    
-    return true;
-}
-
-void EyeDetectionSample::detectAndDisplay(cv::Mat inputFrame, cv::Mat& outputFrame) {
     std::vector<cv::Rect> faces;
+    faceCascade.detectMultiScale(grayscaleFrame, faces, 1.1, 2, HaarOptions, cv::Size(60, 60));
     
-    std::vector<cv::Mat> rgbChannels(3);
-    cv::split(inputFrame, rgbChannels);
-    cv::Mat frame_gray = rgbChannels[2];
-    
-    
-
-    //-- Detect faces
-    face_cascade.detectMultiScale( frame_gray, faces, 1.1, 2, 0|CV_HAAR_SCALE_IMAGE|CV_HAAR_FIND_BIGGEST_OBJECT, cv::Size(150, 150) );
-    //  findSkin(debugImage);
-    frame_gray.copyTo(debugImage);
-    for( int i = 0; i < faces.size(); i++ )
+    for (int i = 0; i < faces.size(); i++)
     {
-        printf("In first loop");
-        rectangle(debugImage, faces[i], 1234);
+//        cv::Point pt1(faces[i].x + faces[i].width, faces[i].y + faces[i].height);
+//        cv::Point pt2(faces[i].x, faces[i].y);
+        
+        cv::rectangle(image, faces[i], 1234);
     }
-    //-- Show what you got
     if (faces.size() > 0) {
-        findEyes(frame_gray, faces[0], outputFrame);
+        [self findEyes:grayscaleFrame withFace:faces[0] output:image];
     }
 }
 
-void EyeDetectionSample::findEyes(cv::Mat frame_gray, cv::Rect face, cv::Mat &outputFrame) {
+- (void) findEyes:(Mat)frame_gray withFace: (cv::Rect) face output:(Mat&) outputFrame {
     cv::Mat faceROI = frame_gray(face);
-    cv::Mat debugFace = faceROI;
+    cv::Mat debugFace = outputFrame;
     
     if (kSmoothFaceImage) {
         double sigma = kSmoothFaceFactor * face.width;
@@ -116,8 +90,8 @@ void EyeDetectionSample::findEyes(cv::Mat frame_gray, cv::Rect face, cv::Mat &ou
                             eye_region_top,eye_region_width,eye_region_height);
     
     //-- Find Eye Centers
-    cv::Point leftPupil = findEyeCenter(faceROI,leftEyeRegion,"Left Eye");
-    cv::Point rightPupil = findEyeCenter(faceROI,rightEyeRegion,"Right Eye");
+    cv::Point leftPupil = findEyeCenter(faceROI,leftEyeRegion,outputFrame);
+    cv::Point rightPupil = findEyeCenter(faceROI,rightEyeRegion,outputFrame);
     // get corner regions
     cv::Rect leftRightCornerRegion(leftEyeRegion);
     leftRightCornerRegion.width -= leftPupil.x;
@@ -169,8 +143,22 @@ void EyeDetectionSample::findEyes(cv::Mat frame_gray, cv::Rect face, cv::Mat &ou
         circle(faceROI, rightLeftCorner, 3, 200);
         circle(faceROI, rightRightCorner, 3, 200);
     }
-
-    faceROI.copyTo(debugImage);
+    
+    debugFace.copyTo(outputFrame);
 }
 
+#endif
 
+#pragma mark - UI Actions
+
+- (IBAction)startCamera:(id)sender
+{
+    [self.videoCamera start];
+}
+
+- (IBAction)stopCamera:(id)sender
+{
+    [self.videoCamera stop];
+}
+
+@end

@@ -34,7 +34,29 @@
     AVCaptureDevice *videoDevice = [captureDevices objectAtIndex:0];
 
     NSError * error;
-    captureInput = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:&error];
+      
+    AVCaptureDevicePosition currentCameraPosition = [videoDevice position];
+
+    if (currentCameraPosition == AVCaptureDevicePositionBack)
+    {
+      currentCameraPosition = AVCaptureDevicePositionFront;
+    }
+    else
+    {
+      currentCameraPosition = AVCaptureDevicePositionBack;
+    }
+
+    AVCaptureDevice *backFacingCamera = nil;
+    NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+    for (AVCaptureDevice *device in devices)
+    {
+      if ([device position] == currentCameraPosition)
+      {
+          backFacingCamera = device;
+      }
+    }
+      
+    captureInput = [AVCaptureDeviceInput deviceInputWithDevice:backFacingCamera error:&error];
     
     if (error)
     {

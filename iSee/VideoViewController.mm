@@ -27,11 +27,7 @@
 
 @implementation VideoViewController
 @synthesize actionSheetButton;
-@synthesize captureReferenceFrameButton;
-@synthesize clearReferenceFrameButton;
-@synthesize options;
 @synthesize imageView;
-@synthesize toggleCameraButton;
 @synthesize containerView;
 @synthesize optionsPopover;
 @synthesize optionsView;
@@ -70,10 +66,6 @@
     
     [videoSource startRunning];
     
-    toggleCameraButton.enabled = [videoSource hasMultipleCameras];
-    captureReferenceFrameButton.enabled = self.currentSample.isReferenceFrameRequired;
-    clearReferenceFrameButton.enabled   = self.currentSample.isReferenceFrameRequired;
-    
 }
 
 - (void) viewDidDisappear:(BOOL)animated
@@ -104,11 +96,6 @@
     }
 }
 
-- (IBAction)toggleCameraPressed:(id)sender
-{
-    [videoSource toggleCamera];
-}
-
 - (IBAction)showActionSheet:(id)sender
 {
     if ([self.actionSheet isVisible])
@@ -119,51 +106,9 @@
 
 - (void)viewDidUnload
 {
-    [self setToggleCameraButton:nil];
     [self setContainerView:nil];
-    [self setOptions:nil];
-    [self setActionSheetButton:nil];
-    [self setCaptureReferenceFrameButton:nil];
-    [self setClearReferenceFrameButton:nil];
+    [self setActionSheetButton:nil];;
     [super viewDidUnload];
-}
-
-- (IBAction)showOptions:(id)sender
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
-    {
-        if ([self.optionsView superview])
-        {
-            [UIView transitionFromView:self.optionsView
-                                toView:imageView
-                              duration:kTransitionDuration
-                               options:UIViewAnimationOptionTransitionFlipFromLeft
-                            completion:^(BOOL)
-             {
-             }];
-        }
-        else
-        {
-            [self.optionsView setFrame:self.containerView.frame];
-            [self.optionsView setNeedsLayout];
-            
-            [UIView transitionFromView:self.imageView
-                                toView:optionsView
-                              duration:kTransitionDuration
-                               options:UIViewAnimationOptionTransitionFlipFromLeft
-                            completion:^(BOOL)
-             {
-                 [self.optionsView reloadData];
-             }];
-        }
-    }
-    else
-    {
-        if ([self.optionsPopover isPopoverVisible])
-            [self.optionsPopover dismissPopoverAnimated:YES];
-        else
-            [self.optionsPopover presentPopoverFromBarButtonItem:options permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-    }
 }
 
 #pragma mark - VideoSourceDelegate
@@ -215,44 +160,6 @@
     [videoSource stopRunning];
 }
 
-#pragma mark - Capture reference frame
 
-- (IBAction) captureReferenceFrame:(id) sender
-{    
-    bool isMainQueue = dispatch_get_current_queue() == dispatch_get_main_queue();
-    
-    if (isMainQueue)
-    {
-        [self.currentSample setReferenceFrame:outputFrame];
-    }
-    else
-    {
-        dispatch_sync( dispatch_get_main_queue(),
-                      ^{
-                          [self.currentSample setReferenceFrame:outputFrame];
-                      }
-                      );
-    }
-}
-
-#pragma mark - Clear reference frame
-
-- (IBAction) clearReferenceFrame:(id) sender
-{
-    bool isMainQueue = dispatch_get_current_queue() == dispatch_get_main_queue();
-    
-    if (isMainQueue)
-    {
-        [self.currentSample resetReferenceFrame];
-    }
-    else
-    {
-        dispatch_sync( dispatch_get_main_queue(), 
-                      ^{ 
-                          [self.currentSample resetReferenceFrame];
-                      }
-                      );
-    }
-}
 
 @end
