@@ -67,6 +67,9 @@
     
     SampleFacade * sample = appDel->allSamples[0];
     
+    cv::String face_cascade_name = cv::String([[[NSBundle mainBundle] pathForResource:@"haarcascade_frontalface_alt" ofType:@"xml"] cStringUsingEncoding:NSUTF8StringEncoding]);
+//    NSLog(face_cascade_name)
+    
     
     [self setDetailItem:sample];
     

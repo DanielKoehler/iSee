@@ -7,18 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CB2B8C01894703E00423F9B /* EyeDetection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2B8B61894703E00423F9B /* EyeDetection.cpp */; };
-		3CB2B8C11894703E00423F9B /* findEyeCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2B8B81894703E00423F9B /* findEyeCenter.cpp */; };
-		3CB2B8C21894703E00423F9B /* findEyeCorner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2B8BA1894703E00423F9B /* findEyeCorner.cpp */; };
-		3CB2B8C31894703E00423F9B /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3CB2B8BC1894703E00423F9B /* haarcascade_frontalface_alt.xml */; };
-		3CB2B8C41894703E00423F9B /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2B8BD1894703E00423F9B /* helpers.cpp */; };
-		3CB2B8C51894703E00423F9B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2B8BF1894703E00423F9B /* main.cpp */; };
-		4C67A84318943B30006DBCA7 /* DefaultSampleIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C67A83918943B30006DBCA7 /* DefaultSampleIcon.png */; };
-		4C67A84418943B30006DBCA7 /* DefaultSampleIcon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C67A83A18943B30006DBCA7 /* DefaultSampleIcon~ipad.png */; };
 		4C67A84518943B30006DBCA7 /* Globals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C67A83B18943B30006DBCA7 /* Globals.cpp */; };
 		4C67A84618943B30006DBCA7 /* SampleBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C67A83D18943B30006DBCA7 /* SampleBase.cpp */; };
 		4C67A84718943B30006DBCA7 /* SampleFacade.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C67A84018943B30006DBCA7 /* SampleFacade.mm */; };
 		4C67A84818943B30006DBCA7 /* SampleOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C67A84118943B30006DBCA7 /* SampleOptions.cpp */; };
+		4CDA3F5818947EB000CE0D70 /* EyeDetection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA3F4F18947EB000CE0D70 /* EyeDetection.cpp */; };
+		4CDA3F5918947EB000CE0D70 /* findEyeCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA3F5118947EB000CE0D70 /* findEyeCenter.cpp */; };
+		4CDA3F5A18947EB000CE0D70 /* findEyeCorner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA3F5318947EB000CE0D70 /* findEyeCorner.cpp */; };
+		4CDA3F5B18947EB000CE0D70 /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4CDA3F5518947EB000CE0D70 /* haarcascade_frontalface_alt.xml */; };
+		4CDA3F5C18947EB000CE0D70 /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA3F5618947EB000CE0D70 /* helpers.cpp */; };
 		8A00096F15AD6DF9001EA42D /* OptionCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A00096E15AD6DF9001EA42D /* OptionCell.mm */; };
 		8A00097315AE0F0A001EA42D /* OptionsTableView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A00097215AE0F09001EA42D /* OptionsTableView.mm */; };
 		8A43889A1595DE5800027D3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4388681595BC4F00027D3C /* UIKit.framework */; };
@@ -29,7 +26,6 @@
 		8A4388B41595DE5800027D3C /* DetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4388B31595DE5800027D3C /* DetailViewController.mm */; };
 		8A4388DC1597189A00027D3C /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4388741595BC4F00027D3C /* main.mm */; };
 		8A4388E81597B7BB00027D3C /* UIImage2OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4388E71597B7BB00027D3C /* UIImage2OpenCV.mm */; };
-		8A66F71515DA85BA00EF1959 /* VideoTrackingSampleIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A66F71415DA85BA00EF1959 /* VideoTrackingSampleIcon.png */; };
 		8A723FC11599AC42008C72DB /* VideoSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A723FC01599AC42008C72DB /* VideoSource.mm */; };
 		8A723FC81599B6EE008C72DB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A723FC71599B6EE008C72DB /* AVFoundation.framework */; };
 		8A723FCB1599B6F2008C72DB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A723FC91599B6F2008C72DB /* GLKit.framework */; };
@@ -63,17 +59,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3CB2B8B51894703E00423F9B /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
-		3CB2B8B61894703E00423F9B /* EyeDetection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EyeDetection.cpp; sourceTree = "<group>"; };
-		3CB2B8B71894703E00423F9B /* EyeDetection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EyeDetection.hpp; sourceTree = "<group>"; };
-		3CB2B8B81894703E00423F9B /* findEyeCenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = findEyeCenter.cpp; sourceTree = "<group>"; };
-		3CB2B8B91894703E00423F9B /* findEyeCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = findEyeCenter.h; sourceTree = "<group>"; };
-		3CB2B8BA1894703E00423F9B /* findEyeCorner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = findEyeCorner.cpp; sourceTree = "<group>"; };
-		3CB2B8BB1894703E00423F9B /* findEyeCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = findEyeCorner.h; sourceTree = "<group>"; };
-		3CB2B8BC1894703E00423F9B /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
-		3CB2B8BD1894703E00423F9B /* helpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = helpers.cpp; sourceTree = "<group>"; };
-		3CB2B8BE1894703E00423F9B /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
-		3CB2B8BF1894703E00423F9B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4C67A83918943B30006DBCA7 /* DefaultSampleIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultSampleIcon.png; sourceTree = "<group>"; };
 		4C67A83A18943B30006DBCA7 /* DefaultSampleIcon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DefaultSampleIcon~ipad.png"; sourceTree = "<group>"; };
 		4C67A83B18943B30006DBCA7 /* Globals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Globals.cpp; sourceTree = "<group>"; };
@@ -84,6 +69,16 @@
 		4C67A84018943B30006DBCA7 /* SampleFacade.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SampleFacade.mm; sourceTree = "<group>"; };
 		4C67A84118943B30006DBCA7 /* SampleOptions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SampleOptions.cpp; sourceTree = "<group>"; };
 		4C67A84218943B30006DBCA7 /* SampleOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleOptions.h; sourceTree = "<group>"; };
+		4CDA3F4E18947EB000CE0D70 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = constants.h; path = iSee/constants.h; sourceTree = "<group>"; };
+		4CDA3F4F18947EB000CE0D70 /* EyeDetection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EyeDetection.cpp; path = iSee/EyeDetection.cpp; sourceTree = "<group>"; };
+		4CDA3F5018947EB000CE0D70 /* EyeDetection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = EyeDetection.hpp; path = iSee/EyeDetection.hpp; sourceTree = "<group>"; };
+		4CDA3F5118947EB000CE0D70 /* findEyeCenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = findEyeCenter.cpp; path = iSee/findEyeCenter.cpp; sourceTree = "<group>"; };
+		4CDA3F5218947EB000CE0D70 /* findEyeCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = findEyeCenter.h; path = iSee/findEyeCenter.h; sourceTree = "<group>"; };
+		4CDA3F5318947EB000CE0D70 /* findEyeCorner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = findEyeCorner.cpp; path = iSee/findEyeCorner.cpp; sourceTree = "<group>"; };
+		4CDA3F5418947EB000CE0D70 /* findEyeCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = findEyeCorner.h; path = iSee/findEyeCorner.h; sourceTree = "<group>"; };
+		4CDA3F5518947EB000CE0D70 /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = haarcascade_frontalface_alt.xml; path = iSee/haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
+		4CDA3F5618947EB000CE0D70 /* helpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = helpers.cpp; path = iSee/helpers.cpp; sourceTree = "<group>"; };
+		4CDA3F5718947EB000CE0D70 /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = helpers.h; path = iSee/helpers.h; sourceTree = "<group>"; };
 		8A00096D15AD6DF8001EA42D /* OptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionCell.h; sourceTree = "<group>"; };
 		8A00096E15AD6DF9001EA42D /* OptionCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OptionCell.mm; sourceTree = "<group>"; };
 		8A00097115AE0F08001EA42D /* OptionsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsTableView.h; sourceTree = "<group>"; };
@@ -104,7 +99,6 @@
 		8A4388E61597B75400027D3C /* UIImage2OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImage2OpenCV.h; sourceTree = "<group>"; };
 		8A4388E71597B7BB00027D3C /* UIImage2OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UIImage2OpenCV.mm; sourceTree = "<group>"; };
 		8A4388F01597C49B00027D3C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		8A66F71415DA85BA00EF1959 /* VideoTrackingSampleIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VideoTrackingSampleIcon.png; sourceTree = "<group>"; };
 		8A723FBF1599AC42008C72DB /* VideoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSource.h; sourceTree = "<group>"; };
 		8A723FC01599AC42008C72DB /* VideoSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoSource.mm; sourceTree = "<group>"; };
 		8A723FC71599B6EE008C72DB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -175,24 +169,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3CB2B8B41894702800423F9B /* Eye Tracking */ = {
-			isa = PBXGroup;
-			children = (
-				3CB2B8B51894703E00423F9B /* constants.h */,
-				3CB2B8B61894703E00423F9B /* EyeDetection.cpp */,
-				3CB2B8B71894703E00423F9B /* EyeDetection.hpp */,
-				3CB2B8B81894703E00423F9B /* findEyeCenter.cpp */,
-				3CB2B8B91894703E00423F9B /* findEyeCenter.h */,
-				3CB2B8BA1894703E00423F9B /* findEyeCorner.cpp */,
-				3CB2B8BB1894703E00423F9B /* findEyeCorner.h */,
-				3CB2B8BC1894703E00423F9B /* haarcascade_frontalface_alt.xml */,
-				3CB2B8BD1894703E00423F9B /* helpers.cpp */,
-				3CB2B8BE1894703E00423F9B /* helpers.h */,
-				3CB2B8BF1894703E00423F9B /* main.cpp */,
-			);
-			name = "Eye Tracking";
-			sourceTree = "<group>";
-		};
 		4C67A84918943B3F006DBCA7 /* Base Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,9 +205,27 @@
 			name = Neno;
 			sourceTree = "<group>";
 		};
+		4CDA3F5D18947EB800CE0D70 /* Eye Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				4CDA3F5618947EB000CE0D70 /* helpers.cpp */,
+				4CDA3F5718947EB000CE0D70 /* helpers.h */,
+				4CDA3F4E18947EB000CE0D70 /* constants.h */,
+				4CDA3F4F18947EB000CE0D70 /* EyeDetection.cpp */,
+				4CDA3F5018947EB000CE0D70 /* EyeDetection.hpp */,
+				4CDA3F5118947EB000CE0D70 /* findEyeCenter.cpp */,
+				4CDA3F5218947EB000CE0D70 /* findEyeCenter.h */,
+				4CDA3F5318947EB000CE0D70 /* findEyeCorner.cpp */,
+				4CDA3F5418947EB000CE0D70 /* findEyeCorner.h */,
+			);
+			name = "Eye Tracking";
+			sourceTree = "<group>";
+		};
 		8A4388591595BC4E00027D3C = {
 			isa = PBXGroup;
 			children = (
+				4CDA3F5518947EB000CE0D70 /* haarcascade_frontalface_alt.xml */,
+				4CDA3F5D18947EB800CE0D70 /* Eye Tracking */,
 				8A43886E1595BC4F00027D3C /* iSee */,
 				8A4388671595BC4F00027D3C /* Frameworks */,
 				8A4388651595BC4F00027D3C /* Products */,
@@ -270,7 +264,6 @@
 		8A43886E1595BC4F00027D3C /* iSee */ = {
 			isa = PBXGroup;
 			children = (
-				3CB2B8B41894702800423F9B /* Eye Tracking */,
 				8AA7F84E15A462250052C95A /* View Controllers */,
 				8AB6D05115BDEB320029641C /* Video Tracking */,
 				8A43886F1595BC4F00027D3C /* Supporting Files */,
@@ -354,7 +347,6 @@
 		8AB6D05115BDEB320029641C /* Video Tracking */ = {
 			isa = PBXGroup;
 			children = (
-				8A66F71415DA85BA00EF1959 /* VideoTrackingSampleIcon.png */,
 				8AB6D04D15BDEB220029641C /* VideoTracking.hpp */,
 				8AB6D04F15BDEB2F0029641C /* VideoTracking.cpp */,
 			);
@@ -397,12 +389,7 @@
 		8A43885B1595BC4E00027D3C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
-				TargetAttributes = {
-					8A4388971595DE5800027D3C = {
-						DevelopmentTeam = KCZV32S26D;
-					};
-				};
+				LastUpgradeCheck = 0440;
 			};
 			buildConfigurationList = 8A43885E1595BC4E00027D3C /* Build configuration list for PBXProject "iSee" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -426,16 +413,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CB2B8C31894703E00423F9B /* haarcascade_frontalface_alt.xml in Resources */,
+				4CDA3F5B18947EB000CE0D70 /* haarcascade_frontalface_alt.xml in Resources */,
 				8A4388AE1595DE5800027D3C /* MainStoryboard_iPad.storyboard in Resources */,
 				8A7934BD15AB5C5A0043BE99 /* BooleanTableViewCell.xib in Resources */,
 				8A7934BF15AB5CB20043BE99 /* FloatTableViewCell.xib in Resources */,
-				4C67A84418943B30006DBCA7 /* DefaultSampleIcon~ipad.png in Resources */,
 				8A7934C115AB5D490043BE99 /* Int32TableViewCell.xib in Resources */,
 				8A7934C315AB5D560043BE99 /* EnumTableViewCell.xib in Resources */,
-				4C67A84318943B30006DBCA7 /* DefaultSampleIcon.png in Resources */,
 				8AFE53CB15D7E3B200E7ADEB /* DoubleTableViewCell.xib in Resources */,
-				8A66F71515DA85BA00EF1959 /* VideoTrackingSampleIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,21 +433,20 @@
 				4C67A84518943B30006DBCA7 /* Globals.cpp in Sources */,
 				8A4388A81595DE5800027D3C /* AppDelegate.mm in Sources */,
 				8A4388B41595DE5800027D3C /* DetailViewController.mm in Sources */,
+				4CDA3F5918947EB000CE0D70 /* findEyeCenter.cpp in Sources */,
+				4CDA3F5C18947EB000CE0D70 /* helpers.cpp in Sources */,
 				8A4388DC1597189A00027D3C /* main.mm in Sources */,
 				8A4388E81597B7BB00027D3C /* UIImage2OpenCV.mm in Sources */,
+				4CDA3F5818947EB000CE0D70 /* EyeDetection.cpp in Sources */,
 				8A723FC11599AC42008C72DB /* VideoSource.mm in Sources */,
 				8A723FDB1599BB74008C72DB /* VideoViewController.mm in Sources */,
 				8A723FDE1599BB95008C72DB /* GLESImageView.mm in Sources */,
 				4C67A84718943B30006DBCA7 /* SampleFacade.mm in Sources */,
-				3CB2B8C51894703E00423F9B /* main.cpp in Sources */,
 				8AA7F85115A462400052C95A /* FPSCalculator.mm in Sources */,
 				8A79349F15A9ADA20043BE99 /* BooleanTableViewCell.mm in Sources */,
 				8A7934A815AB47070043BE99 /* SampleOptionsTableViewDelegate.mm in Sources */,
-				3CB2B8C41894703E00423F9B /* helpers.cpp in Sources */,
 				8A7934AB15AB48C80043BE99 /* NSString+StdString.mm in Sources */,
-				3CB2B8C21894703E00423F9B /* findEyeCorner.cpp in Sources */,
 				4C67A84818943B30006DBCA7 /* SampleOptions.cpp in Sources */,
-				3CB2B8C11894703E00423F9B /* findEyeCenter.cpp in Sources */,
 				8A7934C715AB5E2F0043BE99 /* Int32TableViewCell.mm in Sources */,
 				8A7934CA15AB5E3A0043BE99 /* FloatTableViewCell.mm in Sources */,
 				8A7934CD15AB5E440043BE99 /* EnumTableViewCell.mm in Sources */,
@@ -474,8 +457,8 @@
 				4C67A84618943B30006DBCA7 /* SampleBase.cpp in Sources */,
 				8AB6D05015BDEB2F0029641C /* VideoTracking.cpp in Sources */,
 				8AFE53CA15D7E3B200E7ADEB /* DoubleTableViewCell.mm in Sources */,
-				3CB2B8C01894703E00423F9B /* EyeDetection.cpp in Sources */,
 				8AFE53CF15D7F18E00E7ADEB /* cvneon.cpp in Sources */,
+				4CDA3F5A18947EB000CE0D70 /* findEyeCorner.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,13 +488,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -529,16 +507,12 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = "";
-				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "";
@@ -553,13 +527,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -570,11 +539,8 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;

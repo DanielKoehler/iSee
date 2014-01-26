@@ -28,9 +28,9 @@ public:
   virtual bool processFrame(cv::Mat& inputFrame, cv::Mat& outputFrame);
 
 private:
-  void detectAndDisplay(cv::Mat& inputFrame);
+  void detectAndDisplay(cv::Mat inputFrame, cv::Mat& outputFrame);
   
-  void findEyes(const cv::Mat frame_gray, cv::Rect face);
+  void findEyes(cv::Mat frame_gray, cv::Rect face, cv::Mat& outputFrame);
 
   std::string m_currentEffect;
 

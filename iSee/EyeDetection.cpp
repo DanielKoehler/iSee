@@ -22,14 +22,21 @@
 #include "constants.h"
 
 #include "EyeDetection.hpp"
+
 EyeDetectionSample::EyeDetectionSample()
 {
-    flipped = false;
-    cv::String face_cascade_name = "haarcascade_frontalface_alt.xml";
+    flipped = true;
+    cv::String face_cascade_name = "/var/mobile/Applications/DCDB4A2F-A7E4-4F30-B743-5B6BC73A0B87/iSee.app/haarcascade_frontalface_alt.xml";
     cv::CascadeClassifier face_cascade;
     cv::RNG rng(12345);
     cv::Mat debugImage;
     cv::Mat skinCrCbHist = cv::Mat::zeros(cv::Size(256, 256), CV_8UC1);
+    
+    createCornerKernels();
+    ellipse(skinCrCbHist, cv::Point(113, 155.6), cv::Size(23.4, 15.2),
+            43.0, 0.0, 360.0, cv::Scalar(255, 255, 255), -1);
+
+    if(!face_cascade.load(face_cascade_name)){ printf("--(!)Error loading face cascade, please change face_cascade_name in source code.\n");};
 }
 
 std::string EyeDetectionSample::getName() const
@@ -51,41 +58,47 @@ std::string EyeDetectionSample::getDescription() const
 //! Processes a frame and returns output image 
 bool EyeDetectionSample::processFrame(cv::Mat& inputFrame, cv::Mat& outputFrame)
 {
-    if (flipped){
-        cv::flip(inputFrame, inputFrame, 1);
-    }
+//    inputFrame.copyTo(outputFrame);
+    
+//    cv::flip(inputFrame, inputFrame, 1);
+    
+    inputFrame.copyTo(debugImage);
+
     if( !inputFrame.empty() ) {
-      detectAndDisplay( inputFrame );
+        detectAndDisplay( inputFrame, outputFrame );
+        debugImage.copyTo(outputFrame);
     }
+    
+    
+    
     return true;
 }
 
-void EyeDetectionSample::detectAndDisplay(cv::Mat& inputFrame ) {
+void EyeDetectionSample::detectAndDisplay(cv::Mat inputFrame, cv::Mat& outputFrame) {
     std::vector<cv::Rect> faces;
-    //cv::Mat frame_gray;
     
     std::vector<cv::Mat> rgbChannels(3);
     cv::split(inputFrame, rgbChannels);
     cv::Mat frame_gray = rgbChannels[2];
     
-    //cvtColor( frame, frame_gray, CV_BGR2GRAY );
-    //equalizeHist( frame_gray, frame_gray );
-    //cv::pow(frame_gray, CV_64F, frame_gray);
+    
+
     //-- Detect faces
     face_cascade.detectMultiScale( frame_gray, faces, 1.1, 2, 0|CV_HAAR_SCALE_IMAGE|CV_HAAR_FIND_BIGGEST_OBJECT, cv::Size(150, 150) );
     //  findSkin(debugImage);
-    
+    frame_gray.copyTo(debugImage);
     for( int i = 0; i < faces.size(); i++ )
     {
+        printf("In first loop");
         rectangle(debugImage, faces[i], 1234);
     }
     //-- Show what you got
     if (faces.size() > 0) {
-        findEyes(frame_gray, faces[0]);
+        findEyes(frame_gray, faces[0], outputFrame);
     }
 }
 
-void EyeDetectionSample::findEyes(const cv::Mat frame_gray, cv::Rect face) {
+void EyeDetectionSample::findEyes(cv::Mat frame_gray, cv::Rect face, cv::Mat &outputFrame) {
     cv::Mat faceROI = frame_gray(face);
     cv::Mat debugFace = faceROI;
     
@@ -156,8 +169,8 @@ void EyeDetectionSample::findEyes(const cv::Mat frame_gray, cv::Rect face) {
         circle(faceROI, rightLeftCorner, 3, 200);
         circle(faceROI, rightRightCorner, 3, 200);
     }
-//
-//    imshow(face_window_name, faceROI);
+
+    faceROI.copyTo(debugImage);
 }
 
 
