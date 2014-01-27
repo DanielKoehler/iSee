@@ -13,6 +13,13 @@ The iOS app uses a few open source componenets:
 - [OpenCV](https://github.com/Itseez/opencv) For face and feature detection.
 - [eyeLike](https://github.com/trishume/eyeLike) C++ project which we ported to iOS for accurate eye tracking, based on this [paper](http://www.inb.uni-luebeck.de/publikationen/pdfs/TiBa11b.pdf)
 
+TODO
+==========================
+Even though the hack day has finished, software development never does! We are keen to improve this application, as soon as we get our hands on an ipad.
+
+- [Investigate adding eye corners tracking](https://github.com/DanielKoehler/iSee/issues/3)
+- [Landscape Mode Tracking](https://github.com/DanielKoehler/iSee/issues/2)
+
 Contributors
 ==========================
  * [Tharshan Muthulingam](http://github.com/viperfx)
