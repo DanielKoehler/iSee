@@ -1,20 +1,19 @@
 //
 //  AppDelegate.h
-//  OpenCV Tutorial
+//  openCViOSFaceTrackingTutorial
 //
-//  Created by BloodAxe on 6/23/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Evangelos Georgiou on 16/03/2013.
+//  Copyright (c) 2013 Evangelos Georgiou. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "SampleBase.h"
-#import "SampleFacade.h"
+
+@class ViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-{
-@public
-  std::vector<SampleFacade*> allSamples;
-}
+
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) ViewController *viewController;
 
 @end

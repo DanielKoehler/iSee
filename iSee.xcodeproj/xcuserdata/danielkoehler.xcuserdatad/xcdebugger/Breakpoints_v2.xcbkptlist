@@ -9,89 +9,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iSee/EyeDetection.mm"
-            timestampString = "412422519.926582"
+            filePath = "iSee/ViewController.mm"
+            timestampString = "412434469.420093"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "EyeDetectionSample::EyeDetectionSample()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EyeDetectionSample::EyeDetectionSample()"
-                  moduleName = "iSee"
-                  urlString = "file:///Users/danielkoehler/Google%20Drive/GitHub/iSee/iSee/EyeDetection.mm"
-                  timestampString = "412422981.160769"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "810">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EyeDetectionSample::EyeDetectionSample()"
-                  moduleName = "iSee"
-                  urlString = "file:///Users/danielkoehler/Google%20Drive/GitHub/iSee/iSee/EyeDetection.mm"
-                  timestampString = "412422981.161006"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "906">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EyeDetectionSample::EyeDetectionSample()"
-                  moduleName = "iSee"
-                  urlString = "file:///Users/danielkoehler/Google%20Drive/GitHub/iSee/iSee/EyeDetection.mm"
-                  timestampString = "412422981.161151"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "954">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iSee/EyeDetection.mm"
-            timestampString = "412422643.062271"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "EyeDetectionSample::EyeDetectionSample()"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "-findEyes:withFace:output:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iSee/EyeDetection.mm"
-            timestampString = "412426402.396164"
+            filePath = "iSee/ViewController.mm"
+            timestampString = "412434469.420093"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "EyeDetectionSample::detectAndDisplay(cv::Mat&amp; inputFrame, cv::Mat&amp; outputFrame)"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "-findEyes:withFace:output:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

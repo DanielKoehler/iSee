@@ -1,9 +1,9 @@
 //
 //  main.m
-//  OpenCV Tutorial
+//  openCViOSFaceTrackingTutorial
 //
-//  Created by BloodAxe on 6/23/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Evangelos Georgiou on 16/03/2013.
+//  Copyright (c) 2013 Evangelos Georgiou. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-  @autoreleasepool {
-      return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-  }
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    }
 }
