@@ -3,12 +3,12 @@
 //  iSee
 //
 //  Created by Daniel Koehler on 26/01/2014.
-//  Copyright (c) 2014 Evangelos Georgiou. All rights reserved.
+//  Copyright (c) 2014 Daniel Koehler. All rights reserved.
 //
 
 #import "VideoAcuityChecker.h"
 
-#include "findEyeCenter.h"
+#include "findEyeCentre.h"
 #include "findEyeCorner.h"
 #include "constants.h"
 
@@ -124,8 +124,8 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
                             eye_region_top,eye_region_width,eye_region_height);
     
     //-- Find Eye Centers
-    cv::Point leftPupil = findEyeCenter(faceROI,leftEyeRegion,outputFrame);
-    cv::Point rightPupil = findEyeCenter(faceROI,rightEyeRegion,outputFrame);
+    cv::Point leftPupil = findEyeCentre(faceROI,leftEyeRegion,outputFrame);
+    cv::Point rightPupil = findEyeCentre(faceROI,rightEyeRegion,outputFrame);
     // get corner regions
     cv::Rect leftRightCornerRegion(leftEyeRegion);
     leftRightCornerRegion.width -= leftPupil.x;

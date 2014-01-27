@@ -46,13 +46,6 @@
     self.checker = [[VideoAcuityChecker alloc] init];
     [(VideoAcuityChecker*)self.checker start];
 
-    // We must retain this as initWithTarget:action: doesn't
-//    self.checker = [[MRAcuityChecker alloc] init];
-
-//    self.tapRecognizer =
-//    [[UITapGestureRecognizer alloc] initWithTarget:self.checker
-//                                            action:@selector(handleSingleTap:)];
-//    [self.view addGestureRecognizer:self.tapRecognizer];
 
     // Match acuityView's background to the Cardiff Cards image background
     self.acuityView.backgroundColor = [UIColor colorWithRed:177.0/255.0
@@ -152,14 +145,6 @@
 
             if (!self.model.trialSetSuccessful) {  // if set failed, register that's the case
                 [self stopNSTimer];
-//                NSString *msg = [NSString stringWithFormat:@"Rating: %@", self.model.currentDiagnosis];
-//                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:msg
-//                                                                message:nil
-//                                                               delegate:nil
-//                                                      cancelButtonTitle:@"Restart"
-//                                                      otherButtonTitles:nil];
-//                alert.delegate = self;
-//                [alert show];
                 [self performSegueWithIdentifier:@"ShowDiagnosis" sender:self];
             }
         }

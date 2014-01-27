@@ -1,3 +1,11 @@
+//
+//  findEyeCorner.h
+//  iSee
+//
+//  Created by Daniel Koehler on 26/01/2014.
+//  Copyright (c) 2014 Daniel Koehler. All rights reserved.
+//
+
 #ifndef EYE_CORNER_H
 #define EYE_CORNER_H
 

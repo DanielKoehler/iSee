@@ -16,7 +16,6 @@
 		449A600216F497F200249104 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 449A600116F497F200249104 /* Default.png */; };
 		449A600416F497F200249104 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449A600316F497F200249104 /* Default@2x.png */; };
 		449A600616F497F200249104 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449A600516F497F200249104 /* Default-568h@2x.png */; };
-		449A600916F497F200249104 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 449A600816F497F200249104 /* ViewController.mm */; };
 		449A601316F4981600249104 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A601216F4981600249104 /* opencv2.framework */; };
 		449A601516F4982800249104 /* haarcascade_frontalface_alt2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 449A601416F4982800249104 /* haarcascade_frontalface_alt2.xml */; };
 		449A601D16F4986300249104 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A601616F4986300249104 /* Accelerate.framework */; };
@@ -37,7 +36,7 @@
 		4C4550AA1895475B00BC6A2C /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550A61895475B00BC6A2C /* UIImage+Resize.m */; };
 		4C4550AB1895475B00BC6A2C /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550A81895475B00BC6A2C /* UIImage+RoundedCorner.m */; };
 		4C4550AE189547F500BC6A2C /* VideoAcuityChecker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */; };
-		4CD179C81895235100A8A660 /* findEyeCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C11895235100A8A660 /* findEyeCenter.cpp */; };
+		4CD179C81895235100A8A660 /* findEyeCentre.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C11895235100A8A660 /* findEyeCentre.cpp */; };
 		4CD179C91895235100A8A660 /* findEyeCorner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C31895235100A8A660 /* findEyeCorner.cpp */; };
 		4CD179CA1895235100A8A660 /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C51895235100A8A660 /* helpers.cpp */; };
 		4CD179CD18952E1B00A8A660 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD179CC18952E1B00A8A660 /* Storyboard.storyboard */; };
@@ -57,8 +56,6 @@
 		449A600116F497F200249104 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		449A600316F497F200249104 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		449A600516F497F200249104 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		449A600716F497F200249104 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		449A600816F497F200249104 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		449A601216F4981600249104 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		449A601416F4982800249104 /* haarcascade_frontalface_alt2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt2.xml; sourceTree = "<group>"; };
 		449A601616F4986300249104 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -90,8 +87,8 @@
 		4C4550AC189547F500BC6A2C /* VideoAcuityChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoAcuityChecker.h; sourceTree = "<group>"; };
 		4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoAcuityChecker.mm; sourceTree = "<group>"; };
 		4C4550AF1895508600BC6A2C /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
-		4CD179C11895235100A8A660 /* findEyeCenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = findEyeCenter.cpp; sourceTree = "<group>"; };
-		4CD179C21895235100A8A660 /* findEyeCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = findEyeCenter.h; sourceTree = "<group>"; };
+		4CD179C11895235100A8A660 /* findEyeCentre.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = findEyeCentre.cpp; sourceTree = "<group>"; };
+		4CD179C21895235100A8A660 /* findEyeCentre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = findEyeCentre.h; sourceTree = "<group>"; };
 		4CD179C31895235100A8A660 /* findEyeCorner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = findEyeCorner.cpp; sourceTree = "<group>"; };
 		4CD179C41895235100A8A660 /* findEyeCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = findEyeCorner.h; sourceTree = "<group>"; };
 		4CD179C51895235100A8A660 /* helpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = helpers.cpp; sourceTree = "<group>"; };
@@ -191,14 +188,12 @@
 			isa = PBXGroup;
 			children = (
 				4C4550AF1895508600BC6A2C /* constants.h */,
-				4CD179C11895235100A8A660 /* findEyeCenter.cpp */,
-				4CD179C21895235100A8A660 /* findEyeCenter.h */,
+				4CD179C11895235100A8A660 /* findEyeCentre.cpp */,
+				4CD179C21895235100A8A660 /* findEyeCentre.h */,
 				4CD179C31895235100A8A660 /* findEyeCorner.cpp */,
 				4CD179C41895235100A8A660 /* findEyeCorner.h */,
 				4CD179C51895235100A8A660 /* helpers.cpp */,
 				4CD179C61895235100A8A660 /* helpers.h */,
-				449A600716F497F200249104 /* ViewController.h */,
-				449A600816F497F200249104 /* ViewController.mm */,
 				4C4550AC189547F500BC6A2C /* VideoAcuityChecker.h */,
 				4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */,
 			);
@@ -319,8 +314,7 @@
 				4C4550A91895475B00BC6A2C /* UIImage+Alpha.m in Sources */,
 				4C4550A01895473E00BC6A2C /* MRDiagnosisViewController.m in Sources */,
 				4C4550AA1895475B00BC6A2C /* UIImage+Resize.m in Sources */,
-				4CD179C81895235100A8A660 /* findEyeCenter.cpp in Sources */,
-				449A600916F497F200249104 /* ViewController.mm in Sources */,
+				4CD179C81895235100A8A660 /* findEyeCentre.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

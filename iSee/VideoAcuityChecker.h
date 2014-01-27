@@ -3,7 +3,7 @@
 //  iSee
 //
 //  Created by Daniel Koehler on 26/01/2014.
-//  Copyright (c) 2014 Evangelos Georgiou. All rights reserved.
+//  Copyright (c) 2014 Daniel Koehler. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

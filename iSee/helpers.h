@@ -1,3 +1,11 @@
+//
+//  helpers.h
+//  iSee
+//
+//  Created by Daniel Koehler on 26/01/2014.
+//  Copyright (c) 2014 Daniel Koehler. All rights reserved.
+//
+
 #ifndef HELPERS_H
 #define HELPERS_H
 

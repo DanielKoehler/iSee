@@ -1,9 +1,9 @@
 //
 //  main.m
-//  openCViOSFaceTrackingTutorial
+//  iSee
 //
-//  Created by Evangelos Georgiou on 16/03/2013.
-//  Copyright (c) 2013 Evangelos Georgiou. All rights reserved.
+//  Created by Daniel Koehler on 26/01/2014.
+//  Copyright (c) 2014 Daniel Koehler. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

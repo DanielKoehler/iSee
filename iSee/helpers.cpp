@@ -1,3 +1,11 @@
+//
+//  helpers.cpp
+//  iSee
+//
+//  Created by Daniel Koehler on 26/01/2014.
+//  Copyright (c) 2014 Daniel Koehler. All rights reserved.
+//
+
 #include "opencv2/objdetect/objdetect.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
