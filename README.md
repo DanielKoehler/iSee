@@ -11,7 +11,7 @@ Photo courtesy of Paul Clarke, more from the event [here](http://www.flickr.com/
 
 The iOS app uses a few open source componenets:
 - [OpenCV](https://github.com/Itseez/opencv) For face and feature detection.
-- [eyeLike](https://github.com/trishume/eyeLike) C++ project for accurate eye tracking, based on this [paper](http://www.inb.uni-luebeck.de/publikationen/pdfs/TiBa11b.pdf)
+- [eyeLike](https://github.com/trishume/eyeLike) C++ project which we ported to iOS for accurate eye tracking, based on this [paper](http://www.inb.uni-luebeck.de/publikationen/pdfs/TiBa11b.pdf)
 
 Contributors
 ==========================
