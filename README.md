@@ -1,4 +1,4 @@
-NHS Hack Day Cardiff 2014
+iSee - NHS Hack Day Cardiff 2014
 ==========================
 
 This repository contains source code for our implementation of eye tracking on a tablet. This was the winning entry for NHSHackday (Jan 2014) in Cardiff that spanned for two days. This application is aimed at kids for use in hospitals, to aid in carrying out acuity measurements. You can read more about the event [here](http://blogs.cardiff.ac.uk/development/2014/01/26/nhs-hack-day/)
