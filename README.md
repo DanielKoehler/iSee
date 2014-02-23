@@ -15,10 +15,12 @@ The iOS app uses a few open source componenets:
 
 TODO
 ==========================
-Even though the hack day has finished, software development never does! We are keen to improve this application, as soon as we get our hands on an ipad.
+Even though the hack day has finished, software development never does! We are keen to improve this application.
 
 - [Investigate adding eye corners tracking](https://github.com/DanielKoehler/iSee/issues/3)
 - [Landscape Mode Tracking](https://github.com/DanielKoehler/iSee/issues/2)
+
+This is an ongoing project for us, we have been kindly given a new iPad to continue improving the application.
 
 Contributors
 ==========================
