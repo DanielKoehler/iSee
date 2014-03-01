@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, EyePosition) {
     NSInteger * framesAtPosition;
 }
 
-@property (nonatomic, retain) CvVideoCamera* videoCamera;
+@property (nonatomic, retain) CvVideoCamera* vcVideoCamera;
 
 -(void)start;
 

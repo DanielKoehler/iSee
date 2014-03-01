@@ -1,89 +1,50 @@
 //
-//  VideoAcuityChecker.m
+//  DebugViewController.m
 //  iSee
 //
-//  Created by Daniel Koehler on 26/01/2014.
-//  Copyright (c) 2014 Daniel Koehler. All rights reserved.
+//  Created by Daniel Koehler on 01/03/2014.
+//  Copyright (c) 2014 Evangelos Georgiou. All rights reserved.
 //
 
-#import "VideoAcuityChecker.h"
-
+#import "DebugViewController.h"
 #include "findEyeCentre.h"
 #include "findEyeCorner.h"
 #include "constants.h"
 
 using namespace cv;
 
-@interface VideoAcuityChecker ()
-
-@property (nonatomic) MRAcuityCheckerPosition trialPosition;
+@interface DebugViewController ()
 
 @end
 
-@implementation VideoAcuityChecker
+@implementation DebugViewController
 
-CascadeClassifier faceCascade;
+CascadeClassifier vcfaceCascade;
 
 const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
 
 -(void) start {
     
-    self.vcVideoCamera = [[CvVideoCamera alloc] init];
-    self.vcVideoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
-    self.vcVideoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
-    self.vcVideoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
-    self.vcVideoCamera.defaultFPS = 30;
-    self.vcVideoCamera.grayscaleMode = NO;
-    self.vcVideoCamera.delegate = self;
-    
-    [self.vcVideoCamera start];
+    self.videoCamera = [[CvVideoCamera alloc] initWithParentView:self.imageView];
+    self.videoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
+    self.videoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
+    self.videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
+    self.videoCamera.defaultFPS = 30;
+    self.videoCamera.grayscaleMode = NO;
+    self.videoCamera.delegate = self;
+    [self.videoCamera start];
     
     NSString* faceCascadePath = [[NSBundle mainBundle] pathForResource:@"haarcascade_frontalface_alt2" ofType:@"xml"];
-    faceCascade.load([faceCascadePath UTF8String]);
+    vcfaceCascade.load([faceCascadePath UTF8String]);
 }
 
 -(void) stop {
-    self.vcVideoCamera.delegate = nil;
-    self.vcVideoCamera = nil;
-    [self.vcVideoCamera stop];
+    self.videoCamera.delegate = nil;
+    self.videoCamera = nil;
+    [self.videoCamera stop];
 }
 
-#pragma mark MRAcuityCheckerDelegate methods
-
--(void)startTrialWithPosition:(MRAcuityCheckerPosition)position
-{
-    NSLog(@"VideoAcuityChecker startTrialWithPosition");
-    self.trialPosition = position;
-    eyePosition = EyePositionNone;
-    
-   
-}
-
--(BOOL)trialCompleted
-{
-    NSLog(@"VideoAcuityChecker trialCompleted");
-    
-    if (eyePosition == EyePositionNone) {
-        NSLog(@"Eyes were NOT SEEN");
-    } else if (eyePosition == EyePositionTop) {
-        NSLog(@"Eyes were TOP");
-    } else if (eyePosition == EyePositionBottom) {
-        NSLog(@"Eyes were BOTTOM");
-    }
-    
-    if (self.trialPosition == MRAcuityCheckerPositionTop) {
-        return eyePosition == EyePositionTop;
-    } else if (self.trialPosition == MRAcuityCheckerPositionBottom) {
-        return eyePosition == EyePositionBottom;
-    } else {
-        return NO;
-    }
-}
-
-#pragma mark - Protocol CvVideoCameraDelegate
-
-#ifdef __cplusplus
-- (void)processImage:(Mat&)image;
+- (void) processImage:(Mat&)image;
 {
     Mat grayscaleFrame;
     cvtColor(image, grayscaleFrame, CV_BGR2GRAY);
@@ -91,7 +52,7 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     
     std::vector<cv::Rect> faces;
     
-    faceCascade.detectMultiScale(grayscaleFrame, faces, 1.1, 2, HaarOptions, cv::Size(60, 60));
+    vcfaceCascade.detectMultiScale(grayscaleFrame, faces, 1.1, 2, HaarOptions, cv::Size(60, 60));
     
     for (int i = 0; i < faces.size(); i++)
     {
@@ -100,10 +61,15 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
         
         cv::rectangle(image, faces[i], 1234);
     }
+    
     if (faces.size() > 0) {
         [self findEyes:grayscaleFrame withFace:faces[0] output:image];
     }
+    
+//    [UIImage imageWi]
+//    [self.imageView drawFrame:];
 }
+
 
 - (void) findEyes:(Mat)frame_gray withFace: (cv::Rect) face output:(Mat&) outputFrame {
     cv::Mat faceROI = frame_gray(face);
@@ -179,28 +145,48 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     }
     
     
-    framesAtPosition++;
-    
-    if((int)framesAtPosition > 15) {
-        NSLog(@"Here");
-        if ((rightPupil.y + leftPupil.y) / 2 > 40){
-            eyesAreTop = TRUE;
-            eyePosition = EyePositionTop;
-            NSLog(@"Greater");
-            //stop the camera and move to next slide
-        } else if ((rightPupil.y + leftPupil.y) / 2 < 35){
-            NSLog(@"Less");
-            eyesAreTop = FALSE;
-            eyePosition = EyePositionBottom;
-        }
-        framesAtPosition = 0;
-    }
+    //    framesAtPosition++;
+    //
+    //    if((int)framesAtPosition > 15) {
+    //        NSLog(@"Here");
+    //        if ((rightPupil.y + leftPupil.y) / 2 > 40){
+    //            eyesAreTop = TRUE;
+    //            eyePosition = EyePositionTop;
+    //            NSLog(@"Greater");
+    //            //stop the camera and move to next slide
+    //        } else if ((rightPupil.y + leftPupil.y) / 2 < 35){
+    //            NSLog(@"Less");
+    //            eyesAreTop = FALSE;
+    //            eyePosition = EyePositionBottom;
+    //        }
+    //        framesAtPosition = 0;
+    //    }
     
     
     faceROI.copyTo(outputFrame);
 }
 
-#endif
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self start];
+	// Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 @end

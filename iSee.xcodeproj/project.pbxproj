@@ -36,6 +36,7 @@
 		4C4550AA1895475B00BC6A2C /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550A61895475B00BC6A2C /* UIImage+Resize.m */; };
 		4C4550AB1895475B00BC6A2C /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550A81895475B00BC6A2C /* UIImage+RoundedCorner.m */; };
 		4C4550AE189547F500BC6A2C /* VideoAcuityChecker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */; };
+		4CCBCF5318C202DD000D6B6F /* DebugViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBCF5218C202DD000D6B6F /* DebugViewController.mm */; };
 		4CD179C81895235100A8A660 /* findEyeCentre.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C11895235100A8A660 /* findEyeCentre.cpp */; };
 		4CD179C91895235100A8A660 /* findEyeCorner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C31895235100A8A660 /* findEyeCorner.cpp */; };
 		4CD179CA1895235100A8A660 /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C51895235100A8A660 /* helpers.cpp */; };
@@ -87,6 +88,8 @@
 		4C4550AC189547F500BC6A2C /* VideoAcuityChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoAcuityChecker.h; sourceTree = "<group>"; };
 		4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoAcuityChecker.mm; sourceTree = "<group>"; };
 		4C4550AF1895508600BC6A2C /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		4CCBCF5118C202DD000D6B6F /* DebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugViewController.h; sourceTree = "<group>"; };
+		4CCBCF5218C202DD000D6B6F /* DebugViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DebugViewController.mm; sourceTree = "<group>"; };
 		4CD179C11895235100A8A660 /* findEyeCentre.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = findEyeCentre.cpp; sourceTree = "<group>"; };
 		4CD179C21895235100A8A660 /* findEyeCentre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = findEyeCentre.h; sourceTree = "<group>"; };
 		4CD179C31895235100A8A660 /* findEyeCorner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = findEyeCorner.cpp; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 				4C4550981895473E00BC6A2C /* MRDiagnosisViewController.m */,
 				4C4550991895473E00BC6A2C /* MRViewController.h */,
 				4C45509A1895473E00BC6A2C /* MRViewController.m */,
+				4CCBCF5118C202DD000D6B6F /* DebugViewController.h */,
+				4CCBCF5218C202DD000D6B6F /* DebugViewController.mm */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -260,6 +265,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Evangelos Georgiou";
+				TargetAttributes = {
+					449A5FEB16F497F200249104 = {
+						DevelopmentTeam = KCZV32S26D;
+					};
+				};
 			};
 			buildConfigurationList = 449A5FE716F497F200249104 /* Build configuration list for PBXProject "iSee" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -307,6 +317,7 @@
 				4C45509E1895473E00BC6A2C /* MRAcuityModel.m in Sources */,
 				4CD179CA1895235100A8A660 /* helpers.cpp in Sources */,
 				4CD179C91895235100A8A660 /* findEyeCorner.cpp in Sources */,
+				4CCBCF5318C202DD000D6B6F /* DebugViewController.mm in Sources */,
 				4C4550AE189547F500BC6A2C /* VideoAcuityChecker.mm in Sources */,
 				4C45509D1895473E00BC6A2C /* MRAcuityChecker.m in Sources */,
 				4C45509F1895473E00BC6A2C /* MRAcuityView.m in Sources */,
@@ -391,6 +402,8 @@
 		449A601016F497F200249104 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -400,6 +413,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/iSee/iSee-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = iSee;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -408,6 +422,8 @@
 		449A601116F497F200249104 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -417,6 +433,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/iSee/iSee-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = iSee;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
