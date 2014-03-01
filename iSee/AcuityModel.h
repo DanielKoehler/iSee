@@ -1,5 +1,5 @@
 //
-//  MRAcuityModel.h
+//  AcuityModel.h
 //  EyeTracking
 //
 //  Created by Michael Rhodes on 25/01/2014.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MRAcuityModel : NSObject
+@interface AcuityModel : NSObject
 
 @property (nonatomic,readonly) NSInteger recognisedInCurrentSet;
 

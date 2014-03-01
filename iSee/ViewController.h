@@ -1,5 +1,5 @@
 //
-//  MRViewController.h
+//  ViewController.h
 //  EyeTracking
 //
 //  Created by Michael Rhodes on 25/01/2014.
@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class MRAcuityView;
+@class AcuityView;
 
-@interface MRViewController : UIViewController
+@interface ViewController : UIViewController
 
-@property (nonatomic,strong) IBOutlet MRAcuityView *acuityView;
+@property (nonatomic,strong) IBOutlet AcuityView *acuityView;
 
 @property (nonatomic,strong) IBOutlet UILabel *statusLabel;
 

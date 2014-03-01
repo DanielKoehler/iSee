@@ -26,11 +26,11 @@
 		449A602216F4986300249104 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A601B16F4986300249104 /* CoreVideo.framework */; };
 		449A602316F4986300249104 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A601C16F4986300249104 /* QuartzCore.framework */; };
 		4C45509C1895473E00BC6A2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C45508F1895473E00BC6A2C /* Images.xcassets */; };
-		4C45509D1895473E00BC6A2C /* MRAcuityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550911895473E00BC6A2C /* MRAcuityChecker.m */; };
-		4C45509E1895473E00BC6A2C /* MRAcuityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550941895473E00BC6A2C /* MRAcuityModel.m */; };
-		4C45509F1895473E00BC6A2C /* MRAcuityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550961895473E00BC6A2C /* MRAcuityView.m */; };
-		4C4550A01895473E00BC6A2C /* MRDiagnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550981895473E00BC6A2C /* MRDiagnosisViewController.m */; };
-		4C4550A11895473E00BC6A2C /* MRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C45509A1895473E00BC6A2C /* MRViewController.m */; };
+		4C45509D1895473E00BC6A2C /* AcuityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550911895473E00BC6A2C /* AcuityChecker.m */; };
+		4C45509E1895473E00BC6A2C /* AcuityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550941895473E00BC6A2C /* AcuityModel.m */; };
+		4C45509F1895473E00BC6A2C /* AcuityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550961895473E00BC6A2C /* AcuityView.m */; };
+		4C4550A01895473E00BC6A2C /* DiagnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550981895473E00BC6A2C /* DiagnosisViewController.m */; };
+		4C4550A11895473E00BC6A2C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C45509A1895473E00BC6A2C /* ViewController.m */; };
 		4C4550A21895473E00BC6A2C /* Restricted.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C45509B1895473E00BC6A2C /* Restricted.xcassets */; };
 		4C4550A91895475B00BC6A2C /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550A41895475B00BC6A2C /* UIImage+Alpha.m */; };
 		4C4550AA1895475B00BC6A2C /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550A61895475B00BC6A2C /* UIImage+Resize.m */; };
@@ -68,17 +68,17 @@
 		449A601B16F4986300249104 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		449A601C16F4986300249104 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4C45508F1895473E00BC6A2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4C4550901895473E00BC6A2C /* MRAcuityChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRAcuityChecker.h; sourceTree = "<group>"; };
-		4C4550911895473E00BC6A2C /* MRAcuityChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRAcuityChecker.m; sourceTree = "<group>"; };
-		4C4550921895473E00BC6A2C /* MRAcuityCheckerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRAcuityCheckerDelegate.h; sourceTree = "<group>"; };
-		4C4550931895473E00BC6A2C /* MRAcuityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRAcuityModel.h; sourceTree = "<group>"; };
-		4C4550941895473E00BC6A2C /* MRAcuityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRAcuityModel.m; sourceTree = "<group>"; };
-		4C4550951895473E00BC6A2C /* MRAcuityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRAcuityView.h; sourceTree = "<group>"; };
-		4C4550961895473E00BC6A2C /* MRAcuityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRAcuityView.m; sourceTree = "<group>"; };
-		4C4550971895473E00BC6A2C /* MRDiagnosisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRDiagnosisViewController.h; sourceTree = "<group>"; };
-		4C4550981895473E00BC6A2C /* MRDiagnosisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRDiagnosisViewController.m; sourceTree = "<group>"; };
-		4C4550991895473E00BC6A2C /* MRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRViewController.h; sourceTree = "<group>"; };
-		4C45509A1895473E00BC6A2C /* MRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRViewController.m; sourceTree = "<group>"; };
+		4C4550901895473E00BC6A2C /* AcuityChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcuityChecker.h; sourceTree = "<group>"; };
+		4C4550911895473E00BC6A2C /* AcuityChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcuityChecker.m; sourceTree = "<group>"; };
+		4C4550921895473E00BC6A2C /* AcuityCheckerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcuityCheckerDelegate.h; sourceTree = "<group>"; };
+		4C4550931895473E00BC6A2C /* AcuityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcuityModel.h; sourceTree = "<group>"; };
+		4C4550941895473E00BC6A2C /* AcuityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcuityModel.m; sourceTree = "<group>"; };
+		4C4550951895473E00BC6A2C /* AcuityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcuityView.h; sourceTree = "<group>"; };
+		4C4550961895473E00BC6A2C /* AcuityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcuityView.m; sourceTree = "<group>"; };
+		4C4550971895473E00BC6A2C /* DiagnosisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiagnosisViewController.h; sourceTree = "<group>"; };
+		4C4550981895473E00BC6A2C /* DiagnosisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiagnosisViewController.m; sourceTree = "<group>"; };
+		4C4550991895473E00BC6A2C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4C45509A1895473E00BC6A2C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4C45509B1895473E00BC6A2C /* Restricted.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Restricted.xcassets; sourceTree = "<group>"; };
 		4C4550A31895475B00BC6A2C /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
 		4C4550A41895475B00BC6A2C /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
@@ -210,17 +210,17 @@
 		4C69E1FE18969AC1008763B3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4C4550901895473E00BC6A2C /* MRAcuityChecker.h */,
-				4C4550911895473E00BC6A2C /* MRAcuityChecker.m */,
-				4C4550921895473E00BC6A2C /* MRAcuityCheckerDelegate.h */,
-				4C4550931895473E00BC6A2C /* MRAcuityModel.h */,
-				4C4550941895473E00BC6A2C /* MRAcuityModel.m */,
-				4C4550951895473E00BC6A2C /* MRAcuityView.h */,
-				4C4550961895473E00BC6A2C /* MRAcuityView.m */,
-				4C4550971895473E00BC6A2C /* MRDiagnosisViewController.h */,
-				4C4550981895473E00BC6A2C /* MRDiagnosisViewController.m */,
-				4C4550991895473E00BC6A2C /* MRViewController.h */,
-				4C45509A1895473E00BC6A2C /* MRViewController.m */,
+				4C4550901895473E00BC6A2C /* AcuityChecker.h */,
+				4C4550911895473E00BC6A2C /* AcuityChecker.m */,
+				4C4550921895473E00BC6A2C /* AcuityCheckerDelegate.h */,
+				4C4550931895473E00BC6A2C /* AcuityModel.h */,
+				4C4550941895473E00BC6A2C /* AcuityModel.m */,
+				4C4550951895473E00BC6A2C /* AcuityView.h */,
+				4C4550961895473E00BC6A2C /* AcuityView.m */,
+				4C4550971895473E00BC6A2C /* DiagnosisViewController.h */,
+				4C4550981895473E00BC6A2C /* DiagnosisViewController.m */,
+				4C4550991895473E00BC6A2C /* ViewController.h */,
+				4C45509A1895473E00BC6A2C /* ViewController.m */,
 				4CCBCF5118C202DD000D6B6F /* DebugViewController.h */,
 				4CCBCF5218C202DD000D6B6F /* DebugViewController.mm */,
 				4CCBCF5418C22916000D6B6F /* SettingsViewController.h */,
@@ -316,20 +316,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C4550A11895473E00BC6A2C /* MRViewController.m in Sources */,
+				4C4550A11895473E00BC6A2C /* ViewController.m in Sources */,
 				449A5FFC16F497F200249104 /* main.mm in Sources */,
 				4C4550AB1895475B00BC6A2C /* UIImage+RoundedCorner.m in Sources */,
 				4CCBCF5618C22916000D6B6F /* SettingsViewController.m in Sources */,
-				4C45509E1895473E00BC6A2C /* MRAcuityModel.m in Sources */,
+				4C45509E1895473E00BC6A2C /* AcuityModel.m in Sources */,
 				4CD179CA1895235100A8A660 /* helpers.cpp in Sources */,
 				4CD179C91895235100A8A660 /* findEyeCorner.cpp in Sources */,
 				4CCBCF5318C202DD000D6B6F /* DebugViewController.mm in Sources */,
 				4C4550AE189547F500BC6A2C /* VideoAcuityChecker.mm in Sources */,
-				4C45509D1895473E00BC6A2C /* MRAcuityChecker.m in Sources */,
-				4C45509F1895473E00BC6A2C /* MRAcuityView.m in Sources */,
+				4C45509D1895473E00BC6A2C /* AcuityChecker.m in Sources */,
+				4C45509F1895473E00BC6A2C /* AcuityView.m in Sources */,
 				449A600016F497F200249104 /* AppDelegate.mm in Sources */,
 				4C4550A91895475B00BC6A2C /* UIImage+Alpha.m in Sources */,
-				4C4550A01895473E00BC6A2C /* MRDiagnosisViewController.m in Sources */,
+				4C4550A01895473E00BC6A2C /* DiagnosisViewController.m in Sources */,
 				4C4550AA1895475B00BC6A2C /* UIImage+Resize.m in Sources */,
 				4CD179C81895235100A8A660 /* findEyeCentre.cpp in Sources */,
 			);

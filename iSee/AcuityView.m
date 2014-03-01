@@ -1,18 +1,18 @@
 //
-//  MRAcuityView.m
+//  AcuityView.m
 //  EyeTracking
 //
 //  Created by Michael Rhodes on 25/01/2014.
 //  Copyright (c) 2014 Small Text. All rights reserved.
 //
 
-#import "MRAcuityView.h"
+#import "AcuityView.h"
 
 #import <AVFoundation/AVFoundation.h>
 
 #import "UIImage+Resize.h"
 
-@implementation MRAcuityView
+@implementation AcuityView
 
 - (id)initWithFrame:(CGRect)frame
 {

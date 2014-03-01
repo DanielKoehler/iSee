@@ -1,16 +1,16 @@
 //
-//  MRAcuityModel.m
+//  AcuityModel.m
 //  EyeTracking
 //
 //  Created by Michael Rhodes on 25/01/2014.
 //  Copyright (c) 2014 Small Text. All rights reserved.
 //
 
-#import "MRAcuityModel.h"
+#import "AcuityModel.h"
 
 #define MAX_TRIALS 3
 
-@interface MRAcuityModel ()
+@interface AcuityModel ()
 
 @property (nonatomic) NSInteger trial;
 
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation MRAcuityModel
+@implementation AcuityModel
 
 -(id)initWithViewBounds:(CGRect)acuityBounds
 {

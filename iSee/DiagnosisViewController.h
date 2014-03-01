@@ -1,5 +1,5 @@
 //
-//  MRDiagnosisViewController.h
+//  DiagnosisViewController.h
 //  EyeTracking
 //
 //  Created by Michael Rhodes on 26/01/2014.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MRDiagnosisViewController : UIViewController
+@interface DiagnosisViewController : UIViewController
 
 @property (nonatomic, strong) NSString *diagnosis;
 

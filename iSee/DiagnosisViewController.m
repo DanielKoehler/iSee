@@ -1,18 +1,18 @@
 //
-//  MRDiagnosisViewController.m
+//  DiagnosisViewController.m
 //  EyeTracking
 //
 //  Created by Michael Rhodes on 26/01/2014.
 //  Copyright (c) 2014 Small Text. All rights reserved.
 //
 
-#import "MRDiagnosisViewController.h"
+#import "DiagnosisViewController.h"
 
-@interface MRDiagnosisViewController ()
+@interface DiagnosisViewController ()
 
 @end
 
-@implementation MRDiagnosisViewController
+@implementation DiagnosisViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
