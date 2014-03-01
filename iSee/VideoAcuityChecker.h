@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "MRAcuityCheckerDelegate.h"
+#import "AcuityCheckerDelegate.h"
 
 #import <opencv2/highgui/cap_ios.h>
 #import <opencv2/objdetect/objdetect.hpp>
@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, EyePosition) {
     EyePositionBottom
 };
 
-@interface VideoAcuityChecker : NSObject <MRAcuityCheckerDelegate, CvVideoCameraDelegate>
+@interface VideoAcuityChecker : NSObject <AcuityCheckerDelegate, CvVideoCameraDelegate>
 {
     EyePosition eyePosition;
     CvVideoCamera* videoCamera;

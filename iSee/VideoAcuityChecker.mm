@@ -16,7 +16,7 @@ using namespace cv;
 
 @interface VideoAcuityChecker ()
 
-@property (nonatomic) MRAcuityCheckerPosition trialPosition;
+@property (nonatomic) AcuityCheckerPosition trialPosition;
 
 @end
 
@@ -52,7 +52,7 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
 
 #pragma mark MRAcuityCheckerDelegate methods
 
--(void)startTrialWithPosition:(MRAcuityCheckerPosition)position
+-(void)startTrialWithPosition:(AcuityCheckerPosition)position
 {
     NSLog(@"VideoAcuityChecker startTrialWithPosition");
     self.trialPosition = position;
@@ -73,9 +73,9 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
         NSLog(@"Eyes were BOTTOM");
     }
     
-    if (self.trialPosition == MRAcuityCheckerPositionTop) {
+    if (self.trialPosition == AcuityCheckerPositionTop) {
         return eyePosition == EyePositionTop;
-    } else if (self.trialPosition == MRAcuityCheckerPositionBottom) {
+    } else if (self.trialPosition == AcuityCheckerPositionBottom) {
         return eyePosition == EyePositionBottom;
     } else {
         return NO;

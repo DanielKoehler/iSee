@@ -30,7 +30,7 @@ const int HaarOptions = 0|CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     self.videoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
     self.videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     self.videoCamera.defaultFPS = 30;
-    self.videoCamera.grayscaleMode = NO;
+    self.videoCamera.grayscaleMode = YES;
     self.videoCamera.delegate = self;
     createCornerKernels();
     NSString* faceCascadePath = [[NSBundle mainBundle] pathForResource:@"haarcascade_frontalface_alt2" ofType:@"xml"];
@@ -47,13 +47,13 @@ const int HaarOptions = 0|CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
 
 - (void) processImage:(Mat&)image;
 {
-    Mat grayscaleFrame;
-    cvtColor(image, grayscaleFrame, CV_BGR2GRAY);
-    equalizeHist(grayscaleFrame, grayscaleFrame);
-    
+//    Mat grayscaleFrame;
+//    cvtColor(image, grayscaleFrame, CV_BGR2GRAY);
+//    equalizeHist(grayscaleFrame, grayscaleFrame);
+  
     std::vector<cv::Rect> faces;
     
-    vcfaceCascade.detectMultiScale(grayscaleFrame, faces, 1.1, 2, HaarOptions, cv::Size(100, 100));
+    vcfaceCascade.detectMultiScale(image, faces, 2, 1.1, HaarOptions, cv::Size(150,150));
     
     for (int i = 0; i < faces.size(); i++)
     {
@@ -64,14 +64,14 @@ const int HaarOptions = 0|CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     }
     
     if (faces.size() > 0) {
-        [self findEyes:grayscaleFrame withFace:faces[0] output:image];
+        [self findEyes:image withFace:faces[0] output:image];
     }
 }
 
 
 - (void) findEyes:(Mat)frame_gray withFace: (cv::Rect) face output:(Mat&) outputFrame {
     cv::Mat faceROI = frame_gray(face);
-    cv::Mat debugFace = outputFrame;
+    cv::Mat debugFace = faceROI;
     
     if (kSmoothFaceImage) {
         double sigma = kSmoothFaceFactor * face.width;
@@ -136,10 +136,10 @@ const int HaarOptions = 0|CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
         cv::Point2f rightRightCorner = findEyeCorner(faceROI(rightRightCornerRegion), false, false);
         rightRightCorner.x += rightRightCornerRegion.x;
         rightRightCorner.y += rightRightCornerRegion.y;
-        circle(faceROI, leftRightCorner, 3, 200);
-        circle(faceROI, leftLeftCorner, 3, 200);
-        circle(faceROI, rightLeftCorner, 3, 200);
-        circle(faceROI, rightRightCorner, 3, 200);
+        circle(faceROI, leftRightCorner, 1, 200);
+        circle(faceROI, leftLeftCorner, 1, 200);
+        circle(faceROI, rightLeftCorner, 1, 200);
+        circle(faceROI, rightRightCorner, 1, 200);
     }
     
     

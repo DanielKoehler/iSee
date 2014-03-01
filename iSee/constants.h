@@ -30,10 +30,10 @@ const float kWeightDivisor = 150.0;
 const double kGradientThreshold = 50.0;
 
 // Postprocessing
-const bool kEnablePostProcess = true;
+const bool kEnablePostProcess = false;
 const float kPostProcessThreshold = 0.97;
 
 // Eye Corner
-const bool kEnableEyeCorner = true;
+const bool kEnableEyeCorner = false;
 
 #endif

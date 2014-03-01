@@ -111,8 +111,10 @@ if(left){
   }*/
 
   cv::Mat cornerMap(sizeRegion.height * 10, sizeRegion.width * 10, CV_32F);
-
-  cv::resize(region, cornerMap, cornerMap.size(), 0, 0, cv::INTER_CUBIC);
+  if (cornerMap.cols > 0 || cornerMap.rows > 0 ){
+    cv::resize(region, cornerMap, cornerMap.size(), 0, 0, cv::INTER_CUBIC);
+  }
+  
 
   cv::Point maxP2;
   cv::minMaxLoc(cornerMap, NULL,NULL,NULL,&maxP2);
