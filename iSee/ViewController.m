@@ -83,7 +83,7 @@
 // Create a new model, start the timer
 -(void)startTrials {
     self.statusLabel.text = @"Starting...";
-    self.model = [[MRAcuityModel alloc] initWithViewBounds:self.acuityView.bounds];
+    self.model = [[AcuityModel alloc] initWithViewBounds:self.acuityView.bounds];
     [self startNSTimer];
 }
 
@@ -94,7 +94,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"ShowDiagnosis"]) {
-        MRDiagnosisViewController *vc = (MRDiagnosisViewController*)segue.destinationViewController;
+        DiagnosisViewController *vc = (DiagnosisViewController*)segue.destinationViewController;
         vc.diagnosis = self.model.currentDiagnosis;
     }
 }
@@ -164,7 +164,7 @@
         self.acuityView.image = [self.model currentImage];
 
         // Start the checker
-        [self.checker startTrialWithPosition:MRAcuityCheckerPositionTop];
+        [self.checker startTrialWithPosition:AcuityCheckerPositionTop];
 
         // Trial is started
         self.isActiveTrial = YES;

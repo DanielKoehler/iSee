@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, EyePosition) {
     EyePositionBottom
 };
 
-@interface VideoAcuityChecker : NSObject <MRAcuityCheckerDelegate, CvVideoCameraDelegate>
+@interface VideoAcuityChecker : NSObject <AcuityCheckerDelegate, CvVideoCameraDelegate>
 {
     EyePosition eyePosition;
     CvVideoCamera* videoCamera;
