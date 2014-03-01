@@ -42,6 +42,8 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     faceCascade.load([faceCascadePath UTF8String]);
 }
 
+
+
 -(void) stop {
     self.vcVideoCamera.delegate = nil;
     self.vcVideoCamera = nil;

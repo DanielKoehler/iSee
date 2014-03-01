@@ -21,7 +21,7 @@ using namespace cv;
 
 CascadeClassifier vcfaceCascade;
 
-const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
+const int HaarOptions = 0|CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
 
 -(void) start {
     
@@ -32,16 +32,17 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     self.videoCamera.defaultFPS = 30;
     self.videoCamera.grayscaleMode = NO;
     self.videoCamera.delegate = self;
-    [self.videoCamera start];
-    
+    createCornerKernels();
     NSString* faceCascadePath = [[NSBundle mainBundle] pathForResource:@"haarcascade_frontalface_alt2" ofType:@"xml"];
     vcfaceCascade.load([faceCascadePath UTF8String]);
+    [self.videoCamera start];
 }
 
 -(void) stop {
     self.videoCamera.delegate = nil;
     self.videoCamera = nil;
     [self.videoCamera stop];
+    releaseCornerKernels();
 }
 
 - (void) processImage:(Mat&)image;
@@ -52,7 +53,7 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     
     std::vector<cv::Rect> faces;
     
-    vcfaceCascade.detectMultiScale(grayscaleFrame, faces, 1.1, 2, HaarOptions, cv::Size(60, 60));
+    vcfaceCascade.detectMultiScale(grayscaleFrame, faces, 1.1, 2, HaarOptions, cv::Size(100, 100));
     
     for (int i = 0; i < faces.size(); i++)
     {
