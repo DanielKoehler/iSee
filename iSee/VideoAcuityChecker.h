@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "MRAcuityCheckerDelegate.h"
+#import "AcuityCheckerDelegate.h"
 
 #import <opencv2/highgui/cap_ios.h>
 #import <opencv2/objdetect/objdetect.hpp>
