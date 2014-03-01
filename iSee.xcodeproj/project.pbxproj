@@ -37,6 +37,7 @@
 		4C4550AB1895475B00BC6A2C /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550A81895475B00BC6A2C /* UIImage+RoundedCorner.m */; };
 		4C4550AE189547F500BC6A2C /* VideoAcuityChecker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */; };
 		4CCBCF5318C202DD000D6B6F /* DebugViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBCF5218C202DD000D6B6F /* DebugViewController.mm */; };
+		4CCBCF5618C22916000D6B6F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBCF5518C22916000D6B6F /* SettingsViewController.m */; };
 		4CD179C81895235100A8A660 /* findEyeCentre.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C11895235100A8A660 /* findEyeCentre.cpp */; };
 		4CD179C91895235100A8A660 /* findEyeCorner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C31895235100A8A660 /* findEyeCorner.cpp */; };
 		4CD179CA1895235100A8A660 /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C51895235100A8A660 /* helpers.cpp */; };
@@ -90,6 +91,8 @@
 		4C4550AF1895508600BC6A2C /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		4CCBCF5118C202DD000D6B6F /* DebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugViewController.h; sourceTree = "<group>"; };
 		4CCBCF5218C202DD000D6B6F /* DebugViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DebugViewController.mm; sourceTree = "<group>"; };
+		4CCBCF5418C22916000D6B6F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		4CCBCF5518C22916000D6B6F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		4CD179C11895235100A8A660 /* findEyeCentre.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = findEyeCentre.cpp; sourceTree = "<group>"; };
 		4CD179C21895235100A8A660 /* findEyeCentre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = findEyeCentre.h; sourceTree = "<group>"; };
 		4CD179C31895235100A8A660 /* findEyeCorner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = findEyeCorner.cpp; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 				4C45509A1895473E00BC6A2C /* MRViewController.m */,
 				4CCBCF5118C202DD000D6B6F /* DebugViewController.h */,
 				4CCBCF5218C202DD000D6B6F /* DebugViewController.mm */,
+				4CCBCF5418C22916000D6B6F /* SettingsViewController.h */,
+				4CCBCF5518C22916000D6B6F /* SettingsViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				4C4550A11895473E00BC6A2C /* MRViewController.m in Sources */,
 				449A5FFC16F497F200249104 /* main.mm in Sources */,
 				4C4550AB1895475B00BC6A2C /* UIImage+RoundedCorner.m in Sources */,
+				4CCBCF5618C22916000D6B6F /* SettingsViewController.m in Sources */,
 				4C45509E1895473E00BC6A2C /* MRAcuityModel.m in Sources */,
 				4CD179CA1895235100A8A660 /* helpers.cpp in Sources */,
 				4CD179C91895235100A8A660 /* findEyeCorner.cpp in Sources */,
