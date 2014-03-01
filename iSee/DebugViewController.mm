@@ -65,9 +65,6 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     if (faces.size() > 0) {
         [self findEyes:grayscaleFrame withFace:faces[0] output:image];
     }
-    
-//    [UIImage imageWi]
-//    [self.imageView drawFrame:];
 }
 
 
