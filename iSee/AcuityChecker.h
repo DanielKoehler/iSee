@@ -1,5 +1,5 @@
 //
-//  MRAcuityChecker.h
+//  AcuityChecker.h
 //  EyeTracking
 //
 //  Created by Michael Rhodes on 26/01/2014.
@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-#import "MRAcuityCheckerDelegate.h"
+#import "AcuityCheckerDelegate.h"
 
-@class MRAcuityModel;
+@class AcuityModel;
 
-@interface MRAcuityChecker : NSObject <MRAcuityCheckerDelegate>
+@interface AcuityChecker : NSObject <AcuityCheckerDelegate>
 
 // Attached to acuity view in main UI to register taps
 // and pass back to model
--(void)handleSingleTap:(UITapGestureRecognizer *)recognizer;
+-(void) handleSingleTap:(UITapGestureRecognizer *)recognizer;
 
 @end

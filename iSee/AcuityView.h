@@ -1,5 +1,5 @@
 //
-//  MRAcuityView.h
+//  AcuityView.h
 //  EyeTracking
 //
 //  Created by Michael Rhodes on 25/01/2014.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MRAcuityView : UIView
+@interface AcuityView : UIView
 
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic) CGRect drawBounds;

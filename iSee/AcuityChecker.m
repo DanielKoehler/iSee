@@ -1,22 +1,22 @@
 //
-//  MRAcuityChecker.m
+//  AcuityChecker.m
 //  EyeTracking
 //
 //  Created by Michael Rhodes on 26/01/2014.
 //  Copyright (c) 2014 Small Text. All rights reserved.
 //
 
-#import "MRAcuityChecker.h"
+#import "AcuityChecker.h"
 
-#import "MRAcuityModel.h"
+#import "AcuityModel.h"
 
-@interface MRAcuityChecker ()
+@interface AcuityChecker ()
 
 @property (nonatomic) BOOL tapSpotted;
 
 @end
 
-@implementation MRAcuityChecker
+@implementation AcuityChecker
 
 #pragma mark tap handler
 
@@ -30,7 +30,7 @@
 
 #pragma mark MRAcuityCheckerDelegate methods
 
--(void)startTrialWithPosition:(MRAcuityCheckerPosition)position
+-(void)startTrialWithPosition:(AcuityCheckerPosition)position
 {
     self.tapSpotted = NO;
 }

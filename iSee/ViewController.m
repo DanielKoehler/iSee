@@ -1,28 +1,28 @@
 //
-//  MRViewController.m
+//  ViewController.m
 //  EyeTracking
 //
 //  Created by Michael Rhodes on 25/01/2014.
 //  Copyright (c) 2014 Small Text. All rights reserved.
 //
 
-#import "MRViewController.h"
+#import "ViewController.h"
 
-#import "MRAcuityView.h"
-#import "MRAcuityModel.h"
-#import "MRAcuityChecker.h"
-#import "MRDiagnosisViewController.h"
+#import "AcuityView.h"
+#import "AcuityModel.h"
+#import "AcuityChecker.h"
+#import "DiagnosisViewController.h"
 #import "VideoAcuityChecker.h"
 
 // Time card is shown, and between trials
 #define INTERVAL 2.0
 
-@interface MRViewController ()
+@interface ViewController ()
 
 @property (nonatomic, strong) NSTimer *timer;
 
-@property (nonatomic, strong) MRAcuityModel *model;
-@property (nonatomic, strong) NSObject<MRAcuityCheckerDelegate> *checker;
+@property (nonatomic, strong) AcuityModel *model;
+@property (nonatomic, strong) NSObject<AcuityCheckerDelegate> *checker;
 
 @property (nonatomic, strong) UITapGestureRecognizer *tapRecognizer;
 
@@ -30,7 +30,7 @@
 
 @end
 
-@implementation MRViewController
+@implementation ViewController
 
 - (void)viewDidLoad
 {
