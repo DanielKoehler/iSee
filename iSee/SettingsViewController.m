@@ -27,6 +27,65 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.settings = @{
+                      @"General Settings" :@[
+                              @{@"name": @"Screen Brightness",
+                                @"reuseIdentifier": @"sliderCell"
+                                },
+                              @{@"name": @"Contrast",
+                                @"reuseIdentifier": @"sliderCell"
+                                },
+                              @{@"name": @"Enable Eye Corner",
+                                @"reuseIdentifier": @"switchCell"
+                                }
+                              ],
+                      @"Algorithm Parameters" : @[
+                              @{@"name": @"Gradient Threshold",
+                                @"reuseIdentifier": @"sliderCell"
+                                },
+                              @{@"name": @"Weight Divisor",
+                                @"reuseIdentifier": @"sliderCell"
+                                },
+                              @{@"name": @"Enable Weight",
+                                @"reuseIdentifier": @"switchCell"
+                                },
+                              @{@"name": @"Weight Blur Size",
+                                @"reuseIdentifier": @"sliderCell"
+                                },
+                              @{@"name": @"Fast Eye Width",
+                                @"reuseIdentifier": @"sliderCell"
+                                }
+                              ],
+                      @"Preprocessing" : @[
+                              @{@"name": @"Smooth Face Factor",
+                                @"reuseIdentifier": @"sliderCell"
+                                },
+                              @{@"name": @"Smooth Face Image",
+                                @"reuseIdentifier": @"switchCell"
+                                }
+                              ],
+                      @"Size constants" : @[
+                              @{@"name": @"Eye Percent Width",
+                                @"reuseIdentifier": @"sliderCell"
+                                },
+                              @{@"name": @"Eye Percent Height",
+                                @"reuseIdentifier": @"sliderCell"
+                                },
+                              @{@"name": @"Eye Percent Side",
+                                @"reuseIdentifier": @"sliderCell"
+                                },
+                              @{@"name": @"Eye Percent Top",
+                                @"reuseIdentifier": @"sliderCell"
+                                }
+                              ],
+                      @"Debugging" :@[
+                              @{@"name": @"Plot Vector Field",
+                                @"reuseIdentifier": @"switchCell"
+                                }
+                              ]
+                      };
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -44,72 +103,48 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 150;
+    
+//    if([[self.settings valueForKey:[[self.settings allKeys] objectAtIndex:indexPath.section]][indexPath.row][@"reuseIdentifier"]  isEqual: @"switchCell"])
+//        return 56;
+    return 52;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 80;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [self.settings count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
-    return 4;
+    
+    id section = [[self.settings allKeys] objectAtIndex:sectionIndex];
+    
+    return [[self.settings valueForKey:section] count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [[self.settings allKeys] objectAtIndex:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   
-    NSDictionary *settings = @{
-//                               @"General Settings" :@{
-                                       @"Screen Brightness":@"sliderCell",
-                                       @"Contrast":@"sliderCell",
-                                       @"Enable Eye Corner":@"switchCell",
-//                                       },
-//                               @"Algorithm Parameters" : @{
-                                       @"Gradient Threshold":@"sliderCell",
-                                       @"Weight Divisor":@"sliderCell",
-                                       @"Enable Weight":@"switchCell",
-                                       @"Weight Blur Size":@"sliderCell",
-//                                       @"Fast Eye Width":@"sliderCell",
-//                                       },
-//                               @"Preprocessing" : @{
-                                       @"Smooth Face Factor":@"sliderCell",
-//                                       @"Smooth Face Image":@"switchCell",
-//                                       },
-//                               @"Size constants" : @{
-                                       @"Eye Percent Width":@"sliderCell",
-                                       @"Eye Percent Height":@"sliderCell",
-                                       @"Eye Percent Side":@"sliderCell",
-//                                       @"Eye Percent Top":@"sliderCell",
-//                                       },
-//                               @"Debugging" : @{
-                                       @"Plot Vector Field":@"switchCell",
-//                                       }
-                                 };
+    NSDictionary *setting = [self.settings valueForKey:[[self.settings allKeys] objectAtIndex:indexPath.section]][indexPath.row];
     
-    NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:setting[@"reuseIdentifier"]];
     
-    if(indexPath.row == 0){
-        cellIdentifier = @"UserProfile";
-    }
+
+    cell.selectedBackgroundView = [[UIView alloc] init];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    
-    if (cell == nil && indexPath.row != 0){
-        cell = [[UITableViewCell alloc] initWithStyle:  UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-//        cell.selectedBackgroundView = [[UIView alloc] init];
-        
-        NSArray *keys = [settings allKeys];
-        id aKey = [keys objectAtIndex:indexPath.row];
-        NSLog([settings valueForKey:aKey]);
-        
-        UILabel *name = (UILabel *)[cell viewWithTag:1];
-        name.text = [settings valueForKey:aKey];
-    }
+    UILabel *name = (UILabel *)[cell viewWithTag:1];
+    name.text = setting[@"name"];
     
     return cell;
+
 }
 
 @end

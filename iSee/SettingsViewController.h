@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface SettingsViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic) NSDictionary *settings;
 
 @end
