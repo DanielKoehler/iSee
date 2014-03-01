@@ -94,7 +94,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"ShowDiagnosis"]) {
-        DiagnosisViewController *vc = (DiagnosisViewController*)segue.destinationViewController;
+        DiagnosisViewController *vc = (DiagnosisViewController*) segue.destinationViewController;
         vc.diagnosis = self.model.currentDiagnosis;
     }
 }

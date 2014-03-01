@@ -75,11 +75,7 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     
     if (self.trialPosition == AcuityCheckerPositionTop) {
         return eyePosition == EyePositionTop;
-<<<<<<< HEAD
     } else if (self.trialPosition == AcuityCheckerPositionBottom){
-=======
-    } else if (self.trialPosition == AcuityCheckerPositionBottom) {
->>>>>>> origin/eyeCorners
         return eyePosition == EyePositionBottom;
     } else {
         return NO;
