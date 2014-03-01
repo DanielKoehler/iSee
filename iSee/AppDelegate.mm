@@ -14,7 +14,7 @@
 {
     
     // Override point for customization after application launch.
-
+    [[UIScreen mainScreen] setBrightness:1.0];
     return YES;
 }
 

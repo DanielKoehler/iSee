@@ -52,8 +52,7 @@ cv::Mat eyeCornerMap(const cv::Mat &region, bool left, bool left2) {
 
   cv::Mat miRegion(region, rowRange, colRange);
 
-  cv::filter2D(miRegion, cornerMap, CV_32F,
-               (left && !left2) || (!left && !left2) ? *leftCornerKernel : *rightCornerKernel);
+  cv::filter2D(miRegion, cornerMap, CV_32F,(left && !left2) || (!left && !left2) ? *leftCornerKernel : *rightCornerKernel);
 
   return cornerMap;
 }
@@ -112,8 +111,10 @@ if(left){
   }*/
 
   cv::Mat cornerMap(sizeRegion.height * 10, sizeRegion.width * 10, CV_32F);
-
-  cv::resize(region, cornerMap, cornerMap.size(), 0, 0, cv::INTER_CUBIC);
+  if (cornerMap.cols > 0 || cornerMap.rows > 0 ){
+    cv::resize(region, cornerMap, cornerMap.size(), 0, 0, cv::INTER_CUBIC);
+  }
+  
 
   cv::Point maxP2;
   cv::minMaxLoc(cornerMap, NULL,NULL,NULL,&maxP2);
