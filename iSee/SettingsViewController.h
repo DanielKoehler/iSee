@@ -10,6 +10,6 @@
 
 @interface SettingsViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic) NSDictionary *settings;
+@property (nonatomic) NSArray *settings;
 
 @end

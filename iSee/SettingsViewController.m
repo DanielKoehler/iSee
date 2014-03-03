@@ -28,27 +28,30 @@
 {
     [super viewDidLoad];
     
-    self.settings = @{
-                      @"General Settings" :@[
+    self.settings = @[
+                      @{@"name":@"General Settings",
+                        @"items":@[
+                              @{@"name": @"Enable Eye Corner",
+                                @"reuseIdentifier": @"switchCell"
+                                },
                               @{@"name": @"Screen Brightness",
                                 @"reuseIdentifier": @"sliderCell"
                                 },
                               @{@"name": @"Contrast",
                                 @"reuseIdentifier": @"sliderCell"
-                                },
-                              @{@"name": @"Enable Eye Corner",
-                                @"reuseIdentifier": @"switchCell"
                                 }
-                              ],
-                      @"Algorithm Parameters" : @[
+                              ]
+                        },
+                      @{@"name":@"Algorithm Parameters" ,
+                        @"items": @[
+                              @{@"name": @"Enable Weight",
+                                @"reuseIdentifier": @"switchCell"
+                                },
                               @{@"name": @"Gradient Threshold",
                                 @"reuseIdentifier": @"sliderCell"
                                 },
                               @{@"name": @"Weight Divisor",
                                 @"reuseIdentifier": @"sliderCell"
-                                },
-                              @{@"name": @"Enable Weight",
-                                @"reuseIdentifier": @"switchCell"
                                 },
                               @{@"name": @"Weight Blur Size",
                                 @"reuseIdentifier": @"sliderCell"
@@ -56,16 +59,20 @@
                               @{@"name": @"Fast Eye Width",
                                 @"reuseIdentifier": @"sliderCell"
                                 }
-                              ],
-                      @"Preprocessing" : @[
-                              @{@"name": @"Smooth Face Factor",
-                                @"reuseIdentifier": @"sliderCell"
-                                },
+                              ]
+                        },
+                      @{@"name":@"Preprocessing" ,
+                        @"items": @[
                               @{@"name": @"Smooth Face Image",
                                 @"reuseIdentifier": @"switchCell"
+                                },
+                              @{@"name": @"Smooth Face Factor",
+                                @"reuseIdentifier": @"sliderCell"
                                 }
-                              ],
-                      @"Size constants" : @[
+                              ]
+                        },
+                      @{@"name":@"Size constants" ,
+                        @"items": @[
                               @{@"name": @"Eye Percent Width",
                                 @"reuseIdentifier": @"sliderCell"
                                 },
@@ -78,13 +85,16 @@
                               @{@"name": @"Eye Percent Top",
                                 @"reuseIdentifier": @"sliderCell"
                                 }
-                              ],
-                      @"Debugging" :@[
+                              ]
+                        },
+                      @{@"name": @"Debugging" ,
+                        @"items":@[
                               @{@"name": @"Plot Vector Field",
                                 @"reuseIdentifier": @"switchCell"
                                 }
                               ]
-                      };
+                        }
+                      ];
     
 	// Do any additional setup after loading the view.
 }
@@ -110,7 +120,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 80;
+    return 52;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -120,24 +130,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
-    
-    id section = [[self.settings allKeys] objectAtIndex:sectionIndex];
-    
-    return [[self.settings valueForKey:section] count];
+    return [self.settings[sectionIndex][@"items"] count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [[self.settings allKeys] objectAtIndex:section];
+    return self.settings[section][@"name"];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary *setting = [self.settings valueForKey:[[self.settings allKeys] objectAtIndex:indexPath.section]][indexPath.row];
+    NSDictionary *setting = self.settings[indexPath.section][@"items"][indexPath.row];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:setting[@"reuseIdentifier"]];
     
-
     cell.selectedBackgroundView = [[UIView alloc] init];
     
     UILabel *name = (UILabel *)[cell viewWithTag:1];
