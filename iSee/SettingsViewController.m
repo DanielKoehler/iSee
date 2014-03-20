@@ -149,8 +149,18 @@
     UILabel *name = (UILabel *)[cell viewWithTag:1];
     name.text = setting[@"name"];
     
+    if([setting[@"reuseIdentifier"]  isEqual: @"sliderCell"]){
+        UISlider *slider = (UISlider*)[cell viewWithTag:2];
+    
+        [slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+    }
+    
     return cell;
 
+}
+
+- (IBAction)sliderValueChanged:(UISlider *)sender {
+    NSLog(@"slider value = %f", sender.value);
 }
 
 @end
