@@ -36,6 +36,7 @@
 		4C4550AA1895475B00BC6A2C /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550A61895475B00BC6A2C /* UIImage+Resize.m */; };
 		4C4550AB1895475B00BC6A2C /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550A81895475B00BC6A2C /* UIImage+RoundedCorner.m */; };
 		4C4550AE189547F500BC6A2C /* VideoAcuityChecker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */; };
+		4C689D7018C507300023ABA1 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C689D6F18C507300023ABA1 /* iTunesArtwork@2x.png */; };
 		4CCBCF5318C202DD000D6B6F /* DebugViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBCF5218C202DD000D6B6F /* DebugViewController.mm */; };
 		4CCBCF5618C22916000D6B6F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBCF5518C22916000D6B6F /* SettingsViewController.m */; };
 		4CD179C81895235100A8A660 /* findEyeCentre.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C11895235100A8A660 /* findEyeCentre.cpp */; };
@@ -89,6 +90,7 @@
 		4C4550AC189547F500BC6A2C /* VideoAcuityChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoAcuityChecker.h; sourceTree = "<group>"; };
 		4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoAcuityChecker.mm; sourceTree = "<group>"; };
 		4C4550AF1895508600BC6A2C /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		4C689D6F18C507300023ABA1 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		4CCBCF5118C202DD000D6B6F /* DebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugViewController.h; sourceTree = "<group>"; };
 		4CCBCF5218C202DD000D6B6F /* DebugViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DebugViewController.mm; sourceTree = "<group>"; };
 		4CCBCF5418C22916000D6B6F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		449A5FE316F497F200249104 = {
 			isa = PBXGroup;
 			children = (
+				4C689D6F18C507300023ABA1 /* iTunesArtwork@2x.png */,
 				4C2A3F5D18953276009488BE /* Eye Tracking */,
 				449A5FF516F497F200249104 /* iSee */,
 				449A5FEE16F497F200249104 /* Frameworks */,
@@ -302,6 +305,7 @@
 				449A5FFA16F497F200249104 /* InfoPlist.strings in Resources */,
 				449A600216F497F200249104 /* Default.png in Resources */,
 				4C45509C1895473E00BC6A2C /* Images.xcassets in Resources */,
+				4C689D7018C507300023ABA1 /* iTunesArtwork@2x.png in Resources */,
 				449A600416F497F200249104 /* Default@2x.png in Resources */,
 				449A600616F497F200249104 /* Default-568h@2x.png in Resources */,
 				4CD179CD18952E1B00A8A660 /* Storyboard.storyboard in Resources */,
