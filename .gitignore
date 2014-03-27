@@ -9,23 +9,23 @@ iSee/Restricted.xcassets/
 build/*
  
 # Exclude temp nibs and swap files
-*~.nib
-*.swp
+#*~.nib
+#*.swp
  
  
 # Exclude user-specific XCode 3 and 4 files
-*.mode1
-*.mode1v3
-*.mode2v3
-*.perspective
-*.perspectivev3
-*.pbxuser
-*.xcworkspace
-xcuserdata
-*.xcodeproj/ !*.xcodeproj/project.pbxproj
+#*.mode1
+#*.mode1v3
+#*.mode2v3
+#*.perspective
+#*.perspectivev3
+#*.pbxuser
+#*.xcworkspace
+#xcuserdata
+#*.xcodeproj/ !*.xcodeproj/project.pbxproj
  
   
-#    NB: also, whitelist the default ones, some projects need to use these
+# NB: also, whitelist the default ones, some projects need to use these
 !default.pbxuser
 !default.mode1v3
 !default.mode2v3
