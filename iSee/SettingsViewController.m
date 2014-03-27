@@ -151,8 +151,11 @@
     
     if([setting[@"reuseIdentifier"]  isEqual: @"sliderCell"]){
         UISlider *slider = (UISlider*)[cell viewWithTag:2];
+      
+      slider.restorationIdentifier = setting[@"name"];
+      slider.value = [[NSUserDefaults standardUserDefaults] floatForKey:setting[@"name"]];
     
-        [slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+      [slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
     }
     
     return cell;
@@ -160,7 +163,8 @@
 }
 
 - (IBAction)sliderValueChanged:(UISlider *)sender {
-    NSLog(@"slider value = %f", sender.value);
+    [[NSUserDefaults standardUserDefaults] setFloat:sender.value forKey:sender.restorationIdentifier];
+//    NSLog(@"slider value = %@", sender.restorationIdentifier);
 }
 
 @end
