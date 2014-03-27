@@ -32,65 +32,126 @@
                       @{@"name":@"General Settings",
                         @"items":@[
                               @{@"name": @"Enable Eye Corner",
-                                @"reuseIdentifier": @"switchCell"
+                                @"reuseIdentifier": @"switchCell",
+                                @"type":@"bool",
+                                @"upperbound":@"",
+                                @"lowerbound":@"",
+                                @"handler":@"constants"
                                 },
+                              
                               @{@"name": @"Screen Brightness",
-                                @"reuseIdentifier": @"sliderCell"
+                                @"reuseIdentifier": @"sliderCell",
+                                @"type":@"",
+                                @"upperbound":@"",
+                                @"lowerbound":@"",
+                                @"handler":@""
                                 },
                               @{@"name": @"Contrast",
-                                @"reuseIdentifier": @"sliderCell"
+                                @"reuseIdentifier": @"sliderCell",
+                                @"type":@"",
+                                @"upperbound":@"",
+                                @"lowerbound":@"",
+                                @"handler":@""
                                 }
                               ]
                         },
                       @{@"name":@"Algorithm Parameters" ,
                         @"items": @[
                               @{@"name": @"Enable Weight",
-                                @"reuseIdentifier": @"switchCell"
+                                @"reuseIdentifier": @"switchCell",
+                                @"type":@"",
+                                @"upperbound":@"",
+                                @"lowerbound":@"",
+                                @"handler":@""
                                 },
                               @{@"name": @"Gradient Threshold",
-                                @"reuseIdentifier": @"sliderCell"
+                                @"reuseIdentifier": @"sliderCell",
+                                @"type":@"",
+                                @"upperbound":@"",
+                                @"lowerbound":@"",
+                                @"handler":@""
                                 },
                               @{@"name": @"Weight Divisor",
-                                @"reuseIdentifier": @"sliderCell"
+                                @"reuseIdentifier": @"sliderCell",
+                                @"type":@"",
+                                @"upperbound":@"",
+                                @"lowerbound":@"",
+                                @"handler":@""
                                 },
                               @{@"name": @"Weight Blur Size",
-                                @"reuseIdentifier": @"sliderCell"
+                                @"reuseIdentifier": @"sliderCell",
+                                @"type":@"",
+                                @"upperbound":@"",
+                                @"lowerbound":@"",
+                                @"handler":@""
                                 },
                               @{@"name": @"Fast Eye Width",
-                                @"reuseIdentifier": @"sliderCell"
+                                @"reuseIdentifier": @"sliderCell",
+                                @"type":@"",
+                                @"upperbound":@"",
+                                @"lowerbound":@"",
+                                @"handler":@""
                                 }
                               ]
                         },
                       @{@"name":@"Preprocessing" ,
                         @"items": @[
                               @{@"name": @"Smooth Face Image",
-                                @"reuseIdentifier": @"switchCell"
+                                @"reuseIdentifier": @"switchCell",
+                                @"type":@"",
+                                @"upperbound":@"",
+                                @"lowerbound":@"",
+                                @"handler":@""
                                 },
                               @{@"name": @"Smooth Face Factor",
-                                @"reuseIdentifier": @"sliderCell"
+                                @"reuseIdentifier": @"sliderCell",
+                                @"type":@"",
+                                @"upperbound":@"",
+                                @"lowerbound":@"",
+                                @"handler":@""
                                 }
                               ]
                         },
                       @{@"name":@"Size constants" ,
                         @"items": @[
                               @{@"name": @"Eye Percent Width",
-                                @"reuseIdentifier": @"sliderCell"
+                                @"reuseIdentifier": @"sliderCell",
+                                @"type":@"",
+                                @"upperbound":@"",
+                                @"lowerbound":@"",
+                                @"handler":@""
                                 },
                               @{@"name": @"Eye Percent Height",
-                                @"reuseIdentifier": @"sliderCell"
+                                @"reuseIdentifier": @"sliderCell",
+                                @"type":@"",
+                                @"upperbound":@"",
+                                @"lowerbound":@"",
+                                @"handler":@""
                                 },
                               @{@"name": @"Eye Percent Side",
-                                @"reuseIdentifier": @"sliderCell"
+                                @"reuseIdentifier": @"sliderCell",
+                                @"type":@"",
+                                @"upperbound":@"",
+                                @"lowerbound":@"",
+                                @"handler":@""
                                 },
                               @{@"name": @"Eye Percent Top",
-                                @"reuseIdentifier": @"sliderCell"
+                                @"reuseIdentifier": @"sliderCell",
+                                @"type":@"",
+                                @"upperbound":@"",
+                                @"lowerbound":@"",
+                                @"handler":@""
                                 }
                               ]
                         },
                       @{@"name": @"Debugging" ,
                         @"items":@[
                               @{@"name": @"Plot Vector Field",
-                                @"reuseIdentifier": @"switchCell"
+                                @"reuseIdentifier": @"switchCell",
+                                @"type":@"",
+                                @"upperbound":@"",
+                                @"lowerbound":@"",
+                                @"handler":@""
                                 }
                               ]
                         }
