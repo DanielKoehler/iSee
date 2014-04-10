@@ -31,83 +31,83 @@
     self.settings = @[
                       @{@"name":@"General Settings",
                         @"items":@[
-                                @{@"name": @"Enable Eye Corner",
-                                  @"reuseIdentifier": @"switchCell",
-                                  //                                @"handler":@"constants"
-                                  },
-                                @{@"name": @"Screen Brightness",
-                                  @"reuseIdentifier": @"sliderCell",
-                                  @"handler":@"screenBrightnessDidChange:"
-                                  },
-                                @{@"name": @"Contrast",
-                                  @"reuseIdentifier": @"sliderCell",
-                                  @"handler":@"contrastDidChange:"
-                                  }
-                                ]
+                              @{@"name": @"Enable Eye Corner",
+                                @"reuseIdentifier": @"switchCell",
+//                                @"handler":@"constants"
+                                },
+                              @{@"name": @"Screen Brightness",
+                                @"reuseIdentifier": @"sliderCell",
+                                @"handler":@"screenBrightnessDidChange:"
+                                },
+                              @{@"name": @"Contrast",
+                                @"reuseIdentifier": @"sliderCell",
+                                @"handler":@"contrastDidChange:"
+                                }
+                              ]
                         },
                       @{@"name":@"Algorithm Parameters" ,
                         @"items": @[
-                                @{@"name": @"Enable Weight",
-                                  @"reuseIdentifier": @"switchCell",
-                                  //                                @"handler":@"enableWeightSwitched:"
-                                  },
-                                @{@"name": @"Gradient Threshold",
-                                  @"reuseIdentifier": @"sliderCell",
-                                  @"handler":@"gradientThesholdDidChange:"
-                                  },
-                                @{@"name": @"Weight Divisor",
-                                  @"reuseIdentifier": @"sliderCell",
-                                  @"handler":@"weightDivisorDidChange:"
-                                  },
-                                @{@"name": @"Weight Blur Size",
-                                  @"reuseIdentifier": @"sliderCell",
-                                  @"handler":@"weightBlurSizeDidChange:"
-                                  },
-                                @{@"name": @"Fast Eye Width",
-                                  @"reuseIdentifier": @"sliderCell",
-                                  @"handler":@"fastEyeWidthDidChange:"
-                                  }
-                                ]
+                              @{@"name": @"Enable Weight",
+                                @"reuseIdentifier": @"switchCell",
+//                                @"handler":@"enableWeightSwitched:"
+                                },
+                              @{@"name": @"Gradient Threshold",
+                                @"reuseIdentifier": @"sliderCell",
+                                @"handler":@"gradientThesholdDidChange:"
+                                },
+                              @{@"name": @"Weight Divisor",
+                                @"reuseIdentifier": @"sliderCell",
+                                @"handler":@"weightDivisorDidChange:"
+                                },
+                              @{@"name": @"Weight Blur Size",
+                                @"reuseIdentifier": @"sliderCell",
+                                @"handler":@"weightBlurSizeDidChange:"
+                                },
+                              @{@"name": @"Fast Eye Width",
+                                @"reuseIdentifier": @"sliderCell",
+                                @"handler":@"fastEyeWidthDidChange:"
+                                }
+                              ]
                         },
                       @{@"name":@"Preprocessing" ,
                         @"items": @[
-                                @{@"name": @"Smooth Face Image",
-                                  @"reuseIdentifier": @"switchCell",
-                                  //                                @"handler":@""
-                                  },
-                                @{@"name": @"Smooth Face Factor",
-                                  @"reuseIdentifier": @"sliderCell",
-                                  @"handler":@"smoothFaceFactorDidChange:"
-                                  }
-                                ]
+                              @{@"name": @"Smooth Face Image",
+                                @"reuseIdentifier": @"switchCell",
+//                                @"handler":@""
+                                },
+                              @{@"name": @"Smooth Face Factor",
+                                @"reuseIdentifier": @"sliderCell",
+                                @"handler":@"smoothFaceFactorDidChange:"
+                                }
+                              ]
                         },
                       @{@"name":@"Size constants" ,
                         @"items": @[
-                                @{@"name": @"Eye Percent Width",
-                                  @"reuseIdentifier": @"sliderCell",
-                                  @"handler":@"eyePercentWidthDidChange:"
-                                  },
-                                @{@"name": @"Eye Percent Height",
-                                  @"reuseIdentifier": @"sliderCell",
-                                  @"handler":@"eyePercentHeightDidChange:"
-                                  },
-                                @{@"name": @"Eye Percent Side",
-                                  @"reuseIdentifier": @"sliderCell",
-                                  @"handler":@"eyePercentSideDidChange:"
-                                  },
-                                @{@"name": @"Eye Percent Top",
-                                  @"reuseIdentifier": @"sliderCell",
-                                  @"handler":@"eyePercentTopDidChange:"
-                                  }
-                                ]
+                              @{@"name": @"Eye Percent Width",
+                                @"reuseIdentifier": @"sliderCell",
+                                @"handler":@"eyePercentWidthDidChange:"
+                                },
+                              @{@"name": @"Eye Percent Height",
+                                @"reuseIdentifier": @"sliderCell",
+                                @"handler":@"eyePercentHeightDidChange:"
+                                },
+                              @{@"name": @"Eye Percent Side",
+                                @"reuseIdentifier": @"sliderCell",
+                                @"handler":@"eyePercentSideDidChange:"
+                                },
+                              @{@"name": @"Eye Percent Top",
+                                @"reuseIdentifier": @"sliderCell",
+                                @"handler":@"eyePercentTopDidChange:"
+                                }
+                              ]
                         },
                       @{@"name": @"Debugging" ,
                         @"items":@[
-                                @{@"name": @"Plot Vector Field",
-                                  @"reuseIdentifier": @"switchCell",
-                                  @"handler":@""
-                                  }
-                                ]
+                              @{@"name": @"Plot Vector Field",
+                                @"reuseIdentifier": @"switchCell",
+                                @"handler":@""
+                                }
+                              ]
                         }
                       ];
     
@@ -129,8 +129,8 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    //    if([[self.settings valueForKey:[[self.settings allKeys] objectAtIndex:indexPath.section]][indexPath.row][@"reuseIdentifier"]  isEqual: @"switchCell"])
-    //        return 56;
+//    if([[self.settings valueForKey:[[self.settings allKeys] objectAtIndex:indexPath.section]][indexPath.row][@"reuseIdentifier"]  isEqual: @"switchCell"])
+//        return 56;
     return 52;
 }
 
@@ -166,16 +166,16 @@
     
     if([setting[@"reuseIdentifier"]  isEqual: @"sliderCell"]){
         UISlider *slider = (UISlider*)[cell viewWithTag:2];
-        
-        slider.restorationIdentifier = setting[@"name"];
-        slider.value = [[NSUserDefaults standardUserDefaults] floatForKey:setting[@"name"]];
-        
+      
+      slider.restorationIdentifier = setting[@"name"];
+      slider.value = [[NSUserDefaults standardUserDefaults] floatForKey:setting[@"name"]];
+    
         [slider addTarget:self action:NSSelectorFromString(setting[@"handler"]) forControlEvents:UIControlEventValueChanged];
         
     }
     
     return cell;
-    
+
 }
 
 -(IBAction) screenBrightnessDidChange:(UISlider *)sender {
