@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CF2681B18F7195E00B0AF11 /* PupilTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2681A18F7195E00B0AF11 /* PupilTracking.m */; };
 		449A5FF016F497F200249104 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A5FEF16F497F200249104 /* UIKit.framework */; };
 		449A5FF216F497F200249104 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A5FF116F497F200249104 /* Foundation.framework */; };
 		449A5FF416F497F200249104 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A5FF316F497F200249104 /* CoreGraphics.framework */; };
@@ -46,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CF2681918F7195E00B0AF11 /* PupilTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PupilTracking.h; sourceTree = "<group>"; };
+		3CF2681A18F7195E00B0AF11 /* PupilTracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PupilTracking.m; sourceTree = "<group>"; };
 		449A5FEC16F497F200249104 /* iSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449A5FEF16F497F200249104 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		449A5FF116F497F200249104 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -205,6 +208,8 @@
 				4CD179C61895235100A8A660 /* helpers.h */,
 				4C4550AC189547F500BC6A2C /* VideoAcuityChecker.h */,
 				4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */,
+				3CF2681918F7195E00B0AF11 /* PupilTracking.h */,
+				3CF2681A18F7195E00B0AF11 /* PupilTracking.m */,
 			);
 			name = "Eye Tracking";
 			path = iSee;
@@ -322,6 +327,7 @@
 			files = (
 				4C4550A11895473E00BC6A2C /* ViewController.m in Sources */,
 				449A5FFC16F497F200249104 /* main.mm in Sources */,
+				3CF2681B18F7195E00B0AF11 /* PupilTracking.m in Sources */,
 				4C4550AB1895475B00BC6A2C /* UIImage+RoundedCorner.m in Sources */,
 				4CCBCF5618C22916000D6B6F /* SettingsViewController.m in Sources */,
 				4C45509E1895473E00BC6A2C /* AcuityModel.m in Sources */,

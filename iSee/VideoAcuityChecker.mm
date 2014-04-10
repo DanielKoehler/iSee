@@ -8,9 +8,10 @@
 
 #import "VideoAcuityChecker.h"
 
-#include "findEyeCentre.h"
-#include "findEyeCorner.h"
+//#include "findEyeCentre.h"
+//#include "findEyeCorner.h"
 #include "constants.h"
+#include "PupilTracking.h"
 
 using namespace cv;
 
