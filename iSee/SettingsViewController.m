@@ -31,129 +31,83 @@
     self.settings = @[
                       @{@"name":@"General Settings",
                         @"items":@[
-                              @{@"name": @"Enable Eye Corner",
-                                @"reuseIdentifier": @"switchCell",
-                                @"type":@"bool",
-                                @"upperbound":@"",
-                                @"lowerbound":@"",
-                                @"handler":@"constants"
-                                },
-                              
-                              @{@"name": @"Screen Brightness",
-                                @"reuseIdentifier": @"sliderCell",
-                                @"type":@"",
-                                @"upperbound":@"",
-                                @"lowerbound":@"",
-                                @"handler":@""
-                                },
-                              @{@"name": @"Contrast",
-                                @"reuseIdentifier": @"sliderCell",
-                                @"type":@"",
-                                @"upperbound":@"",
-                                @"lowerbound":@"",
-                                @"handler":@""
-                                }
-                              ]
+                                @{@"name": @"Enable Eye Corner",
+                                  @"reuseIdentifier": @"switchCell",
+                                  //                                @"handler":@"constants"
+                                  },
+                                @{@"name": @"Screen Brightness",
+                                  @"reuseIdentifier": @"sliderCell",
+                                  @"handler":@"screenBrightnessDidChange:"
+                                  },
+                                @{@"name": @"Contrast",
+                                  @"reuseIdentifier": @"sliderCell",
+                                  @"handler":@"contrastDidChange:"
+                                  }
+                                ]
                         },
                       @{@"name":@"Algorithm Parameters" ,
                         @"items": @[
-                              @{@"name": @"Enable Weight",
-                                @"reuseIdentifier": @"switchCell",
-                                @"type":@"",
-                                @"upperbound":@"",
-                                @"lowerbound":@"",
-                                @"handler":@""
-                                },
-                              @{@"name": @"Gradient Threshold",
-                                @"reuseIdentifier": @"sliderCell",
-                                @"type":@"",
-                                @"upperbound":@"",
-                                @"lowerbound":@"",
-                                @"handler":@""
-                                },
-                              @{@"name": @"Weight Divisor",
-                                @"reuseIdentifier": @"sliderCell",
-                                @"type":@"",
-                                @"upperbound":@"",
-                                @"lowerbound":@"",
-                                @"handler":@""
-                                },
-                              @{@"name": @"Weight Blur Size",
-                                @"reuseIdentifier": @"sliderCell",
-                                @"type":@"",
-                                @"upperbound":@"",
-                                @"lowerbound":@"",
-                                @"handler":@""
-                                },
-                              @{@"name": @"Fast Eye Width",
-                                @"reuseIdentifier": @"sliderCell",
-                                @"type":@"",
-                                @"upperbound":@"",
-                                @"lowerbound":@"",
-                                @"handler":@""
-                                }
-                              ]
+                                @{@"name": @"Enable Weight",
+                                  @"reuseIdentifier": @"switchCell",
+                                  //                                @"handler":@"enableWeightSwitched:"
+                                  },
+                                @{@"name": @"Gradient Threshold",
+                                  @"reuseIdentifier": @"sliderCell",
+                                  @"handler":@"gradientThesholdDidChange:"
+                                  },
+                                @{@"name": @"Weight Divisor",
+                                  @"reuseIdentifier": @"sliderCell",
+                                  @"handler":@"weightDivisorDidChange:"
+                                  },
+                                @{@"name": @"Weight Blur Size",
+                                  @"reuseIdentifier": @"sliderCell",
+                                  @"handler":@"weightBlurSizeDidChange:"
+                                  },
+                                @{@"name": @"Fast Eye Width",
+                                  @"reuseIdentifier": @"sliderCell",
+                                  @"handler":@"fastEyeWidthDidChange:"
+                                  }
+                                ]
                         },
                       @{@"name":@"Preprocessing" ,
                         @"items": @[
-                              @{@"name": @"Smooth Face Image",
-                                @"reuseIdentifier": @"switchCell",
-                                @"type":@"",
-                                @"upperbound":@"",
-                                @"lowerbound":@"",
-                                @"handler":@""
-                                },
-                              @{@"name": @"Smooth Face Factor",
-                                @"reuseIdentifier": @"sliderCell",
-                                @"type":@"",
-                                @"upperbound":@"",
-                                @"lowerbound":@"",
-                                @"handler":@""
-                                }
-                              ]
+                                @{@"name": @"Smooth Face Image",
+                                  @"reuseIdentifier": @"switchCell",
+                                  //                                @"handler":@""
+                                  },
+                                @{@"name": @"Smooth Face Factor",
+                                  @"reuseIdentifier": @"sliderCell",
+                                  @"handler":@"smoothFaceFactorDidChange:"
+                                  }
+                                ]
                         },
                       @{@"name":@"Size constants" ,
                         @"items": @[
-                              @{@"name": @"Eye Percent Width",
-                                @"reuseIdentifier": @"sliderCell",
-                                @"type":@"",
-                                @"upperbound":@"",
-                                @"lowerbound":@"",
-                                @"handler":@""
-                                },
-                              @{@"name": @"Eye Percent Height",
-                                @"reuseIdentifier": @"sliderCell",
-                                @"type":@"",
-                                @"upperbound":@"",
-                                @"lowerbound":@"",
-                                @"handler":@""
-                                },
-                              @{@"name": @"Eye Percent Side",
-                                @"reuseIdentifier": @"sliderCell",
-                                @"type":@"",
-                                @"upperbound":@"",
-                                @"lowerbound":@"",
-                                @"handler":@""
-                                },
-                              @{@"name": @"Eye Percent Top",
-                                @"reuseIdentifier": @"sliderCell",
-                                @"type":@"",
-                                @"upperbound":@"",
-                                @"lowerbound":@"",
-                                @"handler":@""
-                                }
-                              ]
+                                @{@"name": @"Eye Percent Width",
+                                  @"reuseIdentifier": @"sliderCell",
+                                  @"handler":@"eyePercentWidthDidChange:"
+                                  },
+                                @{@"name": @"Eye Percent Height",
+                                  @"reuseIdentifier": @"sliderCell",
+                                  @"handler":@"eyePercentHeightDidChange:"
+                                  },
+                                @{@"name": @"Eye Percent Side",
+                                  @"reuseIdentifier": @"sliderCell",
+                                  @"handler":@"eyePercentSideDidChange:"
+                                  },
+                                @{@"name": @"Eye Percent Top",
+                                  @"reuseIdentifier": @"sliderCell",
+                                  @"handler":@"eyePercentTopDidChange:"
+                                  }
+                                ]
                         },
                       @{@"name": @"Debugging" ,
                         @"items":@[
-                              @{@"name": @"Plot Vector Field",
-                                @"reuseIdentifier": @"switchCell",
-                                @"type":@"",
-                                @"upperbound":@"",
-                                @"lowerbound":@"",
-                                @"handler":@""
-                                }
-                              ]
+                                @{@"name": @"Plot Vector Field",
+                                  @"reuseIdentifier": @"switchCell",
+                                  @"handler":@""
+                                  }
+                                ]
                         }
                       ];
     
@@ -175,8 +129,8 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-//    if([[self.settings valueForKey:[[self.settings allKeys] objectAtIndex:indexPath.section]][indexPath.row][@"reuseIdentifier"]  isEqual: @"switchCell"])
-//        return 56;
+    //    if([[self.settings valueForKey:[[self.settings allKeys] objectAtIndex:indexPath.section]][indexPath.row][@"reuseIdentifier"]  isEqual: @"switchCell"])
+    //        return 56;
     return 52;
 }
 
@@ -212,20 +166,26 @@
     
     if([setting[@"reuseIdentifier"]  isEqual: @"sliderCell"]){
         UISlider *slider = (UISlider*)[cell viewWithTag:2];
-      
-      slider.restorationIdentifier = setting[@"name"];
-      slider.value = [[NSUserDefaults standardUserDefaults] floatForKey:setting[@"name"]];
-    
-      [slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+        
+        slider.restorationIdentifier = setting[@"name"];
+        slider.value = [[NSUserDefaults standardUserDefaults] floatForKey:setting[@"name"]];
+        
+        [slider addTarget:self action:NSSelectorFromString(setting[@"handler"]) forControlEvents:UIControlEventValueChanged];
+        
     }
     
     return cell;
-
+    
 }
 
-- (IBAction)sliderValueChanged:(UISlider *)sender {
-    [[NSUserDefaults standardUserDefaults] setFloat:sender.value forKey:sender.restorationIdentifier];
-//    NSLog(@"slider value = %@", sender.restorationIdentifier);
+-(IBAction) screenBrightnessDidChange:(UISlider *)sender {
+    [[UIScreen mainScreen] setBrightness:sender.value];
 }
+
+
+
+
+
+
 
 @end
