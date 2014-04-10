@@ -33,7 +33,7 @@
                         @"items":@[
                               @{@"name": @"Enable Eye Corner",
                                 @"reuseIdentifier": @"switchCell",
-//                                @"handler":@"constants"
+                                @"handler":@"enableEyeCornerDidSwitch:"
                                 },
                               @{@"name": @"Screen Brightness",
                                 @"reuseIdentifier": @"sliderCell",
@@ -49,7 +49,7 @@
                         @"items": @[
                               @{@"name": @"Enable Weight",
                                 @"reuseIdentifier": @"switchCell",
-//                                @"handler":@"enableWeightSwitched:"
+                                @"handler":@"enableWeightDidSwitch:"
                                 },
                               @{@"name": @"Gradient Threshold",
                                 @"reuseIdentifier": @"sliderCell",
@@ -73,7 +73,7 @@
                         @"items": @[
                               @{@"name": @"Smooth Face Image",
                                 @"reuseIdentifier": @"switchCell",
-//                                @"handler":@""
+                                @"handler":@"smoothFaceImageDidSwitch:"
                                 },
                               @{@"name": @"Smooth Face Factor",
                                 @"reuseIdentifier": @"sliderCell",
@@ -105,7 +105,7 @@
                         @"items":@[
                               @{@"name": @"Plot Vector Field",
                                 @"reuseIdentifier": @"switchCell",
-                                @"handler":@""
+                                @"handler":@"plotVectorFieldDidSwitch:"
                                 }
                               ]
                         }
@@ -164,28 +164,139 @@
     UILabel *name = (UILabel *)[cell viewWithTag:1];
     name.text = setting[@"name"];
     
-    if([setting[@"reuseIdentifier"]  isEqual: @"sliderCell"]){
+    if([setting[@"reuseIdentifier"]  isEqual: @"sliderCell"])
+    {
         UISlider *slider = (UISlider*)[cell viewWithTag:2];
       
-      slider.restorationIdentifier = setting[@"name"];
-      slider.value = [[NSUserDefaults standardUserDefaults] floatForKey:setting[@"name"]];
+        slider.restorationIdentifier = setting[@"name"];
+        slider.value = [[NSUserDefaults standardUserDefaults] floatForKey:setting[@"name"]];
     
         [slider addTarget:self action:NSSelectorFromString(setting[@"handler"]) forControlEvents:UIControlEventValueChanged];
         
+    } else if ([setting[@"reuseIdentifier"]  isEqual: @"switchCell"])
+    {
+        UISwitch *button = (UISwitch*)[cell viewWithTag:3];
+        
+        button.restorationIdentifier = setting[@"name"];
+        button.on = [[NSUserDefaults standardUserDefaults] boolForKey:setting[@"name"]];
+        
+        [button addTarget:self action:NSSelectorFromString(setting[@"handler"]) forControlEvents:UIControlEventValueChanged];
     }
     
     return cell;
 
 }
 
--(IBAction) screenBrightnessDidChange:(UISlider *)sender {
-    [[UIScreen mainScreen] setBrightness:sender.value];
+// Switch Handlers
+
+-(void) enableEyeCornerDidSwitch:(UISwitch *)uiswitch
+{
+    NSLog(@"%hhd", [uiswitch isOn]);
+    
+    [[NSUserDefaults standardUserDefaults] setBool:uiswitch.isOn forKey:uiswitch.restorationIdentifier];
+
 }
 
+-(void) enableWeightDidSwitch:(UISwitch *)uiswitch
+{
+    
+    [[NSUserDefaults standardUserDefaults] setBool:uiswitch.isOn forKey:uiswitch.restorationIdentifier];
+    
+}
 
+-(void) smoothFaceImageDidSwitch:(UISwitch *)uiswitch
+{
+    
+    [[NSUserDefaults standardUserDefaults] setBool:uiswitch.isOn forKey:uiswitch.restorationIdentifier];
+    
+}
 
+-(void) plotVectorFieldDidSwitch:(UISwitch *)uiswitch
+{
+    
+    [[NSUserDefaults standardUserDefaults] setBool:uiswitch.isOn forKey:uiswitch.restorationIdentifier];
+    
+}
 
+// Slider Handlers
 
+-(void) screenBrightnessDidChange:(UISlider *)uislider
+{
+    
+    NSLog(@"%f", uislider.value);
+    [[UIScreen mainScreen] setBrightness:uislider.value];
+    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
 
+}
+
+-(void) contrastDidChange:(UISlider *)uislider
+{
+    
+    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
+
+}
+
+-(void) gradientThesholdDidChange:(UISlider *)uislider
+{
+    
+    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
+    
+}
+
+-(void) weightDivisorDidChange:(UISlider *)uislider
+{
+    
+    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
+    
+}
+
+-(void) weightBlurSizeDidChange:(UISlider *)uislider
+{
+    
+    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
+    
+}
+
+-(void) fastEyeWidthDidChange:(UISlider *)uislider
+{
+    
+    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
+    
+}
+
+-(void) smoothFaceFactorDidChange:(UISlider *)uislider
+{
+    
+    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
+    
+}
+
+-(void) eyePercentWidthDidChange:(UISlider *)uislider
+{
+    
+    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
+    
+}
+
+-(void) eyePercentHeightDidChange:(UISlider *)uislider
+{
+    
+    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
+    
+}
+
+-(IBAction) eyePercentSideDidChange:(UISlider *)uislider
+{
+    
+    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
+    
+}
+
+-(IBAction) eyePercentTopDidChange:(UISlider *)uislider
+{
+    
+    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
+    
+}
 
 @end
