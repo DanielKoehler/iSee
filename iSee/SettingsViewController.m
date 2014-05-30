@@ -33,15 +33,19 @@
                         @"items":@[
                               @{@"name": @"Enable Eye Corner",
                                 @"reuseIdentifier": @"switchCell",
-                                @"handler":@"enableEyeCornerDidSwitch:"
+                                @"handler":@"switchValueDidChange:"
                                 },
                               @{@"name": @"Screen Brightness",
                                 @"reuseIdentifier": @"sliderCell",
-                                @"handler":@"screenBrightnessDidChange:"
+                                @"handler":@"screenBrightnessDidChange:",
+                                @"min":[NSNumber numberWithFloat:0],
+                                @"max":[NSNumber numberWithFloat:1]
                                 },
                               @{@"name": @"Contrast",
                                 @"reuseIdentifier": @"sliderCell",
-                                @"handler":@"contrastDidChange:"
+                                @"handler":@"sliderValueDidChange:",
+                                @"min":[NSNumber numberWithFloat:0],
+                                @"max":[NSNumber numberWithFloat:1]
                                 }
                               ]
                         },
@@ -49,23 +53,35 @@
                         @"items": @[
                               @{@"name": @"Enable Weight",
                                 @"reuseIdentifier": @"switchCell",
-                                @"handler":@"enableWeightDidSwitch:"
+                                @"handler":@"switchValueDidChange:"
                                 },
                               @{@"name": @"Gradient Threshold",
                                 @"reuseIdentifier": @"sliderCell",
-                                @"handler":@"gradientThesholdDidChange:"
+                                @"handler":@"sliderValueDidChange:",
+                                @"min":[NSNumber numberWithFloat:20],
+                                @"max":[NSNumber numberWithFloat:100],
+                                @"default":[NSNumber numberWithFloat:50]
                                 },
                               @{@"name": @"Weight Divisor",
                                 @"reuseIdentifier": @"sliderCell",
-                                @"handler":@"weightDivisorDidChange:"
+                                @"handler":@"sliderValueDidChange:",
+                                @"min":[NSNumber numberWithFloat:50],
+                                @"max":[NSNumber numberWithFloat:150],
+                                @"default":[NSNumber numberWithFloat:150]
                                 },
                               @{@"name": @"Weight Blur Size",
                                 @"reuseIdentifier": @"sliderCell",
-                                @"handler":@"weightBlurSizeDidChange:"
+                                @"handler":@"sliderValueDidChange:",
+                                @"min":[NSNumber numberWithFloat:1],
+                                @"max":[NSNumber numberWithFloat:10],
+                                @"default":[NSNumber numberWithFloat:5]
                                 },
                               @{@"name": @"Fast Eye Width",
                                 @"reuseIdentifier": @"sliderCell",
-                                @"handler":@"fastEyeWidthDidChange:"
+                                @"handler":@"sliderValueDidChange:",
+                                @"min":[NSNumber numberWithFloat:10],
+                                @"max":[NSNumber numberWithFloat:100],
+                                @"default":[NSNumber numberWithFloat:50]
                                 }
                               ]
                         },
@@ -73,11 +89,14 @@
                         @"items": @[
                               @{@"name": @"Smooth Face Image",
                                 @"reuseIdentifier": @"switchCell",
-                                @"handler":@"smoothFaceImageDidSwitch:"
+                                @"handler":@"switchValueDidChange:"
                                 },
                               @{@"name": @"Smooth Face Factor",
                                 @"reuseIdentifier": @"sliderCell",
-                                @"handler":@"smoothFaceFactorDidChange:"
+                                @"handler":@"sliderValueDidChange:",
+                                @"min":[NSNumber numberWithFloat:0.001],
+                                @"max":[NSNumber numberWithFloat:0.010],
+                                @"default":[NSNumber numberWithFloat:0.005]
                                 }
                               ]
                         },
@@ -85,19 +104,31 @@
                         @"items": @[
                               @{@"name": @"Eye Percent Width",
                                 @"reuseIdentifier": @"sliderCell",
-                                @"handler":@"eyePercentWidthDidChange:"
+                                @"handler":@"sliderValueDidChange:",
+                                @"min":[NSNumber numberWithFloat:10],
+                                @"max":[NSNumber numberWithFloat:100],
+                                @"default":[NSNumber numberWithFloat:35]
                                 },
                               @{@"name": @"Eye Percent Height",
                                 @"reuseIdentifier": @"sliderCell",
-                                @"handler":@"eyePercentHeightDidChange:"
+                                @"handler":@"sliderValueDidChange:",
+                                @"min":[NSNumber numberWithFloat:10],
+                                @"max":[NSNumber numberWithFloat:100],
+                                @"default":[NSNumber numberWithFloat:30]
                                 },
                               @{@"name": @"Eye Percent Side",
                                 @"reuseIdentifier": @"sliderCell",
-                                @"handler":@"eyePercentSideDidChange:"
+                                @"handler":@"sliderValueDidChange:",
+                                @"min":[NSNumber numberWithFloat:10],
+                                @"max":[NSNumber numberWithFloat:100],
+                                @"default":[NSNumber numberWithFloat:13]
                                 },
                               @{@"name": @"Eye Percent Top",
                                 @"reuseIdentifier": @"sliderCell",
-                                @"handler":@"eyePercentTopDidChange:"
+                                @"handler":@"sliderValueDidChange:",
+                                @"min":[NSNumber numberWithFloat:10],
+                                @"max":[NSNumber numberWithFloat:100],
+                                @"default":[NSNumber numberWithFloat:25]
                                 }
                               ]
                         },
@@ -105,7 +136,7 @@
                         @"items":@[
                               @{@"name": @"Plot Vector Field",
                                 @"reuseIdentifier": @"switchCell",
-                                @"handler":@"plotVectorFieldDidSwitch:"
+                                @"handler":@"switchValueDidChange:"
                                 }
                               ]
                         }
@@ -169,9 +200,13 @@
         UISlider *slider = (UISlider*)[cell viewWithTag:2];
       
         slider.restorationIdentifier = setting[@"name"];
-        slider.value = [[NSUserDefaults standardUserDefaults] floatForKey:setting[@"name"]];
-    
-        [slider addTarget:self action:NSSelectorFromString(setting[@"handler"]) forControlEvents:UIControlEventValueChanged];
+      
+      slider.minimumValue = [setting[@"min"] floatValue];
+      slider.maximumValue = [setting[@"max"] floatValue];
+      slider.value = [setting[@"default"] floatValue];
+      // max is always 0?!!
+      //slider.value = [[NSUserDefaults standardUserDefaults] floatForKey:setting[@"name"]];
+      [slider addTarget:self action:NSSelectorFromString(setting[@"handler"]) forControlEvents:UIControlEventValueChanged];
         
     } else if ([setting[@"reuseIdentifier"]  isEqual: @"switchCell"])
     {
@@ -179,7 +214,7 @@
         
         button.restorationIdentifier = setting[@"name"];
         button.on = [[NSUserDefaults standardUserDefaults] boolForKey:setting[@"name"]];
-        
+      
         [button addTarget:self action:NSSelectorFromString(setting[@"handler"]) forControlEvents:UIControlEventValueChanged];
     }
     
@@ -189,114 +224,37 @@
 
 // Switch Handlers
 
--(void) enableEyeCornerDidSwitch:(UISwitch *)uiswitch
+-(void) switchValueDidChange:(UISwitch *)uiswitch
 {
     NSLog(@"%hhd", [uiswitch isOn]);
-    
+    NSLog(@"%@", [uiswitch restorationIdentifier]);
+  
     [[NSUserDefaults standardUserDefaults] setBool:uiswitch.isOn forKey:uiswitch.restorationIdentifier];
 
-}
-
--(void) enableWeightDidSwitch:(UISwitch *)uiswitch
-{
-    
-    [[NSUserDefaults standardUserDefaults] setBool:uiswitch.isOn forKey:uiswitch.restorationIdentifier];
-    
-}
-
--(void) smoothFaceImageDidSwitch:(UISwitch *)uiswitch
-{
-    
-    [[NSUserDefaults standardUserDefaults] setBool:uiswitch.isOn forKey:uiswitch.restorationIdentifier];
-    
-}
-
--(void) plotVectorFieldDidSwitch:(UISwitch *)uiswitch
-{
-    
-    [[NSUserDefaults standardUserDefaults] setBool:uiswitch.isOn forKey:uiswitch.restorationIdentifier];
-    
 }
 
 // Slider Handlers
 
+-(void) sliderValueDidChange:(UISlider *)uislider
+{
+    NSLog(@"%f", uislider.value);
+    NSLog(@"%@", [uislider restorationIdentifier]);
+
+
+}
+
+
 -(void) screenBrightnessDidChange:(UISlider *)uislider
 {
-    
-    NSLog(@"%f", uislider.value);
-    [[UIScreen mainScreen] setBrightness:uislider.value];
-    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
-
+  NSLog(@"%f", uislider.value);
+  NSLog(@"%@", [uislider restorationIdentifier]);
+  
+  
+  [[UIScreen mainScreen] setBrightness:uislider.value];
+  //    [[NSUserDefaults standardUserDefaults] setFl
+  
 }
 
--(void) contrastDidChange:(UISlider *)uislider
-{
-    
-    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
 
-}
-
--(void) gradientThesholdDidChange:(UISlider *)uislider
-{
-    
-    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
-    
-}
-
--(void) weightDivisorDidChange:(UISlider *)uislider
-{
-    
-    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
-    
-}
-
--(void) weightBlurSizeDidChange:(UISlider *)uislider
-{
-    
-    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
-    
-}
-
--(void) fastEyeWidthDidChange:(UISlider *)uislider
-{
-    
-    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
-    
-}
-
--(void) smoothFaceFactorDidChange:(UISlider *)uislider
-{
-    
-    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
-    
-}
-
--(void) eyePercentWidthDidChange:(UISlider *)uislider
-{
-    
-    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
-    
-}
-
--(void) eyePercentHeightDidChange:(UISlider *)uislider
-{
-    
-    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
-    
-}
-
--(IBAction) eyePercentSideDidChange:(UISlider *)uislider
-{
-    
-    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
-    
-}
-
--(IBAction) eyePercentTopDidChange:(UISlider *)uislider
-{
-    
-    [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
-    
-}
 
 @end

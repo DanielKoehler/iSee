@@ -10,15 +10,13 @@
 
 //#include "findEyeCentre.h"
 //#include "findEyeCorner.h"
-#include "constants.h"
-#include "PupilTracking.h"
-
+#import "PupilTracking.h"
 using namespace cv;
 
 @interface VideoAcuityChecker ()
 
 @property (nonatomic) AcuityCheckerPosition trialPosition;
-
+@property (nonatomic, retain) PupilTracking* pupilTracking;
 @end
 
 @implementation VideoAcuityChecker
@@ -27,9 +25,11 @@ CascadeClassifier faceCascade;
 
 const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
 
--(void) start {
+-(void) startBackgroundMode {
     
     self.vcVideoCamera = [[CvVideoCamera alloc] init];
+    self.pupilTracking = [PupilTracking alloc];
+    [self.pupilTracking initialiseVars];
     self.vcVideoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
     self.vcVideoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
     self.vcVideoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
@@ -43,6 +43,26 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     faceCascade.load([faceCascadePath UTF8String]);
 }
 
+-(void) startDebugWithView:(UIView*) imageView {
+  
+  [self stop];
+ 
+  self.vcVideoCamera = [[CvVideoCamera alloc] initWithParentView:imageView];
+  self.pupilTracking = [PupilTracking alloc];
+  [self.pupilTracking initialiseVars];
+  self.vcVideoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
+  self.vcVideoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
+  self.vcVideoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
+  self.vcVideoCamera.defaultFPS = 30;
+  self.vcVideoCamera.grayscaleMode = NO;
+  self.vcVideoCamera.delegate = self;
+  
+  [self.vcVideoCamera start];
+  NSLog(@"debug view");
+  NSString* faceCascadePath = [[NSBundle mainBundle] pathForResource:@"haarcascade_frontalface_alt2" ofType:@"xml"];
+  faceCascade.load([faceCascadePath UTF8String]);
+  NSLog(@"Loaded faceCascade");
+}
 
 
 -(void) stop {
@@ -88,6 +108,7 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
 #ifdef __cplusplus
 - (void)processImage:(Mat&)image;
 {
+//    NSLog(@"Process Image Func");
     Mat grayscaleFrame;
     cvtColor(image, grayscaleFrame, CV_BGR2GRAY);
     equalizeHist(grayscaleFrame, grayscaleFrame);
@@ -104,6 +125,7 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
         cv::rectangle(image, faces[i], 1234);
     }
     if (faces.size() > 0) {
+        NSLog(@"Found face");
         [self findEyes:grayscaleFrame withFace:faces[0] output:image];
     }
 }
@@ -112,23 +134,24 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     cv::Mat faceROI = frame_gray(face);
     cv::Mat debugFace = outputFrame;
     
-    if (kSmoothFaceImage) {
-        double sigma = kSmoothFaceFactor * face.width;
+    if (self.pupilTracking.SmoothFaceImage) {
+        double sigma = self.pupilTracking.SmoothFaceFactor * face.width;
         GaussianBlur( faceROI, faceROI, cv::Size( 0, 0 ), sigma);
     }
     
     //-- Find eye regions and draw them
-    int eye_region_width = face.width * (kEyePercentWidth/100.0);
-    int eye_region_height = face.width * (kEyePercentHeight/100.0);
-    int eye_region_top = face.height * (kEyePercentTop/100.0);
-    cv::Rect leftEyeRegion(face.width*(kEyePercentSide/100.0),
+    int eye_region_width = face.width * (self.pupilTracking.EyePercentWidth/100.0);
+    int eye_region_height = face.width * (self.pupilTracking.EyePercentHeight/100.0);
+    int eye_region_top = face.height * (self.pupilTracking.EyePercentTop/100.0);
+    cv::Rect leftEyeRegion(face.width*(self.pupilTracking.EyePercentSide/100.0),
                            eye_region_top,eye_region_width,eye_region_height);
-    cv::Rect rightEyeRegion(face.width - eye_region_width - face.width*(kEyePercentSide/100.0),
+    cv::Rect rightEyeRegion(face.width - eye_region_width - face.width*(self.pupilTracking.EyePercentSide/100.0),
                             eye_region_top,eye_region_width,eye_region_height);
     
     //-- Find Eye Centers
-    cv::Point leftPupil = findEyeCentre(faceROI,leftEyeRegion,outputFrame);
-    cv::Point rightPupil = findEyeCentre(faceROI,rightEyeRegion,outputFrame);
+  
+    cv::Point leftPupil = [self.pupilTracking findEyeCenter:faceROI withEye:leftEyeRegion withOutput:outputFrame];
+    cv::Point rightPupil = [self.pupilTracking findEyeCenter:faceROI withEye:rightEyeRegion withOutput:outputFrame];
     // get corner regions
     cv::Rect leftRightCornerRegion(leftEyeRegion);
     leftRightCornerRegion.width -= leftPupil.x;
@@ -162,17 +185,18 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     circle(debugFace, leftPupil, 3, 1234);
     printf("Right (%d, %d), Left (%d, %d)\n", rightPupil.x, rightPupil.y, leftPupil.x, leftPupil.y);
     //-- Find Eye Corners
-    if (kEnableEyeCorner) {
-        cv::Point2f leftRightCorner = findEyeCorner(faceROI(leftRightCornerRegion), true, false);
+    if (self.pupilTracking.EnableEyeCorner) {
+//        cv::Point2f leftRightCorner = findEyeCorner(faceROI(leftRightCornerRegion), true, false);
+      cv::Point2f leftRightCorner = [self.pupilTracking findEyeCorner:faceROI(leftRightCornerRegion) withLeft:true withLeft2:false];
         leftRightCorner.x += leftRightCornerRegion.x;
         leftRightCorner.y += leftRightCornerRegion.y;
-        cv::Point2f leftLeftCorner = findEyeCorner(faceROI(leftLeftCornerRegion), true, true);
+        cv::Point2f leftLeftCorner = [self.pupilTracking findEyeCorner:faceROI(leftLeftCornerRegion) withLeft:true withLeft2:true];
         leftLeftCorner.x += leftLeftCornerRegion.x;
         leftLeftCorner.y += leftLeftCornerRegion.y;
-        cv::Point2f rightLeftCorner = findEyeCorner(faceROI(rightLeftCornerRegion), false, true);
+        cv::Point2f rightLeftCorner = [self.pupilTracking findEyeCorner:faceROI(rightLeftCornerRegion) withLeft:false withLeft2:true];
         rightLeftCorner.x += rightLeftCornerRegion.x;
         rightLeftCorner.y += rightLeftCornerRegion.y;
-        cv::Point2f rightRightCorner = findEyeCorner(faceROI(rightRightCornerRegion), false, false);
+        cv::Point2f rightRightCorner = [self.pupilTracking findEyeCorner:faceROI(rightRightCornerRegion) withLeft:false withLeft2:false];
         rightRightCorner.x += rightRightCornerRegion.x;
         rightRightCorner.y += rightRightCornerRegion.y;
         circle(faceROI, leftRightCorner, 3, 200);
@@ -203,7 +227,27 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     faceROI.copyTo(outputFrame);
 }
 
+
 #endif
+
++ (instancetype) singleton {
+  static id singletonInstance = nil;
+  if (!singletonInstance) {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+      singletonInstance = [[super allocWithZone:NULL] init];
+    });
+  }
+  return singletonInstance;
+}
+
++ (id) allocWithZone:(NSZone *)zone {
+  return [self singleton];
+}
+
+- (id) copyWithZone:(NSZone *)zone {
+  return self;
+}
 
 
 @end

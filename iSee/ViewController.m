@@ -44,7 +44,7 @@
     [super viewDidAppear:animated];
     
     self.checker = [[VideoAcuityChecker alloc] init];
-    [(VideoAcuityChecker*)self.checker start];
+    [(VideoAcuityChecker*)self.checker startBackgroundMode];
 
 
     // Match acuityView's background to the Cardiff Cards image background

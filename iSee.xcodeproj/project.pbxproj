@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CF2681B18F7195E00B0AF11 /* PupilTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2681A18F7195E00B0AF11 /* PupilTracking.m */; };
+		3CF2681B18F7195E00B0AF11 /* PupilTracking.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2681A18F7195E00B0AF11 /* PupilTracking.mm */; };
 		449A5FF016F497F200249104 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A5FEF16F497F200249104 /* UIKit.framework */; };
 		449A5FF216F497F200249104 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A5FF116F497F200249104 /* Foundation.framework */; };
 		449A5FF416F497F200249104 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A5FF316F497F200249104 /* CoreGraphics.framework */; };
@@ -40,15 +40,12 @@
 		4C689D7018C507300023ABA1 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C689D6F18C507300023ABA1 /* iTunesArtwork@2x.png */; };
 		4CCBCF5318C202DD000D6B6F /* DebugViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBCF5218C202DD000D6B6F /* DebugViewController.mm */; };
 		4CCBCF5618C22916000D6B6F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBCF5518C22916000D6B6F /* SettingsViewController.m */; };
-		4CD179C81895235100A8A660 /* findEyeCentre.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C11895235100A8A660 /* findEyeCentre.cpp */; };
-		4CD179C91895235100A8A660 /* findEyeCorner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C31895235100A8A660 /* findEyeCorner.cpp */; };
-		4CD179CA1895235100A8A660 /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C51895235100A8A660 /* helpers.cpp */; };
 		4CD179CD18952E1B00A8A660 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD179CC18952E1B00A8A660 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3CF2681918F7195E00B0AF11 /* PupilTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PupilTracking.h; sourceTree = "<group>"; };
-		3CF2681A18F7195E00B0AF11 /* PupilTracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PupilTracking.m; sourceTree = "<group>"; };
+		3CF2681A18F7195E00B0AF11 /* PupilTracking.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PupilTracking.mm; sourceTree = "<group>"; };
 		449A5FEC16F497F200249104 /* iSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449A5FEF16F497F200249104 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		449A5FF116F497F200249104 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -209,7 +206,7 @@
 				4C4550AC189547F500BC6A2C /* VideoAcuityChecker.h */,
 				4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */,
 				3CF2681918F7195E00B0AF11 /* PupilTracking.h */,
-				3CF2681A18F7195E00B0AF11 /* PupilTracking.m */,
+				3CF2681A18F7195E00B0AF11 /* PupilTracking.mm */,
 			);
 			name = "Eye Tracking";
 			path = iSee;
@@ -327,12 +324,9 @@
 			files = (
 				4C4550A11895473E00BC6A2C /* ViewController.m in Sources */,
 				449A5FFC16F497F200249104 /* main.mm in Sources */,
-				3CF2681B18F7195E00B0AF11 /* PupilTracking.m in Sources */,
 				4C4550AB1895475B00BC6A2C /* UIImage+RoundedCorner.m in Sources */,
 				4CCBCF5618C22916000D6B6F /* SettingsViewController.m in Sources */,
 				4C45509E1895473E00BC6A2C /* AcuityModel.m in Sources */,
-				4CD179CA1895235100A8A660 /* helpers.cpp in Sources */,
-				4CD179C91895235100A8A660 /* findEyeCorner.cpp in Sources */,
 				4CCBCF5318C202DD000D6B6F /* DebugViewController.mm in Sources */,
 				4C4550AE189547F500BC6A2C /* VideoAcuityChecker.mm in Sources */,
 				4C45509D1895473E00BC6A2C /* AcuityChecker.m in Sources */,
@@ -341,7 +335,7 @@
 				4C4550A91895475B00BC6A2C /* UIImage+Alpha.m in Sources */,
 				4C4550A01895473E00BC6A2C /* DiagnosisViewController.m in Sources */,
 				4C4550AA1895475B00BC6A2C /* UIImage+Resize.m in Sources */,
-				4CD179C81895235100A8A660 /* findEyeCentre.cpp in Sources */,
+				3CF2681B18F7195E00B0AF11 /* PupilTracking.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
