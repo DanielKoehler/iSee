@@ -60,28 +60,28 @@
                                 @"handler":@"sliderValueDidChange:",
                                 @"min":[NSNumber numberWithFloat:20],
                                 @"max":[NSNumber numberWithFloat:100],
-                                @"default":[NSNumber numberWithFloat:50]
+                                @"default":[NSNumber numberWithFloat:50.0]
                                 },
                               @{@"name": @"Weight Divisor",
                                 @"reuseIdentifier": @"sliderCell",
                                 @"handler":@"sliderValueDidChange:",
                                 @"min":[NSNumber numberWithFloat:50],
                                 @"max":[NSNumber numberWithFloat:150],
-                                @"default":[NSNumber numberWithFloat:150]
+                                @"default":[NSNumber numberWithFloat:150.0]
                                 },
                               @{@"name": @"Weight Blur Size",
                                 @"reuseIdentifier": @"sliderCell",
                                 @"handler":@"sliderValueDidChange:",
                                 @"min":[NSNumber numberWithFloat:1],
                                 @"max":[NSNumber numberWithFloat:10],
-                                @"default":[NSNumber numberWithFloat:5]
+                                @"default":[NSNumber numberWithFloat:5.0]
                                 },
                               @{@"name": @"Fast Eye Width",
                                 @"reuseIdentifier": @"sliderCell",
                                 @"handler":@"sliderValueDidChange:",
                                 @"min":[NSNumber numberWithFloat:10],
                                 @"max":[NSNumber numberWithFloat:100],
-                                @"default":[NSNumber numberWithFloat:50]
+                                @"default":[NSNumber numberWithFloat:50.0]
                                 }
                               ]
                         },
@@ -201,13 +201,14 @@
       
         slider.restorationIdentifier = setting[@"name"];
       
+
+      // max is always 0?!!
+      //adasd
+      [slider addTarget:self action:NSSelectorFromString(setting[@"handler"]) forControlEvents:UIControlEventValueChanged];
       slider.minimumValue = [setting[@"min"] floatValue];
       slider.maximumValue = [setting[@"max"] floatValue];
-      slider.value = [setting[@"default"] floatValue];
-      // max is always 0?!!
-      //slider.value = [[NSUserDefaults standardUserDefaults] floatForKey:setting[@"name"]];
-      [slider addTarget:self action:NSSelectorFromString(setting[@"handler"]) forControlEvents:UIControlEventValueChanged];
-        
+      [[NSUserDefaults standardUserDefaults] setFloat:[setting[@"default"] floatValue] forKey:setting[@"name"]];
+      slider.value = [[NSUserDefaults standardUserDefaults] floatForKey:setting[@"name"]];
     } else if ([setting[@"reuseIdentifier"]  isEqual: @"switchCell"])
     {
         UISwitch *button = (UISwitch*)[cell viewWithTag:3];

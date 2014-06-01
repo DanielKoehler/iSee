@@ -30,13 +30,14 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     self.vcVideoCamera = [[CvVideoCamera alloc] init];
     self.pupilTracking = [PupilTracking alloc];
     [self.pupilTracking initialiseVars];
+    [self.pupilTracking createCornerKernels];
     self.vcVideoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
     self.vcVideoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
     self.vcVideoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     self.vcVideoCamera.defaultFPS = 30;
     self.vcVideoCamera.grayscaleMode = NO;
     self.vcVideoCamera.delegate = self;
-    
+  
     [self.vcVideoCamera start];
     
     NSString* faceCascadePath = [[NSBundle mainBundle] pathForResource:@"haarcascade_frontalface_alt2" ofType:@"xml"];
@@ -50,6 +51,7 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
   self.vcVideoCamera = [[CvVideoCamera alloc] initWithParentView:imageView];
   self.pupilTracking = [PupilTracking alloc];
   [self.pupilTracking initialiseVars];
+  [self.pupilTracking createCornerKernels];
   self.vcVideoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
   self.vcVideoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
   self.vcVideoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
@@ -69,6 +71,7 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     self.vcVideoCamera.delegate = nil;
     self.vcVideoCamera = nil;
     [self.vcVideoCamera stop];
+    [self.pupilTracking releaseCornerKernels];
 }
 
 #pragma mark MRAcuityCheckerDelegate methods
@@ -125,7 +128,6 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
         cv::rectangle(image, faces[i], 1234);
     }
     if (faces.size() > 0) {
-        NSLog(@"Found face");
         [self findEyes:grayscaleFrame withFace:faces[0] output:image];
     }
 }
@@ -209,7 +211,6 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     framesAtPosition++;
     
     if((int)framesAtPosition > 15) {
-        NSLog(@"Here");
         if ((rightPupil.y + leftPupil.y) / 2 > 40){
             eyesAreTop = TRUE;
             eyePosition = EyePositionTop;

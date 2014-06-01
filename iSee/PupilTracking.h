@@ -20,6 +20,8 @@
 -(cv::Point2f) findEyeCorner:(cv::Mat) region withLeft:(bool) left withLeft2:(bool) left2;
 -(void) initialiseVars;
 -(float) scaledValueForFloat:(float) value withMin:(float) min withMax:(float) max;
+-(void) createCornerKernels;
+-(void) releaseCornerKernels;
 //// Debugging
 @property (nonatomic) bool PlotVectorField;
 //
