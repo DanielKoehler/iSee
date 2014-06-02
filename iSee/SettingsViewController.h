@@ -12,4 +12,6 @@
 
 @property (nonatomic) NSArray *settings;
 
+-(IBAction)restoreDefault:(id)sender;
+
 @end

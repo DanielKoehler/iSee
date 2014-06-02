@@ -15,4 +15,5 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) VideoAcuityChecker *videoac;
+
 @end

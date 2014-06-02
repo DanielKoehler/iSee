@@ -281,6 +281,14 @@
   
 }
 
+-(IBAction)restoreDefault:(id)sender {
+  for (NSDictionary *section in self.settings) {
+    for (NSDictionary *property in section[@"items"]) {
+      [[NSUserDefaults standardUserDefaults] setFloat:[property[@"default"] floatValue] forKey:property[@"name"]];
+    }
+  }
+  [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:TRUE];
+}
 
 
 @end

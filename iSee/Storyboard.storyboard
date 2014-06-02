@@ -157,6 +157,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="2tO-c9-NeR">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="16S-II-Jgh">
+                            <rect key="frame" x="231" y="6" width="307" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="Restore Defaults">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="restoreDefault:" destination="wUO-Nd-oCq" eventType="touchUpInside" id="sxW-MP-rxj"/>
+                            </connections>
+                        </button>
                         <barButtonItem key="rightBarButtonItem" title="Debug Mode" id="uBT-N7-2Ki">
                             <connections>
                                 <segue destination="7Jr-VN-CRy" kind="push" id="OQZ-e2-hxa"/>
