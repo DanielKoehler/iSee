@@ -23,19 +23,10 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-    NSLog(@"Starting to draw boat");
-    
-    //    colorWithRed:0.694
-    //    green:0.701
-    //    blue:0.705
-    
-    // o = (1 - n) * diff(r,o)
-    // 0.103 = 0.103 + (1 - n) * (0.694 - 0.103)
-    
-    //// Color Declarations
-    
-//    (s + (1 - self.bezierPathThickness) * (l - s))
-    
+    NSLog(@"Starting to draw boat at: ");
+  
+  
+  
     UIColor* color0 = [self constrastAdjustedColor:[UIColor colorWithRed: 0.103 green: 0.092 blue: 0.095 alpha: 1]];
     
     UIColor* color7 = [self constrastAdjustedColor:[UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1]];

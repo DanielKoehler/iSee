@@ -34,6 +34,9 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     self.vcVideoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
     self.vcVideoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPresetMedium;
     self.vcVideoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
+  
+//    self.vcVideoCamera.updateOrientation
+  
     self.vcVideoCamera.defaultFPS = 30;
     self.vcVideoCamera.grayscaleMode = NO;
     self.vcVideoCamera.delegate = self;

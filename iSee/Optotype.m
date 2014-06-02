@@ -12,14 +12,16 @@
 @implementation Optotype
 
 - (id)initWithFrame:(CGRect)frame {
-    
+  
+    NSLog(@"Frame: %f", frame.origin.y);
+  
     self = [super initWithFrame:frame];
     
     if (self)
     {
-        self.vectorScaling = 1;
-        self.bezierPathThickness = 13.21;
-        self.contrast = 0.5;
+      self.vectorScaling = [[NSUserDefaults standardUserDefaults] floatForKey:@"Vector Scaling"];
+        self.bezierPathThickness = [[NSUserDefaults standardUserDefaults] floatForKey:@"Bezier Path Thickness"];
+        self.contrast = [[NSUserDefaults standardUserDefaults] floatForKey:@"Contrast"];
     }
     
     return self;

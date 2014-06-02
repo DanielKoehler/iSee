@@ -23,7 +23,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-    NSLog(@"Starting to draw house BPT:%d", self.bezierPathThickness);
+    NSLog(@"Starting to draw house at: %f" , rect.origin.y);
     
     //// Color Declarations
     UIColor* color6 = [self constrastAdjustedColor:[UIColor colorWithRed: 0.103 green: 0.092 blue: 0.095 alpha: 1]];

@@ -162,7 +162,8 @@
 
         // Draw the image
         self.acuityView.drawBounds = [self.model currentBounds];
-        
+        NSLog(@"View controller set y to be: %f" , self.acuityView.drawBounds.origin.y);
+      
         self.acuityView.optotype = [self.model currentOptotype];
         
         // Start the checker

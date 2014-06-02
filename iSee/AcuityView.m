@@ -1,4 +1,4 @@
-//
+ //
 //  AcuityView.m
 //  EyeTracking
 //
@@ -37,9 +37,13 @@
     }
     
     if (self.optotype != nil){
-        
+      
+      
+        NSLog(@"View has seen y to be: %f" , self.drawBounds.origin.y);
+      
         self.optotypeView = [self.optotype initWithFrame:self.drawBounds];
-        
+        [self.optotypeView setFrame:self.drawBounds];
+      
         [[self optotypeView] setBackgroundColor:self.backgroundColor];
         
         [self addSubview:self.optotypeView];

@@ -12,7 +12,9 @@
 @interface AcuityView : UIView
 
 @property (nonatomic, strong) Optotype *optotype;
+
 @property (nonatomic) CGRect drawBounds;
+
 @property (nonatomic, strong) UIView *innerView;
 
 @property (nonatomic, retain) Optotype *optotypeView;
