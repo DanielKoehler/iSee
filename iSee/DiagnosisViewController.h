@@ -14,4 +14,6 @@
 
 @property (nonatomic,strong) IBOutlet UILabel *diagnosisLabel;
 
+-(IBAction) finish:(id) sender;
+
 @end

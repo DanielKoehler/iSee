@@ -83,7 +83,7 @@
 
 // Create a new model, start the timer
 -(void)startTrials {
-    self.statusLabel.text = @"Starting...";
+    self.statusLabel.text = @"Starting";
     self.model = [[AcuityModel alloc] initWithViewBounds:self.acuityView.bounds];
     [self startNSTimer];
 }
