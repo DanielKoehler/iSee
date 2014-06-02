@@ -12,8 +12,8 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic,strong) IBOutlet AcuityView *acuityView;
+@property (nonatomic,retain) IBOutlet AcuityView *acuityView;
 
-@property (nonatomic,strong) IBOutlet UILabel *statusLabel;
+@property (nonatomic,retain) IBOutlet UILabel *statusLabel;
 
 @end

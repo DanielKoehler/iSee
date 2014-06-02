@@ -232,6 +232,8 @@
 -(void) contrastDidChange:(UISlider *)uislider
 {
     
+    
+    
     [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
 
 }
@@ -285,14 +287,14 @@
     
 }
 
--(IBAction) eyePercentSideDidChange:(UISlider *)uislider
+-(void) eyePercentSideDidChange:(UISlider *)uislider
 {
     
     [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];
     
 }
 
--(IBAction) eyePercentTopDidChange:(UISlider *)uislider
+-(void) eyePercentTopDidChange:(UISlider *)uislider
 {
     
     [[NSUserDefaults standardUserDefaults] setFloat:uislider.value forKey:uislider.restorationIdentifier];

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Optotype.h"
 
 @interface AcuityModel : NSObject
 
@@ -21,7 +22,9 @@
 
 -(void)increment;
 -(CGRect)currentBounds;
--(UIImage*)currentImage;
+
+-(Optotype*)currentOptotype;
+
 -(NSString*)currentDiagnosis;
 
 @end

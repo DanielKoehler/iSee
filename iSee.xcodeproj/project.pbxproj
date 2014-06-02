@@ -25,6 +25,8 @@
 		449A602116F4986300249104 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A601A16F4986300249104 /* CoreMedia.framework */; };
 		449A602216F4986300249104 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A601B16F4986300249104 /* CoreVideo.framework */; };
 		449A602316F4986300249104 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A601C16F4986300249104 /* QuartzCore.framework */; };
+		4C3CE983193B78240064159F /* AVHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CE982193B78240064159F /* AVHouse.m */; };
+		4C3CE986193B83C90064159F /* AVBoat.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CE985193B83C90064159F /* AVBoat.m */; };
 		4C45509C1895473E00BC6A2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C45508F1895473E00BC6A2C /* Images.xcassets */; };
 		4C45509D1895473E00BC6A2C /* AcuityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550911895473E00BC6A2C /* AcuityChecker.m */; };
 		4C45509E1895473E00BC6A2C /* AcuityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550941895473E00BC6A2C /* AcuityModel.m */; };
@@ -32,9 +34,6 @@
 		4C4550A01895473E00BC6A2C /* DiagnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550981895473E00BC6A2C /* DiagnosisViewController.m */; };
 		4C4550A11895473E00BC6A2C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C45509A1895473E00BC6A2C /* ViewController.m */; };
 		4C4550A21895473E00BC6A2C /* Restricted.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C45509B1895473E00BC6A2C /* Restricted.xcassets */; };
-		4C4550A91895475B00BC6A2C /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550A41895475B00BC6A2C /* UIImage+Alpha.m */; };
-		4C4550AA1895475B00BC6A2C /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550A61895475B00BC6A2C /* UIImage+Resize.m */; };
-		4C4550AB1895475B00BC6A2C /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550A81895475B00BC6A2C /* UIImage+RoundedCorner.m */; };
 		4C4550AE189547F500BC6A2C /* VideoAcuityChecker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */; };
 		4C689D7018C507300023ABA1 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C689D6F18C507300023ABA1 /* iTunesArtwork@2x.png */; };
 		4CCBCF5318C202DD000D6B6F /* DebugViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBCF5218C202DD000D6B6F /* DebugViewController.mm */; };
@@ -43,6 +42,8 @@
 		4CD179C91895235100A8A660 /* findEyeCorner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C31895235100A8A660 /* findEyeCorner.cpp */; };
 		4CD179CA1895235100A8A660 /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C51895235100A8A660 /* helpers.cpp */; };
 		4CD179CD18952E1B00A8A660 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD179CC18952E1B00A8A660 /* Storyboard.storyboard */; };
+		4CE6D6D5193BC596007D24AD /* Optotype.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6D6D4193BC596007D24AD /* Optotype.m */; };
+		4CE6D6DC193BE243007D24AD /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6D6DB193BE243007D24AD /* UIColor+Extensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,10 @@
 		449A601A16F4986300249104 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		449A601B16F4986300249104 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		449A601C16F4986300249104 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4C3CE981193B78240064159F /* AVHouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHouse.h; sourceTree = "<group>"; };
+		4C3CE982193B78240064159F /* AVHouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHouse.m; sourceTree = "<group>"; };
+		4C3CE984193B83C90064159F /* AVBoat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVBoat.h; sourceTree = "<group>"; };
+		4C3CE985193B83C90064159F /* AVBoat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVBoat.m; sourceTree = "<group>"; };
 		4C45508F1895473E00BC6A2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4C4550901895473E00BC6A2C /* AcuityChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcuityChecker.h; sourceTree = "<group>"; };
 		4C4550911895473E00BC6A2C /* AcuityChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcuityChecker.m; sourceTree = "<group>"; };
@@ -81,12 +86,6 @@
 		4C4550991895473E00BC6A2C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4C45509A1895473E00BC6A2C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4C45509B1895473E00BC6A2C /* Restricted.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Restricted.xcassets; sourceTree = "<group>"; };
-		4C4550A31895475B00BC6A2C /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
-		4C4550A41895475B00BC6A2C /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
-		4C4550A51895475B00BC6A2C /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
-		4C4550A61895475B00BC6A2C /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
-		4C4550A71895475B00BC6A2C /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
-		4C4550A81895475B00BC6A2C /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		4C4550AC189547F500BC6A2C /* VideoAcuityChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoAcuityChecker.h; sourceTree = "<group>"; };
 		4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoAcuityChecker.mm; sourceTree = "<group>"; };
 		4C4550AF1895508600BC6A2C /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
@@ -102,6 +101,10 @@
 		4CD179C51895235100A8A660 /* helpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = helpers.cpp; sourceTree = "<group>"; };
 		4CD179C61895235100A8A660 /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
 		4CD179CC18952E1B00A8A660 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		4CE6D6D3193BC596007D24AD /* Optotype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Optotype.h; sourceTree = "<group>"; };
+		4CE6D6D4193BC596007D24AD /* Optotype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Optotype.m; sourceTree = "<group>"; };
+		4CE6D6DB193BE243007D24AD /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
+		4CE6D6DD193BE2FA007D24AD /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +169,8 @@
 		449A5FF516F497F200249104 /* iSee */ = {
 			isa = PBXGroup;
 			children = (
-				4C69E1FF18969AD7008763B3 /* UI Subclasses */,
+				4CE6D6D6193BD08F007D24AD /* Misc Subclasses */,
+				4C3CE980193B756E0064159F /* Optotypes */,
 				4C69E1FE18969AC1008763B3 /* View Controllers */,
 				449A5FF616F497F200249104 /* Supporting Files */,
 				4C45509B1895473E00BC6A2C /* Restricted.xcassets */,
@@ -210,39 +214,48 @@
 			path = iSee;
 			sourceTree = "<group>";
 		};
+		4C3CE980193B756E0064159F /* Optotypes */ = {
+			isa = PBXGroup;
+			children = (
+				4C3CE984193B83C90064159F /* AVBoat.h */,
+				4C3CE985193B83C90064159F /* AVBoat.m */,
+				4C3CE981193B78240064159F /* AVHouse.h */,
+				4C3CE982193B78240064159F /* AVHouse.m */,
+			);
+			name = Optotypes;
+			sourceTree = "<group>";
+		};
 		4C69E1FE18969AC1008763B3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4C4550931895473E00BC6A2C /* AcuityModel.h */,
+				4C4550941895473E00BC6A2C /* AcuityModel.m */,
+				4C4550991895473E00BC6A2C /* ViewController.h */,
+				4C45509A1895473E00BC6A2C /* ViewController.m */,
+				4CCBCF5418C22916000D6B6F /* SettingsViewController.h */,
+				4CCBCF5518C22916000D6B6F /* SettingsViewController.m */,
 				4C4550901895473E00BC6A2C /* AcuityChecker.h */,
 				4C4550911895473E00BC6A2C /* AcuityChecker.m */,
 				4C4550921895473E00BC6A2C /* AcuityCheckerDelegate.h */,
-				4C4550931895473E00BC6A2C /* AcuityModel.h */,
-				4C4550941895473E00BC6A2C /* AcuityModel.m */,
-				4C4550951895473E00BC6A2C /* AcuityView.h */,
-				4C4550961895473E00BC6A2C /* AcuityView.m */,
 				4C4550971895473E00BC6A2C /* DiagnosisViewController.h */,
 				4C4550981895473E00BC6A2C /* DiagnosisViewController.m */,
-				4C4550991895473E00BC6A2C /* ViewController.h */,
-				4C45509A1895473E00BC6A2C /* ViewController.m */,
 				4CCBCF5118C202DD000D6B6F /* DebugViewController.h */,
 				4CCBCF5218C202DD000D6B6F /* DebugViewController.mm */,
-				4CCBCF5418C22916000D6B6F /* SettingsViewController.h */,
-				4CCBCF5518C22916000D6B6F /* SettingsViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		4C69E1FF18969AD7008763B3 /* UI Subclasses */ = {
+		4CE6D6D6193BD08F007D24AD /* Misc Subclasses */ = {
 			isa = PBXGroup;
 			children = (
-				4C4550A31895475B00BC6A2C /* UIImage+Alpha.h */,
-				4C4550A41895475B00BC6A2C /* UIImage+Alpha.m */,
-				4C4550A51895475B00BC6A2C /* UIImage+Resize.h */,
-				4C4550A61895475B00BC6A2C /* UIImage+Resize.m */,
-				4C4550A71895475B00BC6A2C /* UIImage+RoundedCorner.h */,
-				4C4550A81895475B00BC6A2C /* UIImage+RoundedCorner.m */,
+				4CE6D6D3193BC596007D24AD /* Optotype.h */,
+				4CE6D6D4193BC596007D24AD /* Optotype.m */,
+				4C4550951895473E00BC6A2C /* AcuityView.h */,
+				4C4550961895473E00BC6A2C /* AcuityView.m */,
+				4CE6D6DD193BE2FA007D24AD /* UIColor+Extensions.h */,
+				4CE6D6DB193BE243007D24AD /* UIColor+Extensions.m */,
 			);
-			name = "UI Subclasses";
+			name = "Misc Subclasses";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,19 +335,20 @@
 			files = (
 				4C4550A11895473E00BC6A2C /* ViewController.m in Sources */,
 				449A5FFC16F497F200249104 /* main.mm in Sources */,
-				4C4550AB1895475B00BC6A2C /* UIImage+RoundedCorner.m in Sources */,
 				4CCBCF5618C22916000D6B6F /* SettingsViewController.m in Sources */,
 				4C45509E1895473E00BC6A2C /* AcuityModel.m in Sources */,
+				4CE6D6D5193BC596007D24AD /* Optotype.m in Sources */,
 				4CD179CA1895235100A8A660 /* helpers.cpp in Sources */,
 				4CD179C91895235100A8A660 /* findEyeCorner.cpp in Sources */,
 				4CCBCF5318C202DD000D6B6F /* DebugViewController.mm in Sources */,
 				4C4550AE189547F500BC6A2C /* VideoAcuityChecker.mm in Sources */,
 				4C45509D1895473E00BC6A2C /* AcuityChecker.m in Sources */,
+				4C3CE983193B78240064159F /* AVHouse.m in Sources */,
 				4C45509F1895473E00BC6A2C /* AcuityView.m in Sources */,
 				449A600016F497F200249104 /* AppDelegate.mm in Sources */,
-				4C4550A91895475B00BC6A2C /* UIImage+Alpha.m in Sources */,
+				4CE6D6DC193BE243007D24AD /* UIColor+Extensions.m in Sources */,
 				4C4550A01895473E00BC6A2C /* DiagnosisViewController.m in Sources */,
-				4C4550AA1895475B00BC6A2C /* UIImage+Resize.m in Sources */,
+				4C3CE986193B83C90064159F /* AVBoat.m in Sources */,
 				4CD179C81895235100A8A660 /* findEyeCentre.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
