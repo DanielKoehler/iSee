@@ -42,6 +42,10 @@
                                 @"max":[NSNumber numberWithFloat:1],
                                 @"default":[NSNumber numberWithFloat:1]
                                 },
+                              ],
+                        },
+                        @{@"name":@"Optotype Parameters",
+                            @"items":@[
                               @{@"name": @"Contrast",
                                 @"reuseIdentifier": @"sliderCell",
                                 @"handler":@"sliderValueDidChange:",
@@ -53,14 +57,14 @@
                                 @"reuseIdentifier": @"sliderCell",
                                 @"handler":@"sliderValueDidChange:",
                                 @"min":[NSNumber numberWithFloat:0],
-                                @"max":[NSNumber numberWithFloat:1],
+                                @"max":[NSNumber numberWithFloat:0],
                                 @"default":[NSNumber numberWithFloat:1]
                                 },
                               @{@"name": @"Bezier Path Thickness",
                                 @"reuseIdentifier": @"sliderCell",
                                 @"handler":@"sliderValueDidChange:",
                                 @"min":[NSNumber numberWithFloat:1],
-                                @"max":[NSNumber numberWithFloat:20],
+                                @"max":[NSNumber numberWithFloat:40],
                                 @"default":[NSNumber numberWithFloat:13.21]
                                 },
                               ]
