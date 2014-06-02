@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CAAA3BC193C880300840153 /* AVBoat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAAA3B5193C880300840153 /* AVBoat.m */; };
+		3CAAA3BD193C880300840153 /* AVHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAAA3B7193C880300840153 /* AVHouse.m */; };
+		3CAAA3BE193C880300840153 /* Optotype.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAAA3B9193C880300840153 /* Optotype.m */; };
+		3CAAA3BF193C880300840153 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAAA3BB193C880300840153 /* UIColor+Extensions.m */; };
+		3CF2681B18F7195E00B0AF11 /* PupilTracking.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2681A18F7195E00B0AF11 /* PupilTracking.mm */; };
 		449A5FF016F497F200249104 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A5FEF16F497F200249104 /* UIKit.framework */; };
 		449A5FF216F497F200249104 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A5FF116F497F200249104 /* Foundation.framework */; };
 		449A5FF416F497F200249104 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A5FF316F497F200249104 /* CoreGraphics.framework */; };
@@ -32,20 +37,24 @@
 		4C4550A01895473E00BC6A2C /* DiagnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550981895473E00BC6A2C /* DiagnosisViewController.m */; };
 		4C4550A11895473E00BC6A2C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C45509A1895473E00BC6A2C /* ViewController.m */; };
 		4C4550A21895473E00BC6A2C /* Restricted.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C45509B1895473E00BC6A2C /* Restricted.xcassets */; };
-		4C4550A91895475B00BC6A2C /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550A41895475B00BC6A2C /* UIImage+Alpha.m */; };
-		4C4550AA1895475B00BC6A2C /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550A61895475B00BC6A2C /* UIImage+Resize.m */; };
-		4C4550AB1895475B00BC6A2C /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550A81895475B00BC6A2C /* UIImage+RoundedCorner.m */; };
 		4C4550AE189547F500BC6A2C /* VideoAcuityChecker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */; };
 		4C689D7018C507300023ABA1 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C689D6F18C507300023ABA1 /* iTunesArtwork@2x.png */; };
 		4CCBCF5318C202DD000D6B6F /* DebugViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBCF5218C202DD000D6B6F /* DebugViewController.mm */; };
 		4CCBCF5618C22916000D6B6F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBCF5518C22916000D6B6F /* SettingsViewController.m */; };
-		4CD179C81895235100A8A660 /* findEyeCentre.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C11895235100A8A660 /* findEyeCentre.cpp */; };
-		4CD179C91895235100A8A660 /* findEyeCorner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C31895235100A8A660 /* findEyeCorner.cpp */; };
-		4CD179CA1895235100A8A660 /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CD179C51895235100A8A660 /* helpers.cpp */; };
 		4CD179CD18952E1B00A8A660 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD179CC18952E1B00A8A660 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CAAA3B4193C880300840153 /* AVBoat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVBoat.h; sourceTree = "<group>"; };
+		3CAAA3B5193C880300840153 /* AVBoat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVBoat.m; sourceTree = "<group>"; };
+		3CAAA3B6193C880300840153 /* AVHouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHouse.h; sourceTree = "<group>"; };
+		3CAAA3B7193C880300840153 /* AVHouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHouse.m; sourceTree = "<group>"; };
+		3CAAA3B8193C880300840153 /* Optotype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Optotype.h; sourceTree = "<group>"; };
+		3CAAA3B9193C880300840153 /* Optotype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Optotype.m; sourceTree = "<group>"; };
+		3CAAA3BA193C880300840153 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
+		3CAAA3BB193C880300840153 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
+		3CF2681918F7195E00B0AF11 /* PupilTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PupilTracking.h; sourceTree = "<group>"; };
+		3CF2681A18F7195E00B0AF11 /* PupilTracking.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PupilTracking.mm; sourceTree = "<group>"; };
 		449A5FEC16F497F200249104 /* iSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449A5FEF16F497F200249104 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		449A5FF116F497F200249104 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,12 +90,6 @@
 		4C4550991895473E00BC6A2C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4C45509A1895473E00BC6A2C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4C45509B1895473E00BC6A2C /* Restricted.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Restricted.xcassets; sourceTree = "<group>"; };
-		4C4550A31895475B00BC6A2C /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
-		4C4550A41895475B00BC6A2C /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
-		4C4550A51895475B00BC6A2C /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
-		4C4550A61895475B00BC6A2C /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
-		4C4550A71895475B00BC6A2C /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
-		4C4550A81895475B00BC6A2C /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		4C4550AC189547F500BC6A2C /* VideoAcuityChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoAcuityChecker.h; sourceTree = "<group>"; };
 		4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoAcuityChecker.mm; sourceTree = "<group>"; };
 		4C4550AF1895508600BC6A2C /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
@@ -126,6 +129,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CAAA3C0193C884200840153 /* Optotypes */ = {
+			isa = PBXGroup;
+			children = (
+				3CAAA3B4193C880300840153 /* AVBoat.h */,
+				3CAAA3B5193C880300840153 /* AVBoat.m */,
+				3CAAA3B6193C880300840153 /* AVHouse.h */,
+				3CAAA3B7193C880300840153 /* AVHouse.m */,
+			);
+			name = Optotypes;
+			sourceTree = "<group>";
+		};
 		449A5FE316F497F200249104 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +180,7 @@
 		449A5FF516F497F200249104 /* iSee */ = {
 			isa = PBXGroup;
 			children = (
+				3CAAA3C0193C884200840153 /* Optotypes */,
 				4C69E1FF18969AD7008763B3 /* UI Subclasses */,
 				4C69E1FE18969AC1008763B3 /* View Controllers */,
 				449A5FF616F497F200249104 /* Supporting Files */,
@@ -205,6 +220,8 @@
 				4CD179C61895235100A8A660 /* helpers.h */,
 				4C4550AC189547F500BC6A2C /* VideoAcuityChecker.h */,
 				4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */,
+				3CF2681918F7195E00B0AF11 /* PupilTracking.h */,
+				3CF2681A18F7195E00B0AF11 /* PupilTracking.mm */,
 			);
 			name = "Eye Tracking";
 			path = iSee;
@@ -235,12 +252,10 @@
 		4C69E1FF18969AD7008763B3 /* UI Subclasses */ = {
 			isa = PBXGroup;
 			children = (
-				4C4550A31895475B00BC6A2C /* UIImage+Alpha.h */,
-				4C4550A41895475B00BC6A2C /* UIImage+Alpha.m */,
-				4C4550A51895475B00BC6A2C /* UIImage+Resize.h */,
-				4C4550A61895475B00BC6A2C /* UIImage+Resize.m */,
-				4C4550A71895475B00BC6A2C /* UIImage+RoundedCorner.h */,
-				4C4550A81895475B00BC6A2C /* UIImage+RoundedCorner.m */,
+				3CAAA3B8193C880300840153 /* Optotype.h */,
+				3CAAA3B9193C880300840153 /* Optotype.m */,
+				3CAAA3BA193C880300840153 /* UIColor+Extensions.h */,
+				3CAAA3BB193C880300840153 /* UIColor+Extensions.m */,
 			);
 			name = "UI Subclasses";
 			sourceTree = "<group>";
@@ -322,20 +337,19 @@
 			files = (
 				4C4550A11895473E00BC6A2C /* ViewController.m in Sources */,
 				449A5FFC16F497F200249104 /* main.mm in Sources */,
-				4C4550AB1895475B00BC6A2C /* UIImage+RoundedCorner.m in Sources */,
 				4CCBCF5618C22916000D6B6F /* SettingsViewController.m in Sources */,
+				3CAAA3BD193C880300840153 /* AVHouse.m in Sources */,
 				4C45509E1895473E00BC6A2C /* AcuityModel.m in Sources */,
-				4CD179CA1895235100A8A660 /* helpers.cpp in Sources */,
-				4CD179C91895235100A8A660 /* findEyeCorner.cpp in Sources */,
+				3CAAA3BE193C880300840153 /* Optotype.m in Sources */,
+				3CAAA3BC193C880300840153 /* AVBoat.m in Sources */,
 				4CCBCF5318C202DD000D6B6F /* DebugViewController.mm in Sources */,
 				4C4550AE189547F500BC6A2C /* VideoAcuityChecker.mm in Sources */,
 				4C45509D1895473E00BC6A2C /* AcuityChecker.m in Sources */,
 				4C45509F1895473E00BC6A2C /* AcuityView.m in Sources */,
 				449A600016F497F200249104 /* AppDelegate.mm in Sources */,
-				4C4550A91895475B00BC6A2C /* UIImage+Alpha.m in Sources */,
 				4C4550A01895473E00BC6A2C /* DiagnosisViewController.m in Sources */,
-				4C4550AA1895475B00BC6A2C /* UIImage+Resize.m in Sources */,
-				4CD179C81895235100A8A660 /* findEyeCentre.cpp in Sources */,
+				3CF2681B18F7195E00B0AF11 /* PupilTracking.mm in Sources */,
+				3CAAA3BF193C880300840153 /* UIColor+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +426,7 @@
 		449A601016F497F200249104 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -432,6 +447,7 @@
 		449A601116F497F200249104 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -442,6 +458,7 @@
 				GCC_PREFIX_HEADER = "iSee/iSee-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/iSee/iSee-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = iSee;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;

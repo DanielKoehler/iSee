@@ -32,8 +32,11 @@ typedef NS_ENUM(NSInteger, EyePosition) {
 
 @property (nonatomic, retain) CvVideoCamera* vcVideoCamera;
 
--(void)start;
 
--(void)stop;
+-(void) startBackgroundMode;
+
+-(void) startDebugWithView:(UIView*) imageView;
+
+-(void) stop;
 
 @end

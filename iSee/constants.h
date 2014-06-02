@@ -31,8 +31,8 @@ const double kGradientThreshold = 50.0;
 
 // Postprocessing
 const bool kEnablePostProcess = false;
-const float kPostProcessThreshold = 0.97;
-
+const float kPostProcessThreshold =0.97;
+// [[NSUserDefaults standardUserDefaults] floatForKey:setting[@"name"]]
 // Eye Corner
 const bool kEnableEyeCorner = false;
 

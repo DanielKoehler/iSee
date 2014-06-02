@@ -104,7 +104,7 @@ cv::Point2f findSubpixelEyeCorner(cv::Mat region, cv::Point maxP) {
   cv::Mat miRegion(region, rowRange, colRange);
 
 
-if(left){
+  if(left){
     imshow("aa",miRegion);
   } else {
     imshow("aaa",miRegion);
