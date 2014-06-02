@@ -63,9 +63,9 @@
                               @{@"name": @"Bezier Path Thickness",
                                 @"reuseIdentifier": @"sliderCell",
                                 @"handler":@"sliderValueDidChange:",
-                                @"min":[NSNumber numberWithFloat:1],
-                                @"max":[NSNumber numberWithFloat:40],
-                                @"default":[NSNumber numberWithFloat:13.21]
+                                @"min":[NSNumber numberWithFloat:0.01],
+                                @"max":[NSNumber numberWithFloat:2],
+                                @"default":[NSNumber numberWithFloat:1]
                                 },
                               ]
                         },

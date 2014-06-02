@@ -39,6 +39,8 @@
 		4C4550A21895473E00BC6A2C /* Restricted.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C45509B1895473E00BC6A2C /* Restricted.xcassets */; };
 		4C4550AE189547F500BC6A2C /* VideoAcuityChecker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */; };
 		4C689D7018C507300023ABA1 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C689D6F18C507300023ABA1 /* iTunesArtwork@2x.png */; };
+		4CA3E515193CE3CD00368440 /* AVFish.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3E514193CE3CD00368440 /* AVFish.m */; };
+		4CA3E51E193CEB1800368440 /* AVTrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3E51D193CEB1800368440 /* AVTrain.m */; };
 		4CCBCF5318C202DD000D6B6F /* DebugViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBCF5218C202DD000D6B6F /* DebugViewController.mm */; };
 		4CCBCF5618C22916000D6B6F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBCF5518C22916000D6B6F /* SettingsViewController.m */; };
 		4CD179CD18952E1B00A8A660 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD179CC18952E1B00A8A660 /* Storyboard.storyboard */; };
@@ -94,6 +96,10 @@
 		4C4550AD189547F500BC6A2C /* VideoAcuityChecker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoAcuityChecker.mm; sourceTree = "<group>"; };
 		4C4550AF1895508600BC6A2C /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		4C689D6F18C507300023ABA1 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		4CA3E513193CE3CD00368440 /* AVFish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVFish.h; sourceTree = "<group>"; };
+		4CA3E514193CE3CD00368440 /* AVFish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVFish.m; sourceTree = "<group>"; };
+		4CA3E51C193CEB1800368440 /* AVTrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTrain.h; sourceTree = "<group>"; };
+		4CA3E51D193CEB1800368440 /* AVTrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTrain.m; sourceTree = "<group>"; };
 		4CCBCF5118C202DD000D6B6F /* DebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugViewController.h; sourceTree = "<group>"; };
 		4CCBCF5218C202DD000D6B6F /* DebugViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DebugViewController.mm; sourceTree = "<group>"; };
 		4CCBCF5418C22916000D6B6F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -136,6 +142,10 @@
 				3CAAA3B5193C880300840153 /* AVBoat.m */,
 				3CAAA3B6193C880300840153 /* AVHouse.h */,
 				3CAAA3B7193C880300840153 /* AVHouse.m */,
+				4CA3E513193CE3CD00368440 /* AVFish.h */,
+				4CA3E514193CE3CD00368440 /* AVFish.m */,
+				4CA3E51C193CEB1800368440 /* AVTrain.h */,
+				4CA3E51D193CEB1800368440 /* AVTrain.m */,
 			);
 			name = Optotypes;
 			sourceTree = "<group>";
@@ -339,6 +349,8 @@
 				449A5FFC16F497F200249104 /* main.mm in Sources */,
 				4CCBCF5618C22916000D6B6F /* SettingsViewController.m in Sources */,
 				3CAAA3BD193C880300840153 /* AVHouse.m in Sources */,
+				4CA3E515193CE3CD00368440 /* AVFish.m in Sources */,
+				4CA3E51E193CEB1800368440 /* AVTrain.m in Sources */,
 				4C45509E1895473E00BC6A2C /* AcuityModel.m in Sources */,
 				3CAAA3BE193C880300840153 /* Optotype.m in Sources */,
 				3CAAA3BC193C880300840153 /* AVBoat.m in Sources */,

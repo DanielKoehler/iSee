@@ -13,11 +13,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    
-    if([[NSUserDefaults standardUserDefaults] floatForKey:@"Screen Brightness"]){
-        [[UIScreen mainScreen] setBrightness:[[NSUserDefaults standardUserDefaults] floatForKey:@"Screen Brightness"]];
-    }
-    
     // Override point for customization after application launch.
     return YES;
 }
@@ -37,6 +32,10 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+//    if([[NSUserDefaults standardUserDefaults] floatForKey:@"Screen Brightness"]){
+//        [[UIScreen mainScreen] setBrightness:[[NSUserDefaults standardUserDefaults] floatForKey:@"Screen Brightness"]];
+//    }
+    
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

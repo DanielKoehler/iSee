@@ -66,7 +66,7 @@
     bezierPath.lineJoinStyle = kCGLineJoinRound;
     
     [color0 setStroke];
-    bezierPath.lineWidth = 10.22;
+    bezierPath.lineWidth = self.bezierPathThickness * 10.22;
     [bezierPath stroke];
     
     
@@ -105,7 +105,7 @@
     bezier2Path.lineJoinStyle = kCGLineJoinRound;
     
     [color7 setStroke];
-    bezier2Path.lineWidth = 5.11;
+    bezier2Path.lineWidth = self.bezierPathThickness * 5.11;
     [bezier2Path stroke];
 
 }

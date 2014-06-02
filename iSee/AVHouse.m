@@ -43,7 +43,7 @@
     bezierPath.lineJoinStyle = kCGLineJoinRound;
     
     [color6 setStroke];
-    bezierPath.lineWidth = self.bezierPathThickness;
+    bezierPath.lineWidth = self.bezierPathThickness * 13.21;
     [bezierPath stroke];
     
     
@@ -60,7 +60,7 @@
     bezier2Path.lineJoinStyle = kCGLineJoinRound;
     
     [color6 setStroke];
-    bezier2Path.lineWidth = self.bezierPathThickness;
+    bezier2Path.lineWidth = self.bezierPathThickness * 13.21;
     [bezier2Path stroke];
     
     
@@ -77,7 +77,7 @@
     bezier3Path.lineJoinStyle = kCGLineJoinRound;
     
     [color6 setStroke];
-    bezier3Path.lineWidth = self.bezierPathThickness;
+    bezier3Path.lineWidth = self.bezierPathThickness * 13.21;
     [bezier3Path stroke];
     
     
@@ -94,7 +94,7 @@
     bezier4Path.lineJoinStyle = kCGLineJoinRound;
     
     [color6 setStroke];
-    bezier4Path.lineWidth = self.bezierPathThickness;
+    bezier4Path.lineWidth = self.bezierPathThickness * 13.21;
     [bezier4Path stroke];
     
     
@@ -111,7 +111,7 @@
     bezier5Path.lineJoinStyle = kCGLineJoinRound;
     
     [color6 setStroke];
-    bezier5Path.lineWidth = self.bezierPathThickness;
+    bezier5Path.lineWidth = self.bezierPathThickness * 13.21;
     [bezier5Path stroke];
     
     
@@ -128,7 +128,7 @@
     bezier6Path.lineJoinStyle = kCGLineJoinRound;
     
     [color6 setStroke];
-    bezier6Path.lineWidth = self.bezierPathThickness;
+    bezier6Path.lineWidth = self.bezierPathThickness * 13.21;
     [bezier6Path stroke];
     
     
@@ -145,7 +145,7 @@
     bezier7Path.lineJoinStyle = kCGLineJoinRound;
     
     [color7 setStroke];
-    bezier7Path.lineWidth = (self.bezierPathThickness / 2);
+    bezier7Path.lineWidth = self.bezierPathThickness * 6.62 ;
     [bezier7Path stroke];
     
     
@@ -162,7 +162,7 @@
     bezier8Path.lineJoinStyle = kCGLineJoinRound;
     
     [color7 setStroke];
-    bezier8Path.lineWidth = (self.bezierPathThickness / 2);
+    bezier8Path.lineWidth = self.bezierPathThickness * 6.62;
     [bezier8Path stroke];
     
     
@@ -179,7 +179,7 @@
     bezier9Path.lineJoinStyle = kCGLineJoinRound;
     
     [color7 setStroke];
-    bezier9Path.lineWidth = (self.bezierPathThickness / 2);
+    bezier9Path.lineWidth = self.bezierPathThickness * 6.62;
     [bezier9Path stroke];
     
     
@@ -196,7 +196,7 @@
     bezier10Path.lineJoinStyle = kCGLineJoinRound;
     
     [color7 setStroke];
-    bezier10Path.lineWidth = (self.bezierPathThickness / 2);
+    bezier10Path.lineWidth = self.bezierPathThickness * 6.62;
     [bezier10Path stroke];
     
     
@@ -213,7 +213,7 @@
     bezier11Path.lineJoinStyle = kCGLineJoinRound;
     
     [color7 setStroke];
-    bezier11Path.lineWidth = (self.bezierPathThickness / 2);
+    bezier11Path.lineWidth = self.bezierPathThickness * 6.62;
     [bezier11Path stroke];
     
     
@@ -230,7 +230,7 @@
     bezier12Path.lineJoinStyle = kCGLineJoinRound;
     
     [color7 setStroke];
-    bezier12Path.lineWidth = (self.bezierPathThickness / 2);
+    bezier12Path.lineWidth = self.bezierPathThickness * 6.62;
     [bezier12Path stroke];
 
 }
