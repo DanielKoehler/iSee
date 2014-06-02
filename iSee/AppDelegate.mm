@@ -13,6 +13,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    
+    if([[NSUserDefaults standardUserDefaults] floatForKey:@"Screen Brightness"]){
+        [[UIScreen mainScreen] setBrightness:[[NSUserDefaults standardUserDefaults] floatForKey:@"Screen Brightness"]];
+    }
+    
     // Override point for customization after application launch.
     return YES;
 }
