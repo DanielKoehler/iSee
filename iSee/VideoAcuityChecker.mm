@@ -77,7 +77,7 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
 
 -(void)startTrialWithPosition:(AcuityCheckerPosition)position
 {
-    NSLog(@"VideoAcuityChecker startTrialWithPosition");
+//    NSLog(@"VideoAcuityChecker startTrialWithPosition");
     self.trialPosition = position;
     eyePosition = EyePositionNone;
     
@@ -86,14 +86,14 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
 
 -(BOOL)trialCompleted
 {
-    NSLog(@"VideoAcuityChecker trialCompleted");
+//    NSLog(@"VideoAcuityChecker trialCompleted");
     
     if (eyePosition == EyePositionNone) {
-        NSLog(@"Eyes were NOT SEEN");
+//        NSLog(@"Eyes were NOT SEEN");
     } else if (eyePosition == EyePositionTop) {
-        NSLog(@"Eyes were TOP");
+//        NSLog(@"Eyes were TOP");
     } else if (eyePosition == EyePositionBottom) {
-        NSLog(@"Eyes were BOTTOM");
+//        NSLog(@"Eyes were BOTTOM");
     }
     
     if (self.trialPosition == AcuityCheckerPositionTop) {

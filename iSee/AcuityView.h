@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Optotype.h"
 
 @interface AcuityView : UIView
 
-@property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) Optotype *optotype;
 @property (nonatomic) CGRect drawBounds;
+@property (nonatomic, strong) UIView *innerView;
+
+@property (nonatomic, retain) Optotype *optotypeView;
 
 @end

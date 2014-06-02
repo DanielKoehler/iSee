@@ -14,6 +14,8 @@
 #import "DiagnosisViewController.h"
 #import "VideoAcuityChecker.h"
 
+//#import "AVHouse.h"
+
 // Time card is shown, and between trials
 #define INTERVAL 2.0
 
@@ -36,6 +38,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.acuityView.backgroundColor = [UIColor colorWithRed:177.0/255.0
+                                                      green:179.0/255.0
+                                                       blue:180.0/255.0
+                                                      alpha:1];
 
 }
 
@@ -46,13 +52,8 @@
     self.checker = [[VideoAcuityChecker alloc] init];
     [(VideoAcuityChecker*)self.checker startBackgroundMode];
 
-
     // Match acuityView's background to the Cardiff Cards image background
-    self.acuityView.backgroundColor = [UIColor colorWithRed:177.0/255.0
-                                                      green:179.0/255.0
-                                                       blue:180.0/255.0
-                                                      alpha:1];
-
+    
     [self startTrials];
 }
 
@@ -150,7 +151,7 @@
         }
 
         // Clear the display, update active trial state.
-        self.acuityView.image = nil;
+        self.acuityView.optotype = nil;
         self.isActiveTrial = NO;
 
     } else {  // Starting a trial
@@ -161,8 +162,9 @@
 
         // Draw the image
         self.acuityView.drawBounds = [self.model currentBounds];
-        self.acuityView.image = [self.model currentImage];
-
+        
+        self.acuityView.optotype = [self.model currentOptotype];
+        
         // Start the checker
         [self.checker startTrialWithPosition:AcuityCheckerPositionTop];
 
@@ -170,7 +172,7 @@
         self.isActiveTrial = YES;
     }
 
-    [self.acuityView setNeedsDisplay];
+    [self.acuityView setNeedsLayout];
 }
 
 /** Handle "Restart" button in diagnosis alert **/
