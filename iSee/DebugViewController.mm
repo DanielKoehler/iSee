@@ -28,7 +28,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[VideoAcuityChecker alloc] startDebugWithView:(UIView*) self.imageView];
+    self.videoac = [VideoAcuityChecker alloc];
+    [self.videoac startDebugWithView:(UIView*) self.imageView];
+  
+
 	// Do any additional setup after loading the view.
 }
 
@@ -37,5 +40,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void) viewDidDisappear:(BOOL)animated {
+  [self.videoac stop];
+}
+
 
 @end

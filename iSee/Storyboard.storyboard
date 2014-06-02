@@ -153,7 +153,7 @@
                     <navigationItem key="navigationItem" id="2tO-c9-NeR">
                         <barButtonItem key="rightBarButtonItem" title="Debug Mode" id="uBT-N7-2Ki">
                             <connections>
-                                <segue destination="7Jr-VN-CRy" kind="modal" id="OQZ-e2-hxa"/>
+                                <segue destination="7Jr-VN-CRy" kind="push" id="OQZ-e2-hxa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -179,10 +179,6 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </imageView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="SKc-QF-Fsc">
-                                <rect key="frame" x="365" y="844" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

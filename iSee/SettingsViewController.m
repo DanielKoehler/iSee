@@ -201,14 +201,11 @@
       
         slider.restorationIdentifier = setting[@"name"];
       
-
-      // max is always 0?!!
-      //adasd
-      [slider addTarget:self action:NSSelectorFromString(setting[@"handler"]) forControlEvents:UIControlEventValueChanged];
-      slider.minimumValue = [setting[@"min"] floatValue];
-      slider.maximumValue = [setting[@"max"] floatValue];
-      [[NSUserDefaults standardUserDefaults] setFloat:[setting[@"default"] floatValue] forKey:setting[@"name"]];
-      slider.value = [[NSUserDefaults standardUserDefaults] floatForKey:setting[@"name"]];
+        [slider addTarget:self action:NSSelectorFromString(setting[@"handler"]) forControlEvents:UIControlEventValueChanged];
+        slider.minimumValue = [setting[@"min"] floatValue];
+        slider.maximumValue = [setting[@"max"] floatValue];
+        [[NSUserDefaults standardUserDefaults] setFloat:[setting[@"default"] floatValue] forKey:setting[@"name"]];
+        slider.value = [[NSUserDefaults standardUserDefaults] floatForKey:setting[@"name"]];
     } else if ([setting[@"reuseIdentifier"]  isEqual: @"switchCell"])
     {
         UISwitch *button = (UISwitch*)[cell viewWithTag:3];

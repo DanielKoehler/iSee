@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class VideoAcuityChecker;
 
 @interface DebugViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) VideoAcuityChecker *videoac;
 @end

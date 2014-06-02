@@ -32,7 +32,7 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     [self.pupilTracking initialiseVars];
     [self.pupilTracking createCornerKernels];
     self.vcVideoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
-    self.vcVideoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
+    self.vcVideoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPresetMedium;
     self.vcVideoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     self.vcVideoCamera.defaultFPS = 30;
     self.vcVideoCamera.grayscaleMode = NO;
@@ -47,13 +47,13 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
 -(void) startDebugWithView:(UIView*) imageView {
   
   [self stop];
- 
+  [self.pupilTracking releaseCornerKernels];
   self.vcVideoCamera = [[CvVideoCamera alloc] initWithParentView:imageView];
   self.pupilTracking = [PupilTracking alloc];
   [self.pupilTracking initialiseVars];
   [self.pupilTracking createCornerKernels];
   self.vcVideoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
-  self.vcVideoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
+  self.vcVideoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPresetPhoto;
   self.vcVideoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
   self.vcVideoCamera.defaultFPS = 30;
   self.vcVideoCamera.grayscaleMode = NO;
@@ -71,7 +71,6 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     self.vcVideoCamera.delegate = nil;
     self.vcVideoCamera = nil;
     [self.vcVideoCamera stop];
-    [self.pupilTracking releaseCornerKernels];
 }
 
 #pragma mark MRAcuityCheckerDelegate methods
@@ -111,7 +110,6 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
 #ifdef __cplusplus
 - (void)processImage:(Mat&)image;
 {
-//    NSLog(@"Process Image Func");
     Mat grayscaleFrame;
     cvtColor(image, grayscaleFrame, CV_BGR2GRAY);
     equalizeHist(grayscaleFrame, grayscaleFrame);
@@ -128,14 +126,14 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
         cv::rectangle(image, faces[i], 1234);
     }
     if (faces.size() > 0) {
+
         [self findEyes:grayscaleFrame withFace:faces[0] output:image];
     }
 }
-
 - (void) findEyes:(Mat)frame_gray withFace: (cv::Rect) face output:(Mat&) outputFrame {
     cv::Mat faceROI = frame_gray(face);
-    cv::Mat debugFace = outputFrame;
-    
+    //cv::Mat debugFace;
+  
     if (self.pupilTracking.SmoothFaceImage) {
         double sigma = self.pupilTracking.SmoothFaceFactor * face.width;
         GaussianBlur( faceROI, faceROI, cv::Size( 0, 0 ), sigma);
@@ -173,18 +171,18 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
     rightRightCornerRegion.x += rightPupil.x;
     rightRightCornerRegion.height /= 2;
     rightRightCornerRegion.y += rightRightCornerRegion.height / 2;
-    rectangle(debugFace,leftRightCornerRegion,200);
-    rectangle(debugFace,leftLeftCornerRegion,200);
-    rectangle(debugFace,rightLeftCornerRegion,200);
-    rectangle(debugFace,rightRightCornerRegion,200);
+    rectangle(faceROI,leftRightCornerRegion,200);
+    rectangle(faceROI,leftLeftCornerRegion,200);
+    rectangle(faceROI,rightLeftCornerRegion,200);
+    rectangle(faceROI,rightRightCornerRegion,200);
     // change eye centers to face coordinates
     rightPupil.x += rightEyeRegion.x;
     rightPupil.y += rightEyeRegion.y;
     leftPupil.x += leftEyeRegion.x;
     leftPupil.y += leftEyeRegion.y;
     // draw eye centers
-    circle(debugFace, rightPupil, 3, 1234);
-    circle(debugFace, leftPupil, 3, 1234);
+    circle(faceROI, rightPupil, 3, 1234);
+    circle(faceROI, leftPupil, 3, 1234);
     printf("Right (%d, %d), Left (%d, %d)\n", rightPupil.x, rightPupil.y, leftPupil.x, leftPupil.y);
     //-- Find Eye Corners
     if (self.pupilTracking.EnableEyeCorner) {
@@ -223,9 +221,9 @@ const int HaarOptions = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
         }
         framesAtPosition = 0;
     }
-    
-    
+  
     faceROI.copyTo(outputFrame);
+  
 }
 
 
